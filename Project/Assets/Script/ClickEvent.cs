@@ -7,24 +7,43 @@ public class ClickEvent : MonoBehaviour
 {
     // 點擊時間
     float clickTimer = 0;
+    int clickNum = 0;
+    float timelag = 0.5f;
 
     public GameObject objectCanvas;
     public GameObject objectImg;
     public GameObject objectText;
 
-    bool isClick = false;
+    private void Update()
+    {
+        if (clickNum > 0)
+        {
+            if (LevelController.gameTimer - clickTimer >= timelag)
+            {
+                if (clickNum < 2)
+                {
+                    onceClickEvent();
+                }
+                else
+                {
+                    doubleClickEvent();
+                }
+                clickNum = 0;
+            }
+        }
+    }
 
     // 滑鼠點擊
     void OnMouseDown()
     {
-        if (clickTimer == 0)
+        clickNum++;
+        print("clickNum = " + clickNum);
+
+        if (clickNum == 1)
         {
             clickTimer = LevelController.gameTimer;
             print("開始計時");
-            isClick = true;
         }
-        
-        isDoubleClick(1.0f);
 
         //print("click down");
         //print(this.gameObject.name);
@@ -36,42 +55,25 @@ public class ClickEvent : MonoBehaviour
         //print(this.gameObject.name);
     }*/
 
-    void isDoubleClick(float timelag)
+    void onceClickEvent()
     {
-        float timer = 0;
-        isClick = false;
+        print("觸發單擊事件");
+        objectCanvas.SetActive(true);
+        objectText.SetActive(true);
 
-        while (timer < timelag)
-        {
-            timer += Time.deltaTime;
-            print(timer);
-            if (isClick)
-                break;
-        }
+        /*
+         * 單擊事件寫在這
+         */
+    }
 
-        if (timer >= timelag)
-        {
-            clickTimer = 0;
-            print("不是雙擊");
+    void doubleClickEvent()
+    {
+        print("觸發雙擊事件");
 
-            objectText.SetActive(true);
+        objectImg.SetActive(true);
 
-            /*
-             * 只點一下
-             * 跳出對話框，顯示說明文字
-             */
-        }
-        else
-        {
-            print("觸發雙擊事件");
-
-            objectImg.SetActive(true);
-
-            /*
-             * 雙擊事件寫在這
-             */
-
-            clickTimer = 0;
-        }
+        /*
+         * 雙擊事件寫在這
+         */
     }
 }
