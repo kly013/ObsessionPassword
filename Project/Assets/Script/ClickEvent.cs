@@ -11,6 +11,7 @@ public class ClickEvent : MonoBehaviour
     float timelag = 0.5f;
 
     public GameObject objectCanvas;
+    public GameObject spaceCanvas;
     public GameObject objectImg;
     public GameObject objectText;
 
@@ -60,6 +61,7 @@ public class ClickEvent : MonoBehaviour
         print("觸發單擊事件");
         objectCanvas.SetActive(true);
         objectText.SetActive(true);
+        spaceCanvas.SetActive(true);
 
         /*
          * 單擊事件寫在這
