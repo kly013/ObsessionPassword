@@ -5,49 +5,63 @@ using UnityEngine.EventSystems;
 
 public class ClickEvent : MonoBehaviour
 {
-    // 點擊時間
-    float clickTimer = 0;
-    int clickNum = 0;
-    float timelag = 0.5f;
+    // 點擊當下時間
+    float clickTime = 0;
+    // 點一次後開始計時
+    float delayTime = 0;
+    // 點的次數
+    float clickNum = 0;
+    // 設定多長時間內點兩次算雙擊
+    float lagTime = 0.2f;
 
-    public GameObject objectCanvas;
-    public GameObject spaceCanvas;
-    public GameObject objectImg;
-    public GameObject objectText;
+    // 點擊後放大可以互動的物件
+    public GameObject[] objects;
 
     private void Update()
     {
-        if (clickNum > 0)
+        // 點擊後開始計時
+        if (clickTime != 0)
         {
-            if (LevelController.gameTimer - clickTimer >= timelag)
-            {
-                if (clickNum < 2)
-                {
-                    onceClickEvent();
-                }
-                else
-                {
-                    doubleClickEvent();
-                }
-                clickNum = 0;
-            }
+            delayTime += Time.deltaTime;
+            // print("delaytime = " + delayTime);
         }
+
+        // 時間大於所設判斷雙擊時間
+        if (delayTime >= lagTime)
+        {
+            // 時間內沒點擊到兩次
+            if (clickNum < 2)
+            {
+                // print("不是雙擊");
+                onceClickEvent();
+            }
+            // 時間內點兩次以上
+            else
+            {
+                // print("雙擊");
+                doubleClickEvent();
+            }
+
+            // 將所有計時計數歸零
+            delayTime = 0;
+            clickTime = 0;
+            clickNum = 0;
+        }
+
     }
 
     // 滑鼠點擊
     void OnMouseDown()
     {
-        clickNum++;
-        print("clickNum = " + clickNum);
-
-        if (clickNum == 1)
+        // 按 UI 不要按到後面物件的語法
+        if (!EventSystem.current.IsPointerOverGameObject())
         {
-            clickTimer = LevelController.gameTimer;
-            print("開始計時");
+            //print("name = " + this.gameObject.name);
+            clickTime = LevelController.gameTime;
+            //print("clickTime = " + clickTime);
+            clickNum++;
+            //print("clickNum" + clickNum);
         }
-
-        //print("click down");
-        //print(this.gameObject.name);
     }
 
     /*void OnMouseUp()
@@ -56,26 +70,15 @@ public class ClickEvent : MonoBehaviour
         //print(this.gameObject.name);
     }*/
 
+    // 單擊事件
     void onceClickEvent()
     {
-        print("觸發單擊事件");
-        objectCanvas.SetActive(true);
-        objectText.SetActive(true);
-        spaceCanvas.SetActive(true);
 
-        /*
-         * 單擊事件寫在這
-         */
     }
 
+    // 雙擊事件
     void doubleClickEvent()
     {
-        print("觸發雙擊事件");
 
-        objectImg.SetActive(true);
-
-        /*
-         * 雙擊事件寫在這
-         */
     }
 }
