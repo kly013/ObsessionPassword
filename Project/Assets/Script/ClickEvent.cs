@@ -73,7 +73,8 @@ public class ClickEvent : MonoBehaviour
     // 單擊事件
     void onceClickEvent()
     {
-
+        objects[0].transform.position = LevelController.cameraPos + new Vector3(0, 0, 1);
+        objects[0].transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
     }
 
     // 雙擊事件
