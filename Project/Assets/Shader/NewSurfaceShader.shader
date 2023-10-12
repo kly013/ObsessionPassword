@@ -1,4 +1,4 @@
-Shader "Custom/Water"
+Shader "Custom/NewSurfaceShader"
 {
     Properties
     {
@@ -6,7 +6,13 @@ Shader "Custom/Water"
         _MainTex ("Albedo (RGB)", 2D) = "white" {}
         _Glossiness ("Smoothness", Range(0,1)) = 0.5
         _Metallic ("Metallic", Range(0,1)) = 0.0
+            
+        // 淺水區顏色
+        _WaterShallowColr("WaterShallowColr", Color) = (1,1,1,1)
+        // 深水區顏色
+        _WaterDeepColr("WaterDeepColr", Color) = (1,1,1,1)
     }
+
     SubShader
     {
         Tags { "RenderType"="Opaque" }
