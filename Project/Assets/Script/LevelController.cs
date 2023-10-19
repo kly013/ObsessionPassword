@@ -4,19 +4,15 @@ using UnityEngine;
 
 public class LevelController : MonoBehaviour
 {
-    public static float gameTime = 0;
-
-    public Camera Camera;
-    public static Vector3 cameraPos;
+    public static float gameTimer = 0;
 
     void Start()
     {
-        cameraPos = Camera.GetComponent<Transform>().position;
+        
     }
 
     void Update()
     {
-        gameTime += Time.deltaTime;
-        cameraPos = Camera.transform.position;
+        gameTimer += Time.deltaTime;
     }
 }
