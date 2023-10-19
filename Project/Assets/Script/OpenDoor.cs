@@ -46,16 +46,29 @@ public class OpenDoor : MonoBehaviour
                 }
             }
 
-            if (RayScript.hit.transform.tag == "Cabinet")
+            if (RayScript.hit.transform.tag == "Cabinet01")
             {
                 
                 if (Opened == true)
                 {
-                    OpenDoorAnim.SetTrigger("CabinetOpen");
+                    OpenDoorAnim.SetTrigger("CabinetDoorOpen01");
                 }
                 else
                 {
-                    OpenDoorAnim.SetTrigger("CabinetClose");
+                    OpenDoorAnim.SetTrigger("CabinetDoorClose01");
+                }
+            }
+
+            if (RayScript.hit.transform.tag == "Cabinet02")
+            {
+
+                if (Opened == true)
+                {
+                    OpenDoorAnim.SetTrigger("CabinetDoorOpen02");
+                }
+                else
+                {
+                    OpenDoorAnim.SetTrigger("CabinetDoorClose02");
                 }
             }
 
@@ -100,16 +113,28 @@ public class OpenDoor : MonoBehaviour
 
 
 
-            if (RayScript.hit.transform.tag == "WardrobeDoor")
+            if (RayScript.hit.transform.tag == "WardrobeDoor01")
             {
                 
                 if (Opened == true)
                 {
-                    OpenDoorAnim.SetTrigger("WardrobeOpen");
+                    OpenDoorAnim.SetTrigger("WardrobeDoorOpen01");
                 }
                 else
                 {
-                    OpenDoorAnim.SetTrigger("WardrobeClose");
+                    OpenDoorAnim.SetTrigger("WardrobeDoorClose01");
+                }
+            }
+            if (RayScript.hit.transform.tag == "WardrobeDoor02")
+            {
+
+                if (Opened == true)
+                {
+                    OpenDoorAnim.SetTrigger("WardrobeDoorOpen02");
+                }
+                else
+                {
+                    OpenDoorAnim.SetTrigger("WardrobeDoorClose02");
                 }
             }
         }

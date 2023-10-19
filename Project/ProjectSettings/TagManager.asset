@@ -3,7 +3,15 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Cabinet01
+  - Cabinet02
+  - Drawer001
+  - Drawer002
+  - Drawer003
+  - WardrobeDoor01
+  - WardrobeDoor02
+  - Refrigerator
   layers:
   - Default
   - TransparentFX
