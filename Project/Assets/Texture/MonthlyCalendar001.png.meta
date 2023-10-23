@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: b5b992dd9f4213a44b12fc62149d52ae
+=======
+guid: 6dd5ef2801e7f3f45a70c920d8482b05
+>>>>>>> 8cd22c2 (材質變更、時鐘指針、聯絡簿更新、衣櫃門動畫)
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
