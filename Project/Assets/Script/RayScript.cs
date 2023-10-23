@@ -24,11 +24,26 @@ public class RayScript : MonoBehaviour
     {
         PressE.SetActive(false);
         DialogueBG.SetActive(false);
+
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (isTalking == true)
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
+
+
 
         ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2, 0));
         //由攝影機射到是畫面正中央的射線
@@ -65,11 +80,23 @@ public class RayScript : MonoBehaviour
 
                 }
 
+
             }
             RayOnUI();
             ClickObjectDialogueText();
+            ClickTable();
         }
     }
+
+
+    void ClickTable()
+    {
+        if(hit.collider.gameObject.name== "Table002")
+        {
+            hit.transform.SendMessage("ClickTable02", gameObject, SendMessageOptions.DontRequireReceiver);
+        }
+    }
+
 
     void RayOnUI()
     {
@@ -159,11 +186,11 @@ public class RayScript : MonoBehaviour
         }
         if (RayScript.hit.collider.gameObject == ClickObjTalk[12])
         {
-            ObjTalk.text = "普通的放大鏡，有放大字的功能";
+            ObjTalk.text = "看起來很普通的牛奶";
         }
         if (RayScript.hit.collider.gameObject == ClickObjTalk[13])
         {
-            ObjTalk.text = "看起來很普通的牛奶";
+            ObjTalk.text = "普通的筆";
         }
         if (RayScript.hit.collider.gameObject == ClickObjTalk[14])
         {
@@ -171,26 +198,23 @@ public class RayScript : MonoBehaviour
         }
         if (RayScript.hit.collider.gameObject == ClickObjTalk[15])
         {
-            ObjTalk.text = "普通的筆";
+            ObjTalk.text = "好熱好想吃";
         }
         if (RayScript.hit.collider.gameObject == ClickObjTalk[16])
         {
-            ObjTalk.text = "好熱好想吃";
+            ObjTalk.text = "不要浪費水";
         }
 
         if (RayScript.hit.collider.gameObject == ClickObjTalk[17])
         {
-            ObjTalk.text = "不要浪費水";
+            ObjTalk.text = "看起來像普通的飼料碗";
 
         }
         if (RayScript.hit.collider.gameObject == ClickObjTalk[18])
         {
             ObjTalk.text = "看起來像普通的飼料碗";
         }
-        if (RayScript.hit.collider.gameObject == ClickObjTalk[19])
-        {
-            ObjTalk.text = "看起來像普通的飼料碗";
-        }
+
 
 
 
@@ -201,4 +225,8 @@ public class RayScript : MonoBehaviour
         isTalking = false;
         DialogueBG.SetActive(false);
     }
+
+
+
+
 }
