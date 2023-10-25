@@ -1,8 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
-using UnityEngine.UI;
 
 public class RayScript : MonoBehaviour
 {
@@ -15,23 +13,23 @@ public class RayScript : MonoBehaviour
 
     public string[] Tags;
 
-    static public bool isTalking = false;
-    public GameObject[] ClickObjTalk;
-    public GameObject DialogueBG;
-    public Text ObjTalk;
     // Start is called before the first frame update
     void Start()
     {
         PressE.SetActive(false);
+<<<<<<< HEAD
         DialogueBG.SetActive(false);
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+=======
+>>>>>>> origin/main
     }
 
     // Update is called once per frame
     void Update()
     {
+<<<<<<< HEAD
         if (isTalking == true)
         {
             Cursor.lockState = CursorLockMode.None;
@@ -45,10 +43,12 @@ public class RayScript : MonoBehaviour
 
 
 
+=======
+>>>>>>> origin/main
         ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2, 0));
         //由攝影機射到是畫面正中央的射線
 
-        if (Physics.Raycast(ray, out hit, raylength) && !EventSystem.current.IsPointerOverGameObject())
+        if (Physics.Raycast(ray, out hit, raylength))
         // (射線,out 被射線打到的物件,射線長度)，out hit 意思是：把"被射線打到的物件"帶給hit
         {
             hit.transform.SendMessage("HitByRaycast", gameObject, SendMessageOptions.DontRequireReceiver);
@@ -61,12 +61,11 @@ public class RayScript : MonoBehaviour
             //當射線打到物件時會在Scene視窗畫出黃線，方便查閱
 
             //print("這個在射線名字是"+hit.transform.name);
-            //在Console視窗印出被射線打到的物件名稱，方便查閱
-
-
-
+            //print("這個Tag是"+hit.transform.tag);
+            //在Console視窗印出被射線打到的物件名稱，方便查閱                       
         }
 
+<<<<<<< HEAD
         if (Input.GetMouseButton(0))
         {
             for (int i = 0; i < ClickObjTalk.Length; i++)
@@ -107,6 +106,8 @@ public class RayScript : MonoBehaviour
             Debug.Log("點擊");
 
         }
+=======
+>>>>>>> origin/main
     }
 
     void HitByRaycast2()
@@ -116,7 +117,7 @@ public class RayScript : MonoBehaviour
         {
             if (string.Equals(tag, hit.transform.tag))
             {
-
+                
                 PressE.SetActive(true);
                 break;
 
@@ -133,6 +134,7 @@ public class RayScript : MonoBehaviour
 
     }
 
+<<<<<<< HEAD
     void ClickObjectDialogueText()
     {
         if (RayScript.hit.collider.gameObject == ClickObjTalk[0])
@@ -229,4 +231,6 @@ public class RayScript : MonoBehaviour
 
 
 
+=======
+>>>>>>> origin/main
 }

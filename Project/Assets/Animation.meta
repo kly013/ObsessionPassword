@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 3cb8933f4160afb4dbddd8afb865d79d
+=======
+guid: 63ab5d00b42f99b449e7d58c9c077e44
+>>>>>>> 8cd22c2 (材質變更、時鐘指針、聯絡簿更新、衣櫃門動畫)
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

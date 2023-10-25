@@ -484,7 +484,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &326147536
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -617,28 +617,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ac859e28649a03499b3871149d24efa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DialogueBG: {fileID: 1719991249}
-  ClickObjTalk:
-  - {fileID: 2142287879186584027}
-  - {fileID: 5064294197163286137}
-  - {fileID: 4704651247565858015}
-  - {fileID: 9171234490564117950}
-  - {fileID: 637392533302878743}
-  - {fileID: 1138316981807181814}
-  - {fileID: 8273746534573219699}
-  - {fileID: 6074051734179708648}
-  - {fileID: 2109688000}
-  - {fileID: 504754684172341314}
-  - {fileID: 839288155}
-  - {fileID: 8507420103855805258}
-  - {fileID: 2931011616045252251}
-  - {fileID: 968867236}
-  - {fileID: 3871202421601033040}
-  - {fileID: 5707119226592973234}
-  - {fileID: 535788154}
-  - {fileID: 2529356067705480514}
-  - {fileID: 8404859556173457111}
-  - {fileID: 1114743187392331557}
+  objectCanvas: {fileID: 0}
+  spaceCanvas: {fileID: 0}
+  objectImg: {fileID: 0}
+  objectText: {fileID: 0}
+  ClickObjTalk: {fileID: 0}
   ObjTalk: {fileID: 691650609}
 --- !u!1 &539992076
 GameObject:
@@ -880,6 +863,7 @@ MonoBehaviour:
   - Drawer003
   - WardrobeDoor01
   - WardrobeDoor02
+<<<<<<< HEAD
   ClickObjTalk:
   - {fileID: 2142287879186584027}
   - {fileID: 5064294197163286137}
@@ -902,6 +886,8 @@ MonoBehaviour:
   - {fileID: 1114743187392331557}
   DialogueBG: {fileID: 1719991249}
   ObjTalk: {fileID: 691650609}
+=======
+>>>>>>> origin/main
 --- !u!114 &647464555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1043,28 +1029,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ac859e28649a03499b3871149d24efa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DialogueBG: {fileID: 1719991249}
-  ClickObjTalk:
-  - {fileID: 2142287879186584027}
-  - {fileID: 5064294197163286137}
-  - {fileID: 4704651247565858015}
-  - {fileID: 9171234490564117950}
-  - {fileID: 637392533302878743}
-  - {fileID: 1138316981807181814}
-  - {fileID: 8273746534573219699}
-  - {fileID: 6074051734179708648}
-  - {fileID: 2109688000}
-  - {fileID: 504754684172341314}
-  - {fileID: 839288155}
-  - {fileID: 8507420103855805258}
-  - {fileID: 2931011616045252251}
-  - {fileID: 968867236}
-  - {fileID: 3871202421601033040}
-  - {fileID: 5707119226592973234}
-  - {fileID: 535788154}
-  - {fileID: 2529356067705480514}
-  - {fileID: 8404859556173457111}
-  - {fileID: 1114743187392331557}
+  objectCanvas: {fileID: 0}
+  spaceCanvas: {fileID: 0}
+  objectImg: {fileID: 0}
+  objectText: {fileID: 0}
+  ClickObjTalk: {fileID: 0}
   ObjTalk: {fileID: 691650609}
 --- !u!1 &882682484
 GameObject:
@@ -1226,28 +1195,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ac859e28649a03499b3871149d24efa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DialogueBG: {fileID: 1719991249}
-  ClickObjTalk:
-  - {fileID: 2142287879186584027}
-  - {fileID: 5064294197163286137}
-  - {fileID: 4704651247565858015}
-  - {fileID: 9171234490564117950}
-  - {fileID: 637392533302878743}
-  - {fileID: 1138316981807181814}
-  - {fileID: 8273746534573219699}
-  - {fileID: 6074051734179708648}
-  - {fileID: 2109688000}
-  - {fileID: 504754684172341314}
-  - {fileID: 839288155}
-  - {fileID: 8507420103855805258}
-  - {fileID: 2931011616045252251}
-  - {fileID: 968867236}
-  - {fileID: 3871202421601033040}
-  - {fileID: 5707119226592973234}
-  - {fileID: 535788154}
-  - {fileID: 2529356067705480514}
-  - {fileID: 8404859556173457111}
-  - {fileID: 1114743187392331557}
+  objectCanvas: {fileID: 0}
+  spaceCanvas: {fileID: 0}
+  objectImg: {fileID: 0}
+  objectText: {fileID: 0}
+  ClickObjTalk: {fileID: 0}
   ObjTalk: {fileID: 691650609}
 --- !u!1 &1051214726
 GameObject:
@@ -1266,7 +1218,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1051214727
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1356,8 +1308,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ac859e28649a03499b3871149d24efa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DialogueBG: {fileID: 0}
-  ClickObjTalk: []
+  objectCanvas: {fileID: 0}
+  spaceCanvas: {fileID: 0}
+  objectImg: {fileID: 0}
+  objectText: {fileID: 0}
+  ClickObjTalk: {fileID: 0}
   ObjTalk: {fileID: 0}
 --- !u!65 &1467102097
 BoxCollider:
@@ -1454,7 +1409,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1470677870
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4293,8 +4248,6 @@ Cloth:
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 0.2
-    collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
@@ -4313,37 +4266,19 @@ Cloth:
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 0
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 0.2
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 0
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 0.2
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 0
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 0
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 0.2
+  - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 0.2
+  - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 0
+  - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 0
+  - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 0
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 0
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 0.2
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 0
+  - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
@@ -4389,11 +4324,7 @@ Cloth:
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 0
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 0.2
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 0.2
+  - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
@@ -4401,25 +4332,7 @@ Cloth:
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 0.2
-    collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 0.2
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 0.2
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 0.2
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 0.2
-    collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 0.2
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
@@ -4431,7 +4344,49 @@ Cloth:
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 0.2
+  - maxDistance: 3.4028235e+38
+    collisionSphereDistance: 3.4028235e+38
+  - maxDistance: 3.4028235e+38
+    collisionSphereDistance: 3.4028235e+38
+  - maxDistance: 3.4028235e+38
+    collisionSphereDistance: 3.4028235e+38
+  - maxDistance: 3.4028235e+38
+    collisionSphereDistance: 3.4028235e+38
+  - maxDistance: 3.4028235e+38
+    collisionSphereDistance: 3.4028235e+38
+  - maxDistance: 3.4028235e+38
+    collisionSphereDistance: 3.4028235e+38
+  - maxDistance: 3.4028235e+38
+    collisionSphereDistance: 3.4028235e+38
+  - maxDistance: 3.4028235e+38
+    collisionSphereDistance: 3.4028235e+38
+  - maxDistance: 3.4028235e+38
+    collisionSphereDistance: 3.4028235e+38
+  - maxDistance: 3.4028235e+38
+    collisionSphereDistance: 3.4028235e+38
+  - maxDistance: 3.4028235e+38
+    collisionSphereDistance: 3.4028235e+38
+  - maxDistance: 3.4028235e+38
+    collisionSphereDistance: 3.4028235e+38
+  - maxDistance: 3.4028235e+38
+    collisionSphereDistance: 3.4028235e+38
+  - maxDistance: 3.4028235e+38
+    collisionSphereDistance: 3.4028235e+38
+  - maxDistance: 3.4028235e+38
+    collisionSphereDistance: 3.4028235e+38
+  - maxDistance: 3.4028235e+38
+    collisionSphereDistance: 3.4028235e+38
+  - maxDistance: 3.4028235e+38
+    collisionSphereDistance: 3.4028235e+38
+  - maxDistance: 3.4028235e+38
+    collisionSphereDistance: 3.4028235e+38
+  - maxDistance: 3.4028235e+38
+    collisionSphereDistance: 3.4028235e+38
+  - maxDistance: 3.4028235e+38
+    collisionSphereDistance: 3.4028235e+38
+  - maxDistance: 3.4028235e+38
+    collisionSphereDistance: 3.4028235e+38
+  - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
@@ -4471,7 +4426,7 @@ Cloth:
   m_SphereColliders: []
   m_SelfCollisionDistance: 0
   m_SelfCollisionStiffness: 0.2
-  m_SelfAndInterCollisionIndices: 740000007a000000
+  m_SelfAndInterCollisionIndices: 
   m_VirtualParticleWeights:
   - {x: 0.33333334, y: 0.33333334, z: 0.33333334}
   - {x: 0.6666667, y: 0.16666667, z: 0.16666667}
@@ -4501,13 +4456,13 @@ Cloth:
   m_SolverFrequency: 120
   m_SleepThreshold: 0.1
   m_Coefficients:
-  - maxDistance: 0
+  - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 0
+  - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
@@ -4531,11 +4486,11 @@ Cloth:
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 0
+  - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 0
+  - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
@@ -4613,7 +4568,7 @@ Cloth:
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 0
+  - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
@@ -4627,7 +4582,7 @@ Cloth:
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 0
+  - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
@@ -4639,15 +4594,15 @@ Cloth:
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 0
+  - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 0
+  - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 0
+  - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
@@ -4695,11 +4650,11 @@ Cloth:
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 0
+  - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 0
+  - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 0
+  - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
   m_CapsuleColliders: []
   m_SphereColliders: []
@@ -4787,13 +4742,13 @@ Cloth:
   m_SolverFrequency: 120
   m_SleepThreshold: 0.1
   m_Coefficients:
-  - maxDistance: 0
+  - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 0
+  - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
@@ -4817,11 +4772,11 @@ Cloth:
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 0
+  - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 0
+  - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
@@ -4899,7 +4854,7 @@ Cloth:
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 0
+  - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
@@ -4913,7 +4868,7 @@ Cloth:
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 0
+  - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
@@ -4925,15 +4880,15 @@ Cloth:
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 0
+  - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 0
+  - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 0
+  - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
@@ -4981,11 +4936,11 @@ Cloth:
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 0
+  - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 0
+  - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 0
+  - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
   m_CapsuleColliders: []
   m_SphereColliders: []
@@ -5081,7 +5036,7 @@ Cloth:
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 0
+  - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
@@ -5103,7 +5058,7 @@ Cloth:
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 0
+  - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
@@ -5197,9 +5152,9 @@ Cloth:
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 0
+  - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 0
+  - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
@@ -5211,7 +5166,7 @@ Cloth:
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 0
+  - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
@@ -5269,9 +5224,9 @@ Cloth:
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 0
+  - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 0
+  - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
   m_CapsuleColliders: []
   m_SphereColliders: []
@@ -5423,13 +5378,13 @@ Cloth:
   m_SolverFrequency: 120
   m_SleepThreshold: 0.1
   m_Coefficients:
-  - maxDistance: 0
+  - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 0
+  - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
@@ -5453,11 +5408,11 @@ Cloth:
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 0
+  - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 0
+  - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
@@ -5535,7 +5490,7 @@ Cloth:
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 0
+  - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
@@ -5549,7 +5504,7 @@ Cloth:
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 0
+  - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
@@ -5561,15 +5516,15 @@ Cloth:
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 0
+  - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 0
+  - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 0
+  - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
@@ -5617,11 +5572,11 @@ Cloth:
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 0
+  - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 0
+  - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 0
+  - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
   m_CapsuleColliders: []
   m_SphereColliders: []
@@ -5709,13 +5664,13 @@ Cloth:
   m_SolverFrequency: 120
   m_SleepThreshold: 0.1
   m_Coefficients:
-  - maxDistance: 0
+  - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 0
+  - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
@@ -5739,11 +5694,11 @@ Cloth:
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 0
+  - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 0
+  - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
@@ -5821,7 +5776,7 @@ Cloth:
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 0
+  - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
@@ -5835,7 +5790,7 @@ Cloth:
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 0
+  - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
@@ -5847,15 +5802,15 @@ Cloth:
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 0
+  - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 0
+  - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 0
+  - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
@@ -5903,11 +5858,11 @@ Cloth:
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 0
+  - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 0
+  - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 0
+  - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
   m_CapsuleColliders: []
   m_SphereColliders: []
@@ -6441,28 +6396,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ac859e28649a03499b3871149d24efa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DialogueBG: {fileID: 1719991249}
-  ClickObjTalk:
-  - {fileID: 2142287879186584027}
-  - {fileID: 5064294197163286137}
-  - {fileID: 4704651247565858015}
-  - {fileID: 9171234490564117950}
-  - {fileID: 637392533302878743}
-  - {fileID: 1138316981807181814}
-  - {fileID: 8273746534573219699}
-  - {fileID: 6074051734179708648}
-  - {fileID: 2109688000}
-  - {fileID: 504754684172341314}
-  - {fileID: 839288155}
-  - {fileID: 8507420103855805258}
-  - {fileID: 2931011616045252251}
-  - {fileID: 968867236}
-  - {fileID: 3871202421601033040}
-  - {fileID: 5707119226592973234}
-  - {fileID: 535788154}
-  - {fileID: 2529356067705480514}
-  - {fileID: 8404859556173457111}
-  - {fileID: 1114743187392331557}
+  objectCanvas: {fileID: 0}
+  spaceCanvas: {fileID: 0}
+  objectImg: {fileID: 0}
+  objectText: {fileID: 0}
+  ClickObjTalk: {fileID: 0}
   ObjTalk: {fileID: 691650609}
 --- !u!4 &8280527131054627
 Transform:
@@ -7500,28 +7438,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ac859e28649a03499b3871149d24efa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DialogueBG: {fileID: 1719991249}
-  ClickObjTalk:
-  - {fileID: 2142287879186584027}
-  - {fileID: 5064294197163286137}
-  - {fileID: 4704651247565858015}
-  - {fileID: 9171234490564117950}
-  - {fileID: 637392533302878743}
-  - {fileID: 1138316981807181814}
-  - {fileID: 8273746534573219699}
-  - {fileID: 6074051734179708648}
-  - {fileID: 2109688000}
-  - {fileID: 504754684172341314}
-  - {fileID: 839288155}
-  - {fileID: 8507420103855805258}
-  - {fileID: 2931011616045252251}
-  - {fileID: 968867236}
-  - {fileID: 3871202421601033040}
-  - {fileID: 5707119226592973234}
-  - {fileID: 535788154}
-  - {fileID: 2529356067705480514}
-  - {fileID: 8404859556173457111}
-  - {fileID: 1114743187392331557}
+  objectCanvas: {fileID: 0}
+  spaceCanvas: {fileID: 0}
+  objectImg: {fileID: 0}
+  objectText: {fileID: 0}
+  ClickObjTalk: {fileID: 0}
   ObjTalk: {fileID: 691650609}
 --- !u!4 &509098256125225569
 Transform:
@@ -9103,28 +9024,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ac859e28649a03499b3871149d24efa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DialogueBG: {fileID: 1719991249}
-  ClickObjTalk:
-  - {fileID: 2142287879186584027}
-  - {fileID: 5064294197163286137}
-  - {fileID: 4704651247565858015}
-  - {fileID: 9171234490564117950}
-  - {fileID: 637392533302878743}
-  - {fileID: 1138316981807181814}
-  - {fileID: 8273746534573219699}
-  - {fileID: 6074051734179708648}
-  - {fileID: 2109688000}
-  - {fileID: 504754684172341314}
-  - {fileID: 839288155}
-  - {fileID: 8507420103855805258}
-  - {fileID: 2931011616045252251}
-  - {fileID: 968867236}
-  - {fileID: 3871202421601033040}
-  - {fileID: 5707119226592973234}
-  - {fileID: 535788154}
-  - {fileID: 2529356067705480514}
-  - {fileID: 8404859556173457111}
-  - {fileID: 1114743187392331557}
+  objectCanvas: {fileID: 0}
+  spaceCanvas: {fileID: 0}
+  objectImg: {fileID: 0}
+  objectText: {fileID: 0}
+  ClickObjTalk: {fileID: 0}
   ObjTalk: {fileID: 691650609}
 --- !u!1 &1138316981807181814
 GameObject:
@@ -9158,28 +9062,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ac859e28649a03499b3871149d24efa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DialogueBG: {fileID: 1719991249}
-  ClickObjTalk:
-  - {fileID: 2142287879186584027}
-  - {fileID: 5064294197163286137}
-  - {fileID: 4704651247565858015}
-  - {fileID: 9171234490564117950}
-  - {fileID: 637392533302878743}
-  - {fileID: 1138316981807181814}
-  - {fileID: 8273746534573219699}
-  - {fileID: 6074051734179708648}
-  - {fileID: 2109688000}
-  - {fileID: 504754684172341314}
-  - {fileID: 839288155}
-  - {fileID: 8507420103855805258}
-  - {fileID: 2931011616045252251}
-  - {fileID: 968867236}
-  - {fileID: 3871202421601033040}
-  - {fileID: 5707119226592973234}
-  - {fileID: 535788154}
-  - {fileID: 2529356067705480514}
-  - {fileID: 8404859556173457111}
-  - {fileID: 1114743187392331557}
+  objectCanvas: {fileID: 0}
+  spaceCanvas: {fileID: 0}
+  objectImg: {fileID: 0}
+  objectText: {fileID: 0}
+  ClickObjTalk: {fileID: 0}
   ObjTalk: {fileID: 691650609}
 --- !u!4 &1147236166754315533
 Transform:
@@ -10667,7 +10554,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -4677286853486637302, guid: 70dec6cc2be635148b5e6248c8d07f15, type: 3}
+  - {fileID: 2100000, guid: 3648208eac350c64fb1c899f9a5a2ff7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -11263,28 +11150,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ac859e28649a03499b3871149d24efa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DialogueBG: {fileID: 1719991249}
-  ClickObjTalk:
-  - {fileID: 2142287879186584027}
-  - {fileID: 5064294197163286137}
-  - {fileID: 4704651247565858015}
-  - {fileID: 9171234490564117950}
-  - {fileID: 637392533302878743}
-  - {fileID: 1138316981807181814}
-  - {fileID: 8273746534573219699}
-  - {fileID: 6074051734179708648}
-  - {fileID: 2109688000}
-  - {fileID: 504754684172341314}
-  - {fileID: 839288155}
-  - {fileID: 8507420103855805258}
-  - {fileID: 2931011616045252251}
-  - {fileID: 968867236}
-  - {fileID: 3871202421601033040}
-  - {fileID: 5707119226592973234}
-  - {fileID: 535788154}
-  - {fileID: 2529356067705480514}
-  - {fileID: 8404859556173457111}
-  - {fileID: 1114743187392331557}
+  objectCanvas: {fileID: 0}
+  spaceCanvas: {fileID: 0}
+  objectImg: {fileID: 0}
+  objectText: {fileID: 0}
+  ClickObjTalk: {fileID: 0}
   ObjTalk: {fileID: 691650609}
 --- !u!33 &2143152547989108050
 MeshFilter:
@@ -12066,28 +11936,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ac859e28649a03499b3871149d24efa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DialogueBG: {fileID: 1719991249}
-  ClickObjTalk:
-  - {fileID: 2142287879186584027}
-  - {fileID: 5064294197163286137}
-  - {fileID: 4704651247565858015}
-  - {fileID: 9171234490564117950}
-  - {fileID: 637392533302878743}
-  - {fileID: 1138316981807181814}
-  - {fileID: 8273746534573219699}
-  - {fileID: 6074051734179708648}
-  - {fileID: 2109688000}
-  - {fileID: 504754684172341314}
-  - {fileID: 839288155}
-  - {fileID: 8507420103855805258}
-  - {fileID: 2931011616045252251}
-  - {fileID: 968867236}
-  - {fileID: 3871202421601033040}
-  - {fileID: 5707119226592973234}
-  - {fileID: 535788154}
-  - {fileID: 2529356067705480514}
-  - {fileID: 8404859556173457111}
-  - {fileID: 1114743187392331557}
+  objectCanvas: {fileID: 0}
+  spaceCanvas: {fileID: 0}
+  objectImg: {fileID: 0}
+  objectText: {fileID: 0}
+  ClickObjTalk: {fileID: 0}
   ObjTalk: {fileID: 691650609}
 --- !u!65 &2529356067705480516
 BoxCollider:
@@ -12735,6 +12588,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 64
   m_IsActive: 1
+<<<<<<< HEAD
+=======
+--- !u!114 &2931011616045252252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2931011616045252251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ac859e28649a03499b3871149d24efa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectCanvas: {fileID: 0}
+  spaceCanvas: {fileID: 0}
+  objectImg: {fileID: 0}
+  objectText: {fileID: 0}
+  ClickObjTalk: {fileID: 0}
+  ObjTalk: {fileID: 691650609}
+>>>>>>> origin/main
 --- !u!4 &2932205960601078530
 Transform:
   m_ObjectHideFlags: 0
@@ -14807,28 +14681,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ac859e28649a03499b3871149d24efa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DialogueBG: {fileID: 1719991249}
-  ClickObjTalk:
-  - {fileID: 2142287879186584027}
-  - {fileID: 5064294197163286137}
-  - {fileID: 4704651247565858015}
-  - {fileID: 9171234490564117950}
-  - {fileID: 637392533302878743}
-  - {fileID: 1138316981807181814}
-  - {fileID: 8273746534573219699}
-  - {fileID: 6074051734179708648}
-  - {fileID: 2109688000}
-  - {fileID: 504754684172341314}
-  - {fileID: 839288155}
-  - {fileID: 8507420103855805258}
-  - {fileID: 2931011616045252251}
-  - {fileID: 968867236}
-  - {fileID: 3871202421601033040}
-  - {fileID: 5707119226592973234}
-  - {fileID: 535788154}
-  - {fileID: 2529356067705480514}
-  - {fileID: 8404859556173457111}
-  - {fileID: 1114743187392331557}
+  objectCanvas: {fileID: 0}
+  spaceCanvas: {fileID: 0}
+  objectImg: {fileID: 0}
+  objectText: {fileID: 0}
+  ClickObjTalk: {fileID: 0}
   ObjTalk: {fileID: 691650609}
 --- !u!1 &3873957063093382838
 GameObject:
@@ -17280,28 +17137,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ac859e28649a03499b3871149d24efa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DialogueBG: {fileID: 1719991249}
-  ClickObjTalk:
-  - {fileID: 2142287879186584027}
-  - {fileID: 5064294197163286137}
-  - {fileID: 4704651247565858015}
-  - {fileID: 9171234490564117950}
-  - {fileID: 637392533302878743}
-  - {fileID: 1138316981807181814}
-  - {fileID: 8273746534573219699}
-  - {fileID: 6074051734179708648}
-  - {fileID: 2109688000}
-  - {fileID: 504754684172341314}
-  - {fileID: 839288155}
-  - {fileID: 8507420103855805258}
-  - {fileID: 2931011616045252251}
-  - {fileID: 968867236}
-  - {fileID: 3871202421601033040}
-  - {fileID: 5707119226592973234}
-  - {fileID: 535788154}
-  - {fileID: 2529356067705480514}
-  - {fileID: 8404859556173457111}
-  - {fileID: 1114743187392331557}
+  objectCanvas: {fileID: 0}
+  spaceCanvas: {fileID: 0}
+  objectImg: {fileID: 0}
+  objectText: {fileID: 0}
+  ClickObjTalk: {fileID: 0}
   ObjTalk: {fileID: 691650609}
 --- !u!33 &5070363833192632540
 MeshFilter:
@@ -18322,28 +18162,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ac859e28649a03499b3871149d24efa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DialogueBG: {fileID: 1719991249}
-  ClickObjTalk:
-  - {fileID: 2142287879186584027}
-  - {fileID: 5064294197163286137}
-  - {fileID: 4704651247565858015}
-  - {fileID: 9171234490564117950}
-  - {fileID: 637392533302878743}
-  - {fileID: 1138316981807181814}
-  - {fileID: 8273746534573219699}
-  - {fileID: 6074051734179708648}
-  - {fileID: 2109688000}
-  - {fileID: 504754684172341314}
-  - {fileID: 839288155}
-  - {fileID: 8507420103855805258}
-  - {fileID: 2931011616045252251}
-  - {fileID: 968867236}
-  - {fileID: 3871202421601033040}
-  - {fileID: 5707119226592973234}
-  - {fileID: 535788154}
-  - {fileID: 2529356067705480514}
-  - {fileID: 8404859556173457111}
-  - {fileID: 1114743187392331557}
+  objectCanvas: {fileID: 0}
+  spaceCanvas: {fileID: 0}
+  objectImg: {fileID: 0}
+  objectText: {fileID: 0}
+  ClickObjTalk: {fileID: 0}
   ObjTalk: {fileID: 691650609}
 --- !u!1 &5726203016256741196
 GameObject:
@@ -22842,28 +22665,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ac859e28649a03499b3871149d24efa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DialogueBG: {fileID: 1719991249}
-  ClickObjTalk:
-  - {fileID: 2142287879186584027}
-  - {fileID: 5064294197163286137}
-  - {fileID: 4704651247565858015}
-  - {fileID: 9171234490564117950}
-  - {fileID: 637392533302878743}
-  - {fileID: 1138316981807181814}
-  - {fileID: 8273746534573219699}
-  - {fileID: 6074051734179708648}
-  - {fileID: 2109688000}
-  - {fileID: 504754684172341314}
-  - {fileID: 839288155}
-  - {fileID: 8507420103855805258}
-  - {fileID: 2931011616045252251}
-  - {fileID: 968867236}
-  - {fileID: 3871202421601033040}
-  - {fileID: 5707119226592973234}
-  - {fileID: 535788154}
-  - {fileID: 2529356067705480514}
-  - {fileID: 8404859556173457111}
-  - {fileID: 1114743187392331557}
+  objectCanvas: {fileID: 0}
+  spaceCanvas: {fileID: 0}
+  objectImg: {fileID: 0}
+  objectText: {fileID: 0}
+  ClickObjTalk: {fileID: 0}
   ObjTalk: {fileID: 691650609}
 --- !u!4 &8275505638931242033
 Transform:
@@ -23107,28 +22913,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ac859e28649a03499b3871149d24efa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DialogueBG: {fileID: 1719991249}
-  ClickObjTalk:
-  - {fileID: 2142287879186584027}
-  - {fileID: 5064294197163286137}
-  - {fileID: 4704651247565858015}
-  - {fileID: 9171234490564117950}
-  - {fileID: 637392533302878743}
-  - {fileID: 1138316981807181814}
-  - {fileID: 8273746534573219699}
-  - {fileID: 6074051734179708648}
-  - {fileID: 2109688000}
-  - {fileID: 504754684172341314}
-  - {fileID: 839288155}
-  - {fileID: 8507420103855805258}
-  - {fileID: 2931011616045252251}
-  - {fileID: 968867236}
-  - {fileID: 3871202421601033040}
-  - {fileID: 5707119226592973234}
-  - {fileID: 535788154}
-  - {fileID: 2529356067705480514}
-  - {fileID: 8404859556173457111}
-  - {fileID: 1114743187392331557}
+  objectCanvas: {fileID: 0}
+  spaceCanvas: {fileID: 0}
+  objectImg: {fileID: 0}
+  objectText: {fileID: 0}
+  ClickObjTalk: {fileID: 0}
   ObjTalk: {fileID: 691650609}
 --- !u!33 &8408471860257341542
 MeshFilter:
@@ -23421,28 +23210,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ac859e28649a03499b3871149d24efa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DialogueBG: {fileID: 1719991249}
-  ClickObjTalk:
-  - {fileID: 2142287879186584027}
-  - {fileID: 5064294197163286137}
-  - {fileID: 4704651247565858015}
-  - {fileID: 9171234490564117950}
-  - {fileID: 637392533302878743}
-  - {fileID: 1138316981807181814}
-  - {fileID: 8273746534573219699}
-  - {fileID: 6074051734179708648}
-  - {fileID: 2109688000}
-  - {fileID: 504754684172341314}
-  - {fileID: 839288155}
-  - {fileID: 8507420103855805258}
-  - {fileID: 2931011616045252251}
-  - {fileID: 968867236}
-  - {fileID: 3871202421601033040}
-  - {fileID: 5707119226592973234}
-  - {fileID: 535788154}
-  - {fileID: 2529356067705480514}
-  - {fileID: 8404859556173457111}
-  - {fileID: 1114743187392331557}
+  objectCanvas: {fileID: 0}
+  spaceCanvas: {fileID: 0}
+  objectImg: {fileID: 0}
+  objectText: {fileID: 0}
+  ClickObjTalk: {fileID: 0}
   ObjTalk: {fileID: 691650609}
 --- !u!33 &8518219866468018077
 MeshFilter:

@@ -12,7 +12,6 @@ TagManager:
   - WardrobeDoor01
   - WardrobeDoor02
   - Refrigerator
-  - cube
   layers:
   - Default
   - TransparentFX

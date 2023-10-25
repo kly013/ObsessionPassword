@@ -8,8 +8,6 @@ public class PlayerControl : MonoBehaviour
     public float rotatSpeed;
     public float smoothSpeed;
 
-    
-
     float xRotation = 0;
     float yRotation = 0;
 
@@ -51,24 +49,9 @@ public class PlayerControl : MonoBehaviour
             //transform.rotation = Quaternion.Euler(0, yRotation, 0f);
             //transform.rotation = Quaternion.Euler(Vector3.Lerp(roat, new Vector3(0, yRotation, 0f), smoothSpeed));
         }
-
-        if (RayScript.isTalking == true)
-        {
-            moveSpeed = 0;
-            rotatSpeed = 0;
-            
-        }
-        else
-        {
-            moveSpeed = 1;
-            rotatSpeed= 100;
-        }
-
     }
 
-
-
-   void Move(float speed)
+    void Move(float speed)
     {
         // «e
         if (Input.GetKey(KeyCode.W))
