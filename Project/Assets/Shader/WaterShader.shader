@@ -45,13 +45,10 @@ Shader "Custom/WaterShader"
 
         #pragma target 3.0
 
-        sampler2D _MainTex;
-
         sampler2D_float _CameraDepthTexture;
 
         struct Input
         {
-            float2 uv_MainTex;
             float4 proj;
             float2 uv_NormalTex;
         };
@@ -103,4 +100,5 @@ Shader "Custom/WaterShader"
         ENDCG
     }
     FallBack "Diffuse"
+
 }
