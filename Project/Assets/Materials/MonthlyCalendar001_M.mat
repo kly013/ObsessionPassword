@@ -40,11 +40,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-<<<<<<< HEAD
-        m_Texture: {fileID: 2800000, guid: b5b992dd9f4213a44b12fc62149d52ae, type: 3}
-=======
-        m_Texture: {fileID: 2800000, guid: 6dd5ef2801e7f3f45a70c920d8482b05, type: 3}
->>>>>>> 8cd22c2 (材質變更、時鐘指針、聯絡簿更新、衣櫃門動畫)
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
