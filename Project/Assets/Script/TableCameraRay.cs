@@ -43,6 +43,10 @@ public class TableCameraRay : MonoBehaviour
             CursorVisible();
         }
 
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Camera01hit.transform.SendMessage("BackToMainCamera", gameObject, SendMessageOptions.DontRequireReceiver);
+        }
 
     }
 

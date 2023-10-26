@@ -84,19 +84,26 @@ public class RayScript : MonoBehaviour
             }
             RayOnUI();
             ClickObjectDialogueText();
-            ClickTable();
+            ClickBedRoomTable();
         }
     }
 
 
-    void ClickTable()
+    void ClickBedRoomTable()
     {
         if(hit.collider.gameObject.name== "Table002")
         {
-            hit.transform.SendMessage("ClickTable02", gameObject, SendMessageOptions.DontRequireReceiver);
+            hit.transform.SendMessage("ClickBedRoomTable", gameObject, SendMessageOptions.DontRequireReceiver);
         }
     }
 
+    void ClickShelf02()
+    {
+        if (hit.collider.gameObject.name == "Shelf02")
+        {
+            hit.transform.SendMessage("ClickShelf", gameObject, SendMessageOptions.DontRequireReceiver);
+        }
+    }
 
     void RayOnUI()
     {

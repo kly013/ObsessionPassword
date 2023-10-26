@@ -6,6 +6,7 @@ public class CameraControl : MonoBehaviour
 {
     public GameObject CameraMain;
     public GameObject Camera01;
+    public GameObject Camera02;
     public GameObject Cursor;
 
     static public bool CursorControl;
@@ -18,6 +19,7 @@ public class CameraControl : MonoBehaviour
     private void Awake()
     {
         Camera01.SetActive(false);
+        Camera02.SetActive(false);
     }
 
 
@@ -34,12 +36,29 @@ public class CameraControl : MonoBehaviour
         //}
     }
 
-    void ClickTable02()
+    void ClickBedRoomTable()
     {
         CursorControl = true;
         Cursor.SetActive(false);
         Camera01.SetActive(true);
         CameraMain.SetActive(false);
         GameObject.Find("Player").GetComponent<RayScript>().enabled = false;
+    }
+
+    void ClickShelf()
+    {
+        CursorControl = true;
+        Cursor.SetActive(false);
+        Camera02.SetActive(true);
+        CameraMain.SetActive(false);
+        GameObject.Find("Player").GetComponent<RayScript>().enabled = false;
+    }
+
+    void BackToMainCamera()
+    {
+        CameraMain.SetActive(true);
+        Camera01.SetActive(false);
+        Camera02.SetActive(false);
+        GameObject.Find("Player").GetComponent<RayScript>().enabled = true;
     }
 }
