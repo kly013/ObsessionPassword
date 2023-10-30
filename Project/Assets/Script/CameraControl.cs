@@ -56,6 +56,7 @@ public class CameraControl : MonoBehaviour
 
     void BackToMainCamera()
     {
+        Cursor.SetActive(true);
         CameraMain.SetActive(true);
         Camera01.SetActive(false);
         Camera02.SetActive(false);

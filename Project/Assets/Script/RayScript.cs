@@ -85,6 +85,7 @@ public class RayScript : MonoBehaviour
             RayOnUI();
             ClickObjectDialogueText();
             ClickBedRoomTable();
+            ClickShelf02();
         }
     }
 
@@ -93,13 +94,14 @@ public class RayScript : MonoBehaviour
     {
         if(hit.collider.gameObject.name== "Table002")
         {
+            
             hit.transform.SendMessage("ClickBedRoomTable", gameObject, SendMessageOptions.DontRequireReceiver);
         }
     }
 
     void ClickShelf02()
     {
-        if (hit.collider.gameObject.name == "Shelf02")
+        if (hit.collider.gameObject.name == "Shelf002")
         {
             hit.transform.SendMessage("ClickShelf", gameObject, SendMessageOptions.DontRequireReceiver);
         }
