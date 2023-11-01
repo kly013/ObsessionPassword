@@ -17,9 +17,10 @@ public class PlayerControl : MonoBehaviour
         float h = -Input.GetAxis("Horizontal");
         float v = -Input.GetAxis("Vertical");
 
-        transform.Translate(h * moveSpeed * Time.deltaTime, 0, v * moveSpeed * Time.deltaTime, Space.World);
-
-        //Move(moveSpeed * Time.deltaTime);
+        Vector3 moveDirection = new Vector3(h, 0, v).normalized;
+        moveDirection = transform.TransformDirection(moveDirection);
+        moveDirection = new Vector3(moveDirection.x, 0, moveDirection.z);
+        transform.Translate(moveDirection * moveSpeed * Time.deltaTime, Space.World);
 
         float mouseX = -Input.GetAxis("Mouse X") * rotatSpeed * Time.deltaTime;
         float mouseY = -Input.GetAxis("Mouse Y") * rotatSpeed * Time.deltaTime;
@@ -41,8 +42,6 @@ public class PlayerControl : MonoBehaviour
         else
         {
             Vector3 roat = new Vector3(transform.rotation.x, transform.rotation.y, transform.rotation.z);
-            //transform.rotation = Quaternion.Euler(0, yRotation, 0f);
-            //transform.rotation = Quaternion.Euler(Vector3.Lerp(roat, new Vector3(0, yRotation, 0f), smoothSpeed));
         }
 
         if (RayScript.isTalking == true)
@@ -55,35 +54,6 @@ public class PlayerControl : MonoBehaviour
         {
             moveSpeed = 1;
             rotatSpeed= 100;
-        }
-
-    }
-
-   void Move(float speed)
-    {
-        // лe
-        if (Input.GetKey(KeyCode.W))
-        {
-            transform.Translate(-transform.forward * speed, Space.World);
-            print("-forward = " + -transform.forward);
-        }
-        // лс
-        if (Input.GetKey(KeyCode.S))
-        {
-            transform.Translate(transform.forward * speed, Space.World);
-            print("forward = " + transform.forward);
-        }
-        // ек
-        if (Input.GetKey(KeyCode.A))
-        {
-            transform.Translate(transform.right * speed, Space.World);
-            print("right = " + transform.right);
-        }
-        // еk
-        if (Input.GetKey(KeyCode.D))
-        {
-            transform.Translate(-transform.right * speed, Space.World);
-            print("-right = " + -transform.right);
         }
     }
 }
