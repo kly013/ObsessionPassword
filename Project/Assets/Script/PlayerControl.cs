@@ -8,15 +8,8 @@ public class PlayerControl : MonoBehaviour
     public float rotatSpeed;
     public float smoothSpeed;
 
-    
-
     float xRotation = 0;
     float yRotation = 0;
-
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
@@ -24,7 +17,7 @@ public class PlayerControl : MonoBehaviour
         float h = -Input.GetAxis("Horizontal");
         float v = -Input.GetAxis("Vertical");
 
-        transform.Translate(h * moveSpeed * Time.deltaTime, 0, v * moveSpeed * Time.deltaTime, Space.Self);
+        transform.Translate(h * moveSpeed * Time.deltaTime, 0, v * moveSpeed * Time.deltaTime, Space.World);
 
         //Move(moveSpeed * Time.deltaTime);
 
@@ -66,29 +59,31 @@ public class PlayerControl : MonoBehaviour
 
     }
 
-
-
    void Move(float speed)
     {
         // лe
         if (Input.GetKey(KeyCode.W))
         {
             transform.Translate(-transform.forward * speed, Space.World);
+            print("-forward = " + -transform.forward);
         }
         // лс
         if (Input.GetKey(KeyCode.S))
         {
             transform.Translate(transform.forward * speed, Space.World);
+            print("forward = " + transform.forward);
         }
         // ек
         if (Input.GetKey(KeyCode.A))
         {
             transform.Translate(transform.right * speed, Space.World);
+            print("right = " + transform.right);
         }
         // еk
         if (Input.GetKey(KeyCode.D))
         {
             transform.Translate(-transform.right * speed, Space.World);
+            print("-right = " + -transform.right);
         }
     }
 }
