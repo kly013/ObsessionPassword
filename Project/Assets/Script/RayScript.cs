@@ -82,6 +82,7 @@ public class RayScript : MonoBehaviour
 
 
             }
+
             RayOnUI();
             ClickObjectDialogueText();
             ClickBedRoomTable();

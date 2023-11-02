@@ -11,10 +11,15 @@ public class Shelf02CameraRay : MonoBehaviour
     static public RaycastHit Camera02hit;
 
 
-    public float Speed = 5;
+
     public GameObject[] ShelfCameraMove;
     public GameObject ShelfCamera;
     public GameObject BackButton;
+
+
+    public GameObject CameraMain;
+    public GameObject CursorPNG;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -40,6 +45,17 @@ public class Shelf02CameraRay : MonoBehaviour
             Debug.Log("ÂIÀ»");
             ClickObjectCameraMove();
         }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            CursorPNG.SetActive(true);
+            CameraMain.SetActive(true);
+            ShelfCamera.SetActive(false);
+            ShelfCamera.transform.position = new Vector3(0.01f, -0.72f, 0.9f);
+            GameObject.Find("Player").GetComponent<RayScript>().enabled = true;
+            BackButton.SetActive(false);
+
+        }
     }
 
 
@@ -53,21 +69,58 @@ public class Shelf02CameraRay : MonoBehaviour
 
      void ClickObjectCameraMove()
     {
-        if (Camera02hit.collider.gameObject == ShelfCameraMove[0])
+        if (Camera02hit.collider.gameObject == ShelfCameraMove[0] )
         {
-            ShelfCamera.transform.position = new Vector3(0.146f, -0.518f, 1.808f);
+            ShelfCamera.transform.position = new Vector3(-0.298f, -0.521f, 1.806f);
             BackButton.SetActive(true);
         }
-        if (Camera02hit.collider.gameObject == ShelfCameraMove[1])
+        if (Camera02hit.collider.gameObject == ShelfCameraMove[1] )
+        {
+            ShelfCamera.transform.position = new Vector3(-0.298f, -0.521f, 1.806f);
+            BackButton.SetActive(true);
+        }
+        if (Camera02hit.collider.gameObject == ShelfCameraMove[2] )
+        {
+            ShelfCamera.transform.position = new Vector3(-0.298f, -0.521f, 1.806f);
+            BackButton.SetActive(true);
+        }
+        if (Camera02hit.collider.gameObject == ShelfCameraMove[3] )
+        {
+            ShelfCamera.transform.position = new Vector3(-0.298f, -0.521f, 1.806f);
+            BackButton.SetActive(true);
+        }
+        if ( Camera02hit.collider.gameObject == ShelfCameraMove[4])
+        {
+            ShelfCamera.transform.position = new Vector3(-0.298f, -0.521f, 1.806f);
+            BackButton.SetActive(true);
+        }
+
+
+
+        if (Camera02hit.collider.gameObject == ShelfCameraMove[5])
         {
             ShelfCamera.transform.position = new Vector3(0.146f, - 0.894f, 1.581f);
             BackButton.SetActive(true);
         }
-        if (Camera02hit.collider.gameObject == ShelfCameraMove[2])
+        if (Camera02hit.collider.gameObject == ShelfCameraMove[6])
         {
-            ShelfCamera.transform.position = new Vector3(-0.298f, - 0.521f, 1.806f);
+            ShelfCamera.transform.position = new Vector3(0.146f, -0.894f, 1.581f);
             BackButton.SetActive(true);
         }
+
+
+
+        if (Camera02hit.collider.gameObject == ShelfCameraMove[7])
+        {
+            ShelfCamera.transform.position = new Vector3(0.146f, -0.518f, 1.808f);
+            BackButton.SetActive(true);
+        }
+        if (Camera02hit.collider.gameObject == ShelfCameraMove[8])
+        {
+            ShelfCamera.transform.position = new Vector3(0.146f, -0.518f, 1.808f);
+            BackButton.SetActive(true);
+        }
+
     }
 
     public void BackButtonClick()

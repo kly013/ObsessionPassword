@@ -51,11 +51,11 @@ public class OpenDoor : MonoBehaviour
                 
                 if (Opened == true)
                 {
-                    OpenDoorAnim.SetTrigger("CabinetDoorOpen01");
+                    OpenDoorAnim.SetTrigger("CabinetOpen001");
                 }
                 else
                 {
-                    OpenDoorAnim.SetTrigger("CabinetDoorClose01");
+                    OpenDoorAnim.SetTrigger("CabinetClose001");
                 }
             }
 
@@ -64,11 +64,11 @@ public class OpenDoor : MonoBehaviour
 
                 if (Opened == true)
                 {
-                    OpenDoorAnim.SetTrigger("CabinetDoorOpen02");
+                    OpenDoorAnim.SetTrigger("CabinetOpen002");
                 }
                 else
                 {
-                    OpenDoorAnim.SetTrigger("CabinetDoorClose02");
+                    OpenDoorAnim.SetTrigger("CabinetClose02");
                 }
             }
 
@@ -79,11 +79,11 @@ public class OpenDoor : MonoBehaviour
                 
                 if (Opened == true)
                 {
-                    OpenDoorAnim.SetTrigger("DrawerOpen");
+                    OpenDoorAnim.SetTrigger("DrawerOpen001");
                 }
                 else
                 {
-                    OpenDoorAnim.SetTrigger("DrawerClose");
+                    OpenDoorAnim.SetTrigger("DrawerClose001");
                 }
             }
             if (RayScript.hit.transform.tag == "Drawer002")
@@ -118,11 +118,11 @@ public class OpenDoor : MonoBehaviour
                 
                 if (Opened == true)
                 {
-                    OpenDoorAnim.SetTrigger("WardrobeDoorOpen01");
+                    OpenDoorAnim.SetTrigger("WardrobeOpen001");
                 }
                 else
                 {
-                    OpenDoorAnim.SetTrigger("WardrobeDoorClose01");
+                    OpenDoorAnim.SetTrigger("WardrobeClose001");
                 }
             }
             if (RayScript.hit.transform.tag == "WardrobeDoor02")
@@ -130,11 +130,11 @@ public class OpenDoor : MonoBehaviour
 
                 if (Opened == true)
                 {
-                    OpenDoorAnim.SetTrigger("WardrobeDoorOpen02");
+                    OpenDoorAnim.SetTrigger("WardrobeOpen002");
                 }
                 else
                 {
-                    OpenDoorAnim.SetTrigger("WardrobeDoorClose02");
+                    OpenDoorAnim.SetTrigger("WardrobeClose002");
                 }
             }
         }
