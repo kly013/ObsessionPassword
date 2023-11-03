@@ -20,6 +20,8 @@ public class Shelf02CameraRay : MonoBehaviour
     public GameObject CameraMain;
     public GameObject CursorPNG;
 
+    bool isStart = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,7 +35,7 @@ public class Shelf02CameraRay : MonoBehaviour
     {
         Camera02Ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-        if (Physics.Raycast(Camera02Ray, out Camera02hit, raylength) && !EventSystem.current.IsPointerOverGameObject())
+        if (Physics.Raycast(Camera02Ray, out Camera02hit, raylength))
         {
 
             Debug.DrawLine(Camera02Ray.origin, Camera02hit.point, Color.blue);
@@ -47,12 +49,19 @@ public class Shelf02CameraRay : MonoBehaviour
         }
 
 
+        if (Input.GetMouseButtonUp(0))
+        {
+            isStart = true;
+        }
 
-       if (Input.GetMouseButton(0))
-       {
-            
-            ClickObjectCameraMove();
-       }
+        if (isStart)
+        {
+            if (Input.GetMouseButton(0))
+            {
+                ClickObjectCameraMove();
+            }
+        }
+       
 
 
 
@@ -66,7 +75,7 @@ public class Shelf02CameraRay : MonoBehaviour
             BackButton.SetActive(false);
 
         }
-        Debug.Log(ShelfCamera.transform.position);
+        // Debug.Log(ShelfCamera.transform.position);
     }
 
 
@@ -110,28 +119,36 @@ public class Shelf02CameraRay : MonoBehaviour
 
 
 
-        if (Camera02hit.collider.gameObject == ShelfCameraMove[5])
+        if (Camera02hit.collider.gameObject.name == ShelfCameraMove[5].name)
         {
             ShelfCamera.transform.position = new Vector3(0.146f, -0.518f, 1.808f);
             BackButton.SetActive(true);
+            print("a = " + Camera02hit.collider.gameObject.name);
+            print("b = " + ShelfCameraMove[5].name);
         }
-        if (Camera02hit.collider.gameObject == ShelfCameraMove[6])
+        if (Camera02hit.collider.gameObject.name == ShelfCameraMove[6].name)
         {
             ShelfCamera.transform.position = new Vector3(0.146f, -0.518f, 1.808f);
             BackButton.SetActive(true);
+            print("c = " + Camera02hit.collider.gameObject.name);
+            print("d = " + ShelfCameraMove[6].name);
         }
 
-        if (Camera02hit.collider.gameObject == ShelfCameraMove[7])
+        if (Camera02hit.collider.gameObject.name == ShelfCameraMove[7].name)
         {
             ShelfCamera.transform.position = new Vector3(0.146f, -0.894f, 1.581f);
             BackButton.SetActive(true);
+            print("e = " + Camera02hit.collider.gameObject.name);
+            print("f = " + ShelfCameraMove[7].name);
         }
-        if (Camera02hit.collider.gameObject == ShelfCameraMove[8])
+        if (Camera02hit.collider.gameObject.name == ShelfCameraMove[8].name)
         {
             ShelfCamera.transform.position = new Vector3(0.146f, -0.894f, 1.581f);
             BackButton.SetActive(true);
+            print("g = " + Camera02hit.collider.gameObject.name);
+            print("h = " + ShelfCameraMove[8].name);
         }
-
+        
 
     }
 
