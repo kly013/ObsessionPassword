@@ -8,12 +8,14 @@ public class CameraControl : MonoBehaviour
     public GameObject Camera01;
     public GameObject Camera02;
     public GameObject Cursor;
+    public GameObject BackButton;
 
     static public bool CursorControl;
     // Start is called before the first frame update
     void Start()
     {
         CameraMain.SetActive(true);
+        BackButton.SetActive(false);
     }
 
     private void Awake()
@@ -50,6 +52,8 @@ public class CameraControl : MonoBehaviour
         CursorControl = true;
         Cursor.SetActive(false);
         Camera02.SetActive(true);
+        Camera02.transform.position = new Vector3(0.01f, -0.72f, 0.9f);
+        Debug.Log(Camera02.transform.position);
         CameraMain.SetActive(false);
         GameObject.Find("Player").GetComponent<RayScript>().enabled = false;
     }

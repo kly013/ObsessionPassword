@@ -68,7 +68,7 @@ public class OpenDoor : MonoBehaviour
                 }
                 else
                 {
-                    OpenDoorAnim.SetTrigger("CabinetClose02");
+                    OpenDoorAnim.SetTrigger("CabinetClose002");
                 }
             }
 

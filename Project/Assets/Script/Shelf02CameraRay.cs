@@ -24,6 +24,8 @@ public class Shelf02CameraRay : MonoBehaviour
     void Start()
     {
         BackButton.SetActive(false);
+        
+        
     }
 
     // Update is called once per frame
@@ -31,20 +33,28 @@ public class Shelf02CameraRay : MonoBehaviour
     {
         Camera02Ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-
         if (Physics.Raycast(Camera02Ray, out Camera02hit, raylength) && !EventSystem.current.IsPointerOverGameObject())
         {
-            CursorVisible();
+
             Debug.DrawLine(Camera02Ray.origin, Camera02hit.point, Color.blue);
 
 
         }
 
-        if (Input.GetMouseButton(0))
+        if (CameraControl.CursorControl == true)
         {
-            Debug.Log("ÂIÀ»");
-            ClickObjectCameraMove();
+            CursorVisible();
         }
+
+
+
+       if (Input.GetMouseButton(0))
+       {
+            
+            ClickObjectCameraMove();
+       }
+
+
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -56,6 +66,7 @@ public class Shelf02CameraRay : MonoBehaviour
             BackButton.SetActive(false);
 
         }
+        Debug.Log(ShelfCamera.transform.position);
     }
 
 
@@ -69,57 +80,58 @@ public class Shelf02CameraRay : MonoBehaviour
 
      void ClickObjectCameraMove()
     {
-        if (Camera02hit.collider.gameObject == ShelfCameraMove[0] )
+        
+        if (Camera02hit.collider.gameObject == ShelfCameraMove[0])
         {
             ShelfCamera.transform.position = new Vector3(-0.298f, -0.521f, 1.806f);
             BackButton.SetActive(true);
         }
-        if (Camera02hit.collider.gameObject == ShelfCameraMove[1] )
+        if (Camera02hit.collider.gameObject == ShelfCameraMove[1])
         {
             ShelfCamera.transform.position = new Vector3(-0.298f, -0.521f, 1.806f);
             BackButton.SetActive(true);
         }
-        if (Camera02hit.collider.gameObject == ShelfCameraMove[2] )
+        if (Camera02hit.collider.gameObject == ShelfCameraMove[2])
         {
             ShelfCamera.transform.position = new Vector3(-0.298f, -0.521f, 1.806f);
             BackButton.SetActive(true);
         }
-        if (Camera02hit.collider.gameObject == ShelfCameraMove[3] )
+        if (Camera02hit.collider.gameObject == ShelfCameraMove[3])
         {
             ShelfCamera.transform.position = new Vector3(-0.298f, -0.521f, 1.806f);
             BackButton.SetActive(true);
         }
-        if ( Camera02hit.collider.gameObject == ShelfCameraMove[4])
+        if (Camera02hit.collider.gameObject == ShelfCameraMove[4])
         {
             ShelfCamera.transform.position = new Vector3(-0.298f, -0.521f, 1.806f);
             BackButton.SetActive(true);
         }
+
 
 
 
         if (Camera02hit.collider.gameObject == ShelfCameraMove[5])
         {
-            ShelfCamera.transform.position = new Vector3(0.146f, - 0.894f, 1.581f);
+            ShelfCamera.transform.position = new Vector3(0.146f, -0.518f, 1.808f);
             BackButton.SetActive(true);
         }
         if (Camera02hit.collider.gameObject == ShelfCameraMove[6])
+        {
+            ShelfCamera.transform.position = new Vector3(0.146f, -0.518f, 1.808f);
+            BackButton.SetActive(true);
+        }
+
+        if (Camera02hit.collider.gameObject == ShelfCameraMove[7])
+        {
+            ShelfCamera.transform.position = new Vector3(0.146f, -0.894f, 1.581f);
+            BackButton.SetActive(true);
+        }
+        if (Camera02hit.collider.gameObject == ShelfCameraMove[8])
         {
             ShelfCamera.transform.position = new Vector3(0.146f, -0.894f, 1.581f);
             BackButton.SetActive(true);
         }
 
-
-
-        if (Camera02hit.collider.gameObject == ShelfCameraMove[7])
-        {
-            ShelfCamera.transform.position = new Vector3(0.146f, -0.518f, 1.808f);
-            BackButton.SetActive(true);
-        }
-        if (Camera02hit.collider.gameObject == ShelfCameraMove[8])
-        {
-            ShelfCamera.transform.position = new Vector3(0.146f, -0.518f, 1.808f);
-            BackButton.SetActive(true);
-        }
 
     }
 
