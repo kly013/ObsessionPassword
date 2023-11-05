@@ -53,7 +53,6 @@ public class CameraControl : MonoBehaviour
         Cursor.SetActive(false);
         Camera02.SetActive(true);
         Camera02.transform.position = new Vector3(0.01f, -0.72f, 0.9f);
-        Debug.Log(Camera02.transform.position);
         CameraMain.SetActive(false);
         GameObject.Find("Player").GetComponent<RayScript>().enabled = false;
     }

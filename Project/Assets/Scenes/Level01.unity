@@ -612,7 +612,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 0}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0}
@@ -637,6 +637,30 @@ MonoBehaviour:
       - m_Target: {fileID: 919278327}
         m_TargetAssemblyTypeName: Shelf02CameraRay, Assembly-CSharp
         m_MethodName: BackButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2936456039271951971}
+        m_TargetAssemblyTypeName: ShelfOpenDoors, Assembly-CSharp
+        m_MethodName: OpenDoorBackButtonClick01
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 5830788218606605072}
+        m_TargetAssemblyTypeName: ShelfOpenDoors, Assembly-CSharp
+        m_MethodName: OpenDoorBackButtonClick02
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -701,7 +725,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -350, y: 186}
+  m_AnchoredPosition: {x: -350, y: 189}
   m_SizeDelta: {x: 90, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &539992076
@@ -991,25 +1015,24 @@ MonoBehaviour:
   - WardrobeDoor01
   - WardrobeDoor02
   ClickObjTalk:
-  - {fileID: 2142287879293737020}
-  - {fileID: 5064294197056133022}
-  - {fileID: 637392533477272560}
-  - {fileID: 9171234490792905817}
-  - {fileID: 4704651248000167224}
-  - {fileID: 1138316981834769937}
-  - {fileID: 8273746534470522516}
-  - {fileID: 6074051733813163791}
-  - {fileID: 1445696804}
-  - {fileID: 504754684673235365}
-  - {fileID: 832485254}
-  - {fileID: 8507420103417043629}
-  - {fileID: 542575376}
-  - {fileID: 3871202421838336695}
-  - {fileID: 5707119226620696661}
-  - {fileID: 7293108087709460327}
   - {fileID: 2529356068014222501}
-  - {fileID: 8404859556406177584}
+  - {fileID: 832485254}
+  - {fileID: 5064294197056133022}
+  - {fileID: 504754684673235365}
+  - {fileID: 542575376}
+  - {fileID: 7293108087709460327}
+  - {fileID: 8273746534470522516}
+  - {fileID: 637392533477272560}
+  - {fileID: 6074051733813163791}
+  - {fileID: 3871202421838336695}
+  - {fileID: 2055059529669741046}
+  - {fileID: 7718632647689662487}
+  - {fileID: 1138316981834769937}
+  - {fileID: 8507420103417043629}
   - {fileID: 1114743187222132418}
+  - {fileID: 8404859556406177584}
+  - {fileID: 1445696804}
+  - {fileID: 2142287879293737020}
   DogListener:
   - {fileID: 2529356068014222501}
   - {fileID: 832485254}
@@ -1324,7 +1347,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919278323}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.01, y: -0.312, z: 0.9}
+  m_LocalPosition: {x: 0.01, y: -0.72, z: 0.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1342,18 +1365,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24bd5e043c707dc438d6a84ccae52413, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DoorName:
+  - SlidingDoor001
+  - SlidingDoor002
+  - SlidingDoor003
+  - SlidingDoor004
   ShelfCameraMove:
   - {fileID: 6942977296849871549}
   - {fileID: 1459276462942607755}
   - {fileID: 1812322097808796461}
   - {fileID: 5957660960816945924}
   - {fileID: 4555534340032575316}
-  - {fileID: 5182581389449012420}
-  - {fileID: 5624743445581064465}
   - {fileID: 1385521180372982703}
   - {fileID: 5340715808211235952}
+  - {fileID: 5182581389449012420}
+  - {fileID: 5624743445581064465}
+  - {fileID: 2936456039271951968}
+  - {fileID: 5830788218606605069}
+  ShelfObjTalk:
+  - {fileID: 6942977296849871549}
+  - {fileID: 1459276462942607755}
+  - {fileID: 1812322097808796461}
+  - {fileID: 5957660960816945924}
+  - {fileID: 4555534340032575316}
+  - {fileID: 1111050213922115418}
+  - {fileID: 2991175663545112310}
+  - {fileID: 2530203879307693219}
+  - {fileID: 4968610144591727715}
+  - {fileID: 7916185117771772834}
+  - {fileID: 3667883582975607810}
+  - {fileID: 6853448627931117421}
+  - {fileID: 7453928658367555270}
+  - {fileID: 440392705026690268}
+  - {fileID: 4377678027726129377}
+  - {fileID: 637536709064406973}
+  - {fileID: 4857481449941055762}
+  - {fileID: 3893641497978409534}
+  - {fileID: 4254179646382585696}
   ShelfCamera: {fileID: 919278323}
   BackButton: {fileID: 533982071}
+  DialogueBG: {fileID: 1719991249}
+  ObjTalk: {fileID: 691650609}
+  PressE: {fileID: 96775105}
   CameraMain: {fileID: 127295948}
   CursorPNG: {fileID: 882682484}
 --- !u!1 &967110051
@@ -5714,6 +5767,8 @@ GameObject:
   - component: {fileID: 7600780619476040435}
   - component: {fileID: 682962440611624449}
   - component: {fileID: 1385521180372982704}
+  - component: {fileID: 1385521180372982705}
+  - component: {fileID: 1385521180372982706}
   m_Layer: 0
   m_Name: SlidingDoor001
   m_TagString: Untagged
@@ -5734,6 +5789,39 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.2513397, y: 0.020000095, z: 0.42122245}
   m_Center: {x: 0.12566985, y: -0.00000028358772, z: 0.21061122}
+--- !u!95 &1385521180372982705
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1385521180372982703}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9cb4364d8bbbca2449618c2cee05b564, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1385521180372982706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1385521180372982703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7ad11102ec59de4bbf752d47abc9f73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShelfCamera: {fileID: 919278323}
+  BackButton: {fileID: 0}
 --- !u!4 &1408543058356080220
 Transform:
   m_ObjectHideFlags: 0
@@ -9266,6 +9354,8 @@ GameObject:
   - component: {fileID: 3253001988203691109}
   - component: {fileID: 2812721848281311313}
   - component: {fileID: 2936456039271951969}
+  - component: {fileID: 2936456039271951970}
+  - component: {fileID: 2936456039271951971}
   m_Layer: 0
   m_Name: Drawer004
   m_TagString: Untagged
@@ -9287,6 +9377,39 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -74921631553927764, guid: 70dec6cc2be635148b5e6248c8d07f15, type: 3}
+--- !u!95 &2936456039271951970
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2936456039271951968}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1e6b15bc3792b564aad79e8750366ea6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2936456039271951971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2936456039271951968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7ad11102ec59de4bbf752d47abc9f73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShelfCamera: {fileID: 919278323}
+  BackButton: {fileID: 533982071}
 --- !u!33 &2953468044393478311
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -14865,6 +14988,7 @@ GameObject:
   - component: {fileID: 4435153465967000099}
   - component: {fileID: 5182581389449012421}
   - component: {fileID: 5182581389449012422}
+  - component: {fileID: 5182581389449012423}
   m_Layer: 0
   m_Name: SlidingDoor003
   m_TagString: Untagged
@@ -14904,6 +15028,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5182581389449012423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5182581389449012420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7ad11102ec59de4bbf752d47abc9f73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShelfCamera: {fileID: 919278323}
+  BackButton: {fileID: 0}
 --- !u!23 &5186376285793528741
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15270,6 +15408,8 @@ GameObject:
   - component: {fileID: 683672269374728341}
   - component: {fileID: 2081794889307318970}
   - component: {fileID: 5340715808211235953}
+  - component: {fileID: 5340715808211235954}
+  - component: {fileID: 5340715808211235955}
   m_Layer: 0
   m_Name: SlidingDoor002
   m_TagString: Untagged
@@ -15290,6 +15430,39 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.2513397, y: 0.020000095, z: 0.42122245}
   m_Center: {x: 0.12566985, y: -0.00000004516916, z: 0.21061122}
+--- !u!95 &5340715808211235954
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5340715808211235952}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fd5dbdf0faed1204f9b40d82ea2a5b4d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5340715808211235955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5340715808211235952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7ad11102ec59de4bbf752d47abc9f73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShelfCamera: {fileID: 919278323}
+  BackButton: {fileID: 0}
 --- !u!4 &5343763745185741147
 Transform:
   m_ObjectHideFlags: 0
@@ -15659,6 +15832,7 @@ GameObject:
   - component: {fileID: 1601510072727042603}
   - component: {fileID: 5624743445581064466}
   - component: {fileID: 5624743445581064467}
+  - component: {fileID: 5624743445581064468}
   m_Layer: 0
   m_Name: SlidingDoor004
   m_TagString: Untagged
@@ -15698,6 +15872,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5624743445581064468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5624743445581064465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7ad11102ec59de4bbf752d47abc9f73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShelfCamera: {fileID: 919278323}
+  BackButton: {fileID: 0}
 --- !u!4 &5640804045078164783
 Transform:
   m_ObjectHideFlags: 0
@@ -16074,6 +16262,8 @@ GameObject:
   - component: {fileID: 2378191096484448830}
   - component: {fileID: 1019539928181930527}
   - component: {fileID: 5830788218606605070}
+  - component: {fileID: 5830788218606605071}
+  - component: {fileID: 5830788218606605072}
   m_Layer: 0
   m_Name: Drawer005
   m_TagString: Untagged
@@ -16095,6 +16285,39 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -2428985448299862547, guid: 70dec6cc2be635148b5e6248c8d07f15, type: 3}
+--- !u!95 &5830788218606605071
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5830788218606605069}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e92f4a86945a843499d0f8d2f824cf42, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5830788218606605072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5830788218606605069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7ad11102ec59de4bbf752d47abc9f73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShelfCamera: {fileID: 919278323}
+  BackButton: {fileID: 533982071}
 --- !u!23 &5833728971191645826
 MeshRenderer:
   m_ObjectHideFlags: 0

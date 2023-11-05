@@ -20,9 +20,10 @@ public class RayScript : MonoBehaviour
     public GameObject[] DogListener;
     public GameObject DialogueBG;
     public Text ObjTalk;
-    bool CanHearDog=false;
+    static public bool CanHearDog=false;
 
     public GameObject CameraShelf;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -57,7 +58,7 @@ public class RayScript : MonoBehaviour
         {
             hit.transform.SendMessage("HitByRaycast", gameObject, SendMessageOptions.DontRequireReceiver);
 
-            HitByRaycast2();
+            PressEControl();
 
             //向被射線打到的物件呼叫名為"HitByRaycast"的方法，不需要傳回覆
 
@@ -77,6 +78,7 @@ public class RayScript : MonoBehaviour
             if (hit.collider.gameObject.name == "DogCollar")
             {
                 CanHearDog = true;
+                
             }
 
 
@@ -138,7 +140,7 @@ public class RayScript : MonoBehaviour
 
 
 
-    void HitByRaycast2()
+    void PressEControl()
     {
 
         foreach (string tag in Tags)
@@ -159,89 +161,86 @@ public class RayScript : MonoBehaviour
 
         }
 
-
     }
 
     void ClickObjectDialogueText()
     {
-        if (RayScript.hit.collider.gameObject == ClickObjTalk[0])
+        if (RayScript.hit.collider.gameObject == DogListener[0]) //水龍頭
         {
-            ObjTalk.text = "一張普通的床";
+            ObjTalk.text = "節約用水，保護生命。";
         }
-        if (RayScript.hit.collider.gameObject == ClickObjTalk[1])
+        if (RayScript.hit.collider.gameObject == DogListener[1]) //狗飼料
         {
-            ObjTalk.text = "一個看起來很好吃的蛋糕";
+            ObjTalk.text = "都是寵物喜歡的飼料。";
         }
-        if (RayScript.hit.collider.gameObject == ClickObjTalk[2])
+        if (RayScript.hit.collider.gameObject == DogListener[2]) //蛋糕
         {
-            ObjTalk.text = "一堆普通的作業本";
-        }
-        if (RayScript.hit.collider.gameObject == ClickObjTalk[3])
-        {
-            ObjTalk.text = "一堆普通的作業本";
-        }
-        if (RayScript.hit.collider.gameObject == ClickObjTalk[4])
-        {
-            ObjTalk.text = "一堆普通的作業本";
+            ObjTalk.text = "這蛋糕看起來好好吃。";
         }
 
-        if (RayScript.hit.collider.gameObject == ClickObjTalk[5])
+        if (RayScript.hit.collider.gameObject == DogListener[3]) //咖啡
         {
-            ObjTalk.text = "打不開，應該是沒電";
-        }
-        if (RayScript.hit.collider.gameObject == ClickObjTalk[6])
-        {
-            ObjTalk.text = "一張普通的椅子";
-        }
-        if (RayScript.hit.collider.gameObject == ClickObjTalk[7])
-        {
-            ObjTalk.text = "看起來就是普通的充電線";
-        }
-        if (RayScript.hit.collider.gameObject == ClickObjTalk[8])
-        {
-            ObjTalk.text = "看起來是爺爺的衣服";
-        }
-        if (RayScript.hit.collider.gameObject == ClickObjTalk[9])
-        {
-            ObjTalk.text = "看起來很普通的咖啡";
-        }
-        if (RayScript.hit.collider.gameObject == ClickObjTalk[10])
-        {
-            ObjTalk.text = "好多狗飼料";
-        }
-        if (RayScript.hit.collider.gameObject == ClickObjTalk[11])
-        {
-            ObjTalk.text = "普通的狗窩";
-        }
-        if (RayScript.hit.collider.gameObject == ClickObjTalk[12])
-        {
-            ObjTalk.text = "看起來很普通的牛奶";
-        }
-        if (RayScript.hit.collider.gameObject == ClickObjTalk[13])
-        {
-            ObjTalk.text = "普通的筆";
-        }
-        if (RayScript.hit.collider.gameObject == ClickObjTalk[14])
-        {
-            ObjTalk.text = "普通的筆";
-        }
-        if (RayScript.hit.collider.gameObject == ClickObjTalk[15])
-        {
-            ObjTalk.text = "好熱好想吃";
-        }
-        if (RayScript.hit.collider.gameObject == ClickObjTalk[16])
-        {
-            ObjTalk.text = "不要浪費水";
+            ObjTalk.text = "黑咖啡，好苦。";
         }
 
-        if (RayScript.hit.collider.gameObject == ClickObjTalk[17])
+        if (RayScript.hit.collider.gameObject == DogListener[4]) //牛奶
         {
-            ObjTalk.text = "看起來像普通的飼料碗";
-
+            ObjTalk.text = "香濃的鮮奶。";
         }
-        if (RayScript.hit.collider.gameObject == ClickObjTalk[18])
+        if (RayScript.hit.collider.gameObject == DogListener[5]) //冰
         {
-            ObjTalk.text = "看起來像普通的飼料碗";
+            ObjTalk.text = "好熱呀，好想吃。";
+        }
+
+        if (RayScript.hit.collider.gameObject == DogListener[6]) //椅子
+        {
+            ObjTalk.text = "結實的木頭椅。";
+        }
+
+        if (RayScript.hit.collider.gameObject == DogListener[7]) //作業本
+        {
+            ObjTalk.text = "一疊作業本，想到就頭痛。";
+        }
+        if (RayScript.hit.collider.gameObject == DogListener[8]) //充電線
+        {
+            ObjTalk.text = "捆綁好的充電線。";
+        }
+        if (RayScript.hit.collider.gameObject == DogListener[9]) //筆
+        {
+            ObjTalk.text = "幾枝普通的筆。";
+        }
+        if (RayScript.hit.collider.gameObject == DogListener[10]) //剪刀
+        {
+            ObjTalk.text = "安全剪刀。";
+        }
+        if (RayScript.hit.collider.gameObject == DogListener[11]) //書
+        {
+            ObjTalk.text = "許多書本。";
+        }
+        if (RayScript.hit.collider.gameObject == DogListener[12]) //手機
+        {
+            ObjTalk.text = "開不了機，應該是沒電了。";
+        }
+
+        if (RayScript.hit.collider.gameObject == DogListener[13]) //狗窩
+        {
+            ObjTalk.text = "寵物的狗窩。";
+        }
+        if (RayScript.hit.collider.gameObject == DogListener[14]) //水碗
+        {
+            ObjTalk.text = "裝水給寵物的碗。";
+        }
+        if (RayScript.hit.collider.gameObject == DogListener[15]) //飼料碗
+        {
+            ObjTalk.text = "裝寵物飼料的碗。";
+        }
+        if (RayScript.hit.collider.gameObject == DogListener[16]) //衣服
+        {
+            ObjTalk.text = "感覺是爺爺的衣服。";
+        }
+        if (RayScript.hit.collider.gameObject == DogListener[17]) //床
+        {
+            ObjTalk.text = "很大很舒服的床。";
         }
 
 
