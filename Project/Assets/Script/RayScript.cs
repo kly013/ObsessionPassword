@@ -34,6 +34,8 @@ public class RayScript : MonoBehaviour
     // 判斷是不是聽得懂動物語
     bool CanHear = false;
 
+    public ClickComputer clickComputer;
+
     //public GameObject CameraShelf;
 
     void Start()
@@ -106,6 +108,12 @@ public class RayScript : MonoBehaviour
                 {
                     //ClickObjectDialogueText();
                     levelText01.notHearText(hit.collider.name);
+                }
+
+                if(hit.collider.name == "Computer")
+                {
+                    clickComputer.OnClick();
+                    LevelText01.isTalking = true;
                 }
 
                 ClickBedRoomTable();
