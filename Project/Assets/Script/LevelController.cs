@@ -5,10 +5,11 @@ using UnityEngine;
 public class LevelController : MonoBehaviour
 {
     public static float gameTimer = 0;
+    public static int levelnum = 1;
 
     void Start()
     {
-        
+        gameTimer = 0;
     }
 
     void Update()

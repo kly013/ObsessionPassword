@@ -6,13 +6,10 @@ using UnityEngine.UI;
 
 public class ClickEvent : MonoBehaviour
 {
-    
-
     // 點擊時間
     float clickTimer = 0;
     int clickNum = 0;
     float timelag = 0.5f;
-
 
     public GameObject DialogueBG;
 
@@ -20,14 +17,6 @@ public class ClickEvent : MonoBehaviour
     public Text ObjTalk;
 
     static public bool isTalking=false;
-
-
-    private void Start()
-    {
-
-
-
-    }
 
     private void Update()
     {
@@ -46,9 +35,6 @@ public class ClickEvent : MonoBehaviour
                 clickNum = 0;
             }
         }
-
-
-
     }
 
     // 滑鼠點擊
@@ -62,38 +48,14 @@ public class ClickEvent : MonoBehaviour
             clickTimer = LevelController.gameTimer;
             print("開始計時");
         }
-
-
     }
-
-    
 
     void onceClickEvent()
     {
         print("觸發單擊事件");
-
-
     }
-
-
-
-
-
     void doubleClickEvent()
     {
         print("觸發雙擊事件");
-
-
-        /*
-         * 雙擊事件寫在這
-         */
     }
-
-
-    
-   
-  
-
-
-
 }

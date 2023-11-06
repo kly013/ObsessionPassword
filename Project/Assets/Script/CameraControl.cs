@@ -11,7 +11,7 @@ public class CameraControl : MonoBehaviour
     public GameObject BackButton;
 
     static public bool CursorControl;
-    // Start is called before the first frame update
+
     void Start()
     {
         CameraMain.SetActive(true);
@@ -24,8 +24,6 @@ public class CameraControl : MonoBehaviour
         Camera02.SetActive(false);
     }
 
-
-    // Update is called once per frame
     void Update()
     {
         //if (Input.GetKeyDown(KeyCode.P))

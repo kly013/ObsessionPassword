@@ -4,15 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Cabinet01
-  - Cabinet02
-  - Drawer001
-  - Drawer002
-  - Drawer003
-  - WardrobeDoor01
-  - WardrobeDoor02
-  - Refrigerator
-  - cube
+  - key
+  - pressE
   layers:
   - Default
   - TransparentFX

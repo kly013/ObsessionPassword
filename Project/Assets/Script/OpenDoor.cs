@@ -6,37 +6,22 @@ public class OpenDoor : MonoBehaviour
 {
     Animator OpenDoorAnim;
     bool Opened;
-
-
     
-    // Start is called before the first frame update
     void Start()
     {
         OpenDoorAnim = GetComponent<Animator>();
-       
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-       
     }
 
     void HitByRaycast() //被射線打到時會進入此方法
     {
-
-
         if (Input.GetKeyDown(KeyCode.E))
         {
-            print("EEEEEE");
+            //print("EEEEEE");
             Opened = !Opened;
 
-            if (RayScript.hit.transform.tag == "Refrigerator")
+            if (RayScript.hit.collider.name == "Refrigerator")
             {
-                
-                if (Opened == true)
+                if (Opened)
                 {
                     OpenDoorAnim.SetTrigger("RefrigeratorOpen");
                 }
@@ -46,10 +31,10 @@ public class OpenDoor : MonoBehaviour
                 }
             }
 
-            if (RayScript.hit.transform.tag == "Cabinet01")
+
+            if (RayScript.hit.collider.name == "Cabinet01")
             {
-                
-                if (Opened == true)
+                if (Opened)
                 {
                     OpenDoorAnim.SetTrigger("CabinetOpen001");
                 }
@@ -59,10 +44,9 @@ public class OpenDoor : MonoBehaviour
                 }
             }
 
-            if (RayScript.hit.transform.tag == "Cabinet02")
+            if (RayScript.hit.collider.name == "Cabinet02")
             {
-
-                if (Opened == true)
+                if (Opened)
                 {
                     OpenDoorAnim.SetTrigger("CabinetOpen002");
                 }
@@ -73,11 +57,9 @@ public class OpenDoor : MonoBehaviour
             }
 
 
-
-            if (RayScript.hit.transform.tag == "Drawer001")
+            if (RayScript.hit.collider.name == "Drawer001")
             {
-                
-                if (Opened == true)
+                if (Opened)
                 {
                     OpenDoorAnim.SetTrigger("DrawerOpen001");
                 }
@@ -86,10 +68,10 @@ public class OpenDoor : MonoBehaviour
                     OpenDoorAnim.SetTrigger("DrawerClose001");
                 }
             }
-            if (RayScript.hit.transform.tag == "Drawer002")
+
+            if (RayScript.hit.collider.name == "Drawer002")
             {
-                
-                if (Opened == true)
+                if (Opened)
                 {
                     OpenDoorAnim.SetTrigger("DrawerOpen002");
                 }
@@ -98,10 +80,10 @@ public class OpenDoor : MonoBehaviour
                     OpenDoorAnim.SetTrigger("DrawerClose002");
                 }
             }
-            if (RayScript.hit.transform.tag == "Drawer003")
+
+            if (RayScript.hit.collider.name == "Drawer003")
             {
-               
-                if (Opened == true)
+                if (Opened)
                 {
                     OpenDoorAnim.SetTrigger("DrawerOpen003");
                 }
@@ -112,11 +94,9 @@ public class OpenDoor : MonoBehaviour
             }
 
 
-
-            if (RayScript.hit.transform.tag == "WardrobeDoor01")
+            if (RayScript.hit.collider.name == "WardrobeDoor01")
             {
-                
-                if (Opened == true)
+                if (Opened)
                 {
                     OpenDoorAnim.SetTrigger("WardrobeOpen001");
                 }
@@ -125,10 +105,10 @@ public class OpenDoor : MonoBehaviour
                     OpenDoorAnim.SetTrigger("WardrobeClose001");
                 }
             }
-            if (RayScript.hit.transform.tag == "WardrobeDoor02")
-            {
 
-                if (Opened == true)
+            if (RayScript.hit.collider.name == "WardrobeDoor02")
+            {
+                if (Opened)
                 {
                     OpenDoorAnim.SetTrigger("WardrobeOpen002");
                 }
@@ -138,14 +118,5 @@ public class OpenDoor : MonoBehaviour
                 }
             }
         }
-
     }
-
-
-
-
-
-
-
-
 }
