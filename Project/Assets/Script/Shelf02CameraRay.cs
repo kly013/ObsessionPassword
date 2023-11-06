@@ -108,7 +108,7 @@ public class Shelf02CameraRay : MonoBehaviour
         }
 
 
-        if(Input.GetKeyDown(KeyCode.Space) &&ShelfOpenDoors.Drawer04Control==true)
+        if(Input.GetKeyDown(KeyCode.Space) &&  ShelfOpenDoors.Drawer04Control==true)
         {
             GameObject.Find("Drawer004").SendMessage("DrawerClose04", gameObject, SendMessageOptions.DontRequireReceiver);
             
