@@ -15,5 +15,10 @@ public class LevelController : MonoBehaviour
     void Update()
     {
         gameTimer += Time.deltaTime;
+
+        if(Input.GetKeyDown(KeyCode.Z))
+        {
+            LevelText01.isTalking = true;
+        }
     }
 }
