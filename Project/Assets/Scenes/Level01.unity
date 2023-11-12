@@ -1315,6 +1315,7 @@ MonoBehaviour:
   DialogueBG: {fileID: 1719991249}
   clickSpace: {fileID: 1551179168}
   clickComputer: {fileID: 5040339273327684103}
+  openDoor: {fileID: 1510190661}
 --- !u!114 &647464555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2407,6 +2408,7 @@ GameObject:
   - component: {fileID: 1510190659}
   - component: {fileID: 1510190658}
   - component: {fileID: 1510190660}
+  - component: {fileID: 1510190661}
   m_Layer: 0
   m_Name: LevelController
   m_TagString: Untagged
@@ -2455,6 +2457,18 @@ MonoBehaviour:
   DialogueBG: {fileID: 1719991249}
   ObjTalk: {fileID: 691650609}
   clickSpace: {fileID: 1551179168}
+--- !u!114 &1510190661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1510190657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11071e0e6ad66b647853337c73a885d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1551179168
 GameObject:
   m_ObjectHideFlags: 0
@@ -4761,8 +4775,8 @@ Transform:
   - {fileID: 8518670225236269328}
   - {fileID: 8969043747352704385}
   - {fileID: 3887305310127627885}
-  - {fileID: 498956433}
   - {fileID: 121250390}
+  - {fileID: 498956433}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5113,7 +5127,6 @@ GameObject:
   - component: {fileID: 3578348002237855304}
   - component: {fileID: 8158728636234912758}
   - component: {fileID: 710628684982502704}
-  - component: {fileID: 710628684982502706}
   - component: {fileID: 710628684982502705}
   m_Layer: 0
   m_Name: CabinetDoor001
@@ -5146,7 +5159,7 @@ Animator:
   m_GameObject: {fileID: 710628684982502703}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: fee5067b1c859f845a38f558c3a3a242, type: 2}
+  m_Controller: {fileID: 9100000, guid: 852c500fcbd49fe488c593345ae8b0aa, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -5155,18 +5168,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &710628684982502706
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 710628684982502703}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11071e0e6ad66b647853337c73a885d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &728377103717402869
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5394,7 +5395,6 @@ GameObject:
   - component: {fileID: 269368044433426854}
   - component: {fileID: 3334687754932303042}
   - component: {fileID: 786928741747664464}
-  - component: {fileID: 786928741747664466}
   - component: {fileID: 786928741747664465}
   m_Layer: 0
   m_Name: WardrobeDoor002
@@ -5436,18 +5436,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &786928741747664466
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 786928741747664463}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11071e0e6ad66b647853337c73a885d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!33 &801940064558474997
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -11635,7 +11623,6 @@ GameObject:
   - component: {fileID: 3521543566064082953}
   - component: {fileID: 222643326793792803}
   - component: {fileID: 3464789123256556939}
-  - component: {fileID: 3464789123256556941}
   - component: {fileID: 3464789123256556940}
   m_Layer: 0
   m_Name: Drawer001
@@ -11677,18 +11664,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &3464789123256556941
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3464789123256556938}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11071e0e6ad66b647853337c73a885d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &3473812656690059881
 GameObject:
   m_ObjectHideFlags: 0
@@ -12004,7 +11979,6 @@ GameObject:
   - component: {fileID: 4272386635237180177}
   - component: {fileID: 6496068010727410848}
   - component: {fileID: 3560211274209466503}
-  - component: {fileID: 3560211274209466505}
   - component: {fileID: 3560211274209466504}
   m_Layer: 0
   m_Name: Drawer003
@@ -12046,18 +12020,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &3560211274209466505
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3560211274209466502}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11071e0e6ad66b647853337c73a885d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!33 &3578348002237855304
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -14335,7 +14297,6 @@ GameObject:
   - component: {fileID: 8878127308160752927}
   - component: {fileID: 102716850651114432}
   - component: {fileID: 4516860188673133565}
-  - component: {fileID: 4516860188673133567}
   - component: {fileID: 4516860188673133566}
   m_Layer: 0
   m_Name: Refrigerator002
@@ -14377,18 +14338,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &4516860188673133567
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4516860188673133564}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11071e0e6ad66b647853337c73a885d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!33 &4523029603515941220
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -16209,7 +16158,6 @@ GameObject:
   - component: {fileID: 7029033125340568110}
   - component: {fileID: 8820758319492210828}
   - component: {fileID: 5400059844807117075}
-  - component: {fileID: 5400059844807117077}
   - component: {fileID: 5400059844807117076}
   m_Layer: 0
   m_Name: WardrobeDoor001
@@ -16251,18 +16199,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &5400059844807117077
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5400059844807117074}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11071e0e6ad66b647853337c73a885d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &5414035698534870831
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -20340,7 +20276,6 @@ GameObject:
   - component: {fileID: 1635930676485456254}
   - component: {fileID: 2407239314506843046}
   - component: {fileID: 7495741744767194024}
-  - component: {fileID: 7495741744767194026}
   - component: {fileID: 7495741744767194025}
   m_Layer: 0
   m_Name: Refrigerator003
@@ -20382,18 +20317,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &7495741744767194026
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7495741744767194023}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11071e0e6ad66b647853337c73a885d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &7501934913371722189
 Transform:
   m_ObjectHideFlags: 0
@@ -21314,7 +21237,6 @@ GameObject:
   - component: {fileID: 15523574552335709}
   - component: {fileID: 7135472324012952432}
   - component: {fileID: 7977649219728402455}
-  - component: {fileID: 7977649219728402457}
   - component: {fileID: 7977649219728402456}
   m_Layer: 0
   m_Name: Drawer002
@@ -21356,18 +21278,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &7977649219728402457
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7977649219728402454}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11071e0e6ad66b647853337c73a885d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!33 &7980636451427065282
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -22020,7 +21930,6 @@ GameObject:
   - component: {fileID: 1858372324427670694}
   - component: {fileID: 8941474194468207978}
   - component: {fileID: 8310534770401470117}
-  - component: {fileID: 8310534770401470119}
   - component: {fileID: 8310534770401470118}
   m_Layer: 0
   m_Name: CabinetDoor002
@@ -22053,7 +21962,7 @@ Animator:
   m_GameObject: {fileID: 8310534770401470116}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 852c500fcbd49fe488c593345ae8b0aa, type: 2}
+  m_Controller: {fileID: 9100000, guid: 477813bb42474dc498dc299555f5f474, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -22062,18 +21971,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &8310534770401470119
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8310534770401470116}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11071e0e6ad66b647853337c73a885d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!33 &8320397011317017072
 MeshFilter:
   m_ObjectHideFlags: 0

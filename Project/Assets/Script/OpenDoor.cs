@@ -1,120 +1,84 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class OpenDoor : MonoBehaviour
 {
     Animator OpenDoorAnim;
-    bool Opened;
-    
-    void Start()
-    {
-        OpenDoorAnim = GetComponent<Animator>();
-    }
+    bool isOpen;
+    bool[] isthisOpen = Enumerable.Repeat(false, 10).ToArray();
 
-    void HitByRaycast() //被射線打到時會進入此方法
+    public void HitByRaycast() //被射線打到時會進入此方法
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            //print("EEEEEE");
-            Opened = !Opened;
+            print("EEEEEE");
 
-            if (RayScript.hit.collider.name == "Refrigerator")
+            OpenDoorAnim = RayScript.hit.collider.GetComponent<Animator>();
+            string name = RayScript.hit.collider.name;
+            int thisNum = -1;
+
+            switch (name)
             {
-                if (Opened)
-                {
-                    OpenDoorAnim.SetTrigger("RefrigeratorOpen");
-                }
-                else
-                {
-                    OpenDoorAnim.SetTrigger("RefrigeratorClose");
-                }
+                case "Refrigerator002":
+                    thisNum = 0;
+                    break;
+                case "Refrigerator003":
+                    thisNum = 1;
+                    break;
+                case "CabinetDoor001":
+                    thisNum = 2;
+                    break;
+                case "CabinetDoor002":
+                    thisNum = 3;
+                    break;
+                case "Drawer001":
+                    thisNum = 4;
+                    break;
+                case "Drawer002":
+                    thisNum = 5;
+                    break;
+                case "Drawer003":
+                    thisNum = 6;
+                    break;
+                case "WardrobeDoor001":
+                    thisNum = 7;
+                    break;
+                case "WardrobeDoor002":
+                    thisNum = 8;
+                    break;
             }
 
+            print("ThisNum = " + thisNum);
 
-            if (RayScript.hit.collider.name == "Cabinet01")
+            if (thisNum >= 0)
             {
-                if (Opened)
+                if(isthisOpen[thisNum])
                 {
-                    OpenDoorAnim.SetTrigger("CabinetOpen001");
+                    isOpen = false;
                 }
                 else
                 {
-                    OpenDoorAnim.SetTrigger("CabinetClose001");
+                    isOpen = true;
                 }
-            }
 
-            if (RayScript.hit.collider.name == "Cabinet02")
-            {
-                if (Opened)
-                {
-                    OpenDoorAnim.SetTrigger("CabinetOpen002");
-                }
-                else
-                {
-                    OpenDoorAnim.SetTrigger("CabinetClose002");
-                }
-            }
+                isthisOpen[thisNum] = isOpen;
+                print("isOpen = " + isOpen);
 
-
-            if (RayScript.hit.collider.name == "Drawer001")
-            {
-                if (Opened)
+                switch (name)
                 {
-                    OpenDoorAnim.SetTrigger("DrawerOpen001");
-                }
-                else
-                {
-                    OpenDoorAnim.SetTrigger("DrawerClose001");
-                }
-            }
-
-            if (RayScript.hit.collider.name == "Drawer002")
-            {
-                if (Opened)
-                {
-                    OpenDoorAnim.SetTrigger("DrawerOpen002");
-                }
-                else
-                {
-                    OpenDoorAnim.SetTrigger("DrawerClose002");
-                }
-            }
-
-            if (RayScript.hit.collider.name == "Drawer003")
-            {
-                if (Opened)
-                {
-                    OpenDoorAnim.SetTrigger("DrawerOpen003");
-                }
-                else
-                {
-                    OpenDoorAnim.SetTrigger("DrawerClose003");
-                }
-            }
-
-
-            if (RayScript.hit.collider.name == "WardrobeDoor01")
-            {
-                if (Opened)
-                {
-                    OpenDoorAnim.SetTrigger("WardrobeOpen001");
-                }
-                else
-                {
-                    OpenDoorAnim.SetTrigger("WardrobeClose001");
-                }
-            }
-
-            if (RayScript.hit.collider.name == "WardrobeDoor02")
-            {
-                if (Opened)
-                {
-                    OpenDoorAnim.SetTrigger("WardrobeOpen002");
-                }
-                else
-                {
-                    OpenDoorAnim.SetTrigger("WardrobeClose002");
+                    case "Refrigerator002":
+                    case "Refrigerator003":
+                    case "CabinetDoor001":
+                    case "CabinetDoor002":
+                    case "Drawer001":
+                    case "Drawer002":
+                    case "Drawer003":
+                    case "WardrobeDoor001":
+                    case "WardrobeDoor002":
+                        OpenDoorAnim.SetBool("isOpen", isOpen);
+                        break;
                 }
             }
         }

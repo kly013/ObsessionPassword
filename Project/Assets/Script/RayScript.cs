@@ -35,6 +35,7 @@ public class RayScript : MonoBehaviour
     bool CanHear = false;
 
     public ClickComputer clickComputer;
+    public OpenDoor openDoor;
 
     //public GameObject CameraShelf;
 
@@ -55,6 +56,7 @@ public class RayScript : MonoBehaviour
         // 對話時
         if (LevelText01.isTalking)
         {
+            // 鼠標出現
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
         }
@@ -70,8 +72,10 @@ public class RayScript : MonoBehaviour
         // (射線,out 被射線打到的物件,射線長度)，out hit 意思是：把"被射線打到的物件"帶給hit
         if (Physics.Raycast(ray, out hit, raylength) && !EventSystem.current.IsPointerOverGameObject())
         {
-            // 向被射線打到的物件呼叫名為"HitByRaycast"的方法
-            hit.transform.SendMessage("HitByRaycast", gameObject, SendMessageOptions.DontRequireReceiver);
+            //// 向被射線打到的物件呼叫名為"HitByRaycast"的方法
+            //hit.transform.SendMessage("HitByRaycast", gameObject, SendMessageOptions.DontRequireReceiver);
+
+            openDoor.HitByRaycast();
 
             if (string.Equals(hit.collider.tag, "pressE"))
             {
