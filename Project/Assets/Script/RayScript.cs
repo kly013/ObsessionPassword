@@ -13,36 +13,25 @@ public class RayScript : MonoBehaviour
     // 打到的東西
     static public RaycastHit hit;
 
-    // 按 E 出現的字
-    public GameObject PressE;
-
     public LevelText01 levelText01;
-
-    //public string[] Tags;
-
-
-    ////public GameObject[] ClickObjTalk;
-    ////public GameObject[] DogListener;
 
     // 對話框
     public GameObject DialogueBG;
     // 按空白處
     public GameObject clickSpace;
-    ////對話框文字
-    //public Text ObjTalk;
 
     // 判斷是不是聽得懂動物語
     bool CanHear = false;
 
+    public static bool isHit = false;
+
     public ClickComputer clickComputer;
     public OpenDoor openDoor;
-
-    //public GameObject CameraShelf;
 
     void Start()
     {
         // 開始關掉提示和對話框
-        PressE.SetActive(false);
+        //PressE.SetActive(false);
         //DialogueBG.SetActive(false);
 
         // 鼠標設定視窗中
@@ -72,19 +61,7 @@ public class RayScript : MonoBehaviour
         // (射線,out 被射線打到的物件,射線長度)，out hit 意思是：把"被射線打到的物件"帶給hit
         if (Physics.Raycast(ray, out hit, raylength) && !EventSystem.current.IsPointerOverGameObject())
         {
-            //// 向被射線打到的物件呼叫名為"HitByRaycast"的方法
-            //hit.transform.SendMessage("HitByRaycast", gameObject, SendMessageOptions.DontRequireReceiver);
-
-            openDoor.HitByRaycast();
-
-            if (string.Equals(hit.collider.tag, "pressE"))
-            {
-                PressE.SetActive(true);
-            }
-            else
-            {
-                PressE.SetActive(false);
-            }
+            isHit = true;
 
             //當射線打到物件時會在Scene視窗畫出黃線，方便查閱
             Debug.DrawLine(ray.origin, hit.point, Color.yellow);
@@ -92,14 +69,18 @@ public class RayScript : MonoBehaviour
             //在Console視窗印出被射線打到的物件名稱，方便查閱
             //print("這個在射線名字是" + hit.transform.name);
         }
-
-        if (Input.GetMouseButton(0))
+        else
         {
-            if (hit.collider != null && hit.collider.gameObject != null)
+            isHit = false;
+        }
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            if (isHit)
             {
                 if (hit.collider.gameObject.tag == "key")
                 {
-                    print(hit.collider.name);
+                    //print(hit.collider.name);
                     CanHear = true;
                 }
 
@@ -114,7 +95,9 @@ public class RayScript : MonoBehaviour
                     levelText01.notHearText(hit.collider.name);
                 }
 
-                if(hit.collider.name == "Computer")
+                openDoor.HitByRaycast();
+
+                if (hit.collider.name == "Computer")
                 {
                     clickComputer.OnClick();
                     LevelText01.isTalking = true;

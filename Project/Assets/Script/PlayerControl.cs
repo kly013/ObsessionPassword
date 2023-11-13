@@ -13,6 +13,8 @@ public class PlayerControl : MonoBehaviour
     float xRotation = 0;
     float yRotation = 0;
 
+    Vector3 moveDirection;
+
     void Update()
     {
         // 方向量值
@@ -23,7 +25,6 @@ public class PlayerControl : MonoBehaviour
         Vector3 moveDirection = new Vector3(h, 0, v).normalized;
         moveDirection = transform.TransformDirection(moveDirection);
         moveDirection = new Vector3(moveDirection.x, 0, moveDirection.z);
-        transform.Translate(moveDirection * moveSpeed * Time.deltaTime, Space.World);
 
         // 滑鼠 xy 軸量值
         float mouseX = -Input.GetAxis("Mouse X") * rotatSpeed * Time.deltaTime;
@@ -43,12 +44,15 @@ public class PlayerControl : MonoBehaviour
                 xRotation = Mathf.Clamp(xRotation, -90f, 90f);
             }
 
-            // 轉動
-            transform.rotation = Quaternion.Euler(xRotation, yRotation, 0f);
+            if (mouseX != 0 || mouseY != 0)
+            {
+                // 轉動
+                transform.rotation = Quaternion.Euler(xRotation, yRotation, 0f);
+            }
         }
         else
         {
-            // 移動
+            transform.Translate(moveDirection * moveSpeed * Time.deltaTime, Space.World);
             Vector3 roat = new Vector3(transform.rotation.x, transform.rotation.y, transform.rotation.z);
         }
 
