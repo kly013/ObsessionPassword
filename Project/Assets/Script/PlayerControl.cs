@@ -65,7 +65,7 @@ public class PlayerControl : MonoBehaviour
         else
         {
             moveSpeed = 1f;
-            rotatSpeed= 200;
+            rotatSpeed= 150;
         }
     }
 }

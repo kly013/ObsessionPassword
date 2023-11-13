@@ -68,15 +68,8 @@ public class RayScript : MonoBehaviour
 
             //在Console視窗印出被射線打到的物件名稱，方便查閱
             //print("這個在射線名字是" + hit.transform.name);
-        }
-        else
-        {
-            isHit = false;
-        }
 
-        if (Input.GetMouseButtonDown(0))
-        {
-            if (isHit)
+            if (Input.GetMouseButtonDown(0))
             {
                 if (hit.collider.gameObject.tag == "key")
                 {
@@ -106,6 +99,10 @@ public class RayScript : MonoBehaviour
                 ClickBedRoomTable();
                 ClickShelf02();
             }
+        }
+        else
+        {
+            isHit = false;
         }
     }
 
