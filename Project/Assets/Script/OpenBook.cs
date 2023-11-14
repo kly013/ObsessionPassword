@@ -37,9 +37,9 @@ public class OpenBook : MonoBehaviour
             if (isOpenClicked)
             {
 
-                if ((endTime - startTime).TotalSeconds >= 1 && transform.eulerAngles.y < 180)
+                if ((endTime - startTime).TotalSeconds >= 1 && transform.eulerAngles.y > -180)
                 {
-                    transform.eulerAngles = new Vector3(0, -180, 0);
+                    transform.eulerAngles = new Vector3(0, 180, 0);
                     isOpenClicked = false;
                     gameObject.SetActive(false);
                     insideBackcover.SetActive(false);

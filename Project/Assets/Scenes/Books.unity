@@ -672,6 +672,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ContactBook
       objectReference: {fileID: 0}
+    - target: {fileID: 6681889793426151032, guid: dc801662470bf5f4db9f35db3521cffd, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6681889793426151033, guid: dc801662470bf5f4db9f35db3521cffd, type: 3}
       propertyPath: m_RootOrder
       value: 6
