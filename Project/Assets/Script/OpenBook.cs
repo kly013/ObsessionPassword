@@ -6,22 +6,29 @@ using System;
 
 public class OpenBook : MonoBehaviour
 {
+    public GameObject DiaryCover;
+    public GameObject ContactCover;
+    public GameObject DiaryOpenedbook;
+    public GameObject DiaryInsideBackcover;
+    public GameObject ContactOpenedbook;
+    public GameObject ContactInsideBackcover;
 
-    public GameObject openedbook;
-    public GameObject insideBackcover;
     public AudioSource audioSource;
     public AudioClip OpenBookSound;
     public AudioClip CloseBookSound;
-    private Vector3 rotationVector;
-    bool isOpenClicked;
-    bool isClosedClicked;
+    private Vector3 RotationVector;
+    bool isDiaryOpenClicked;
+    bool isDiaryClosedClicked;
+
+    bool isContactOpenClicked;
+    bool isContactClosedClicked;
     DateTime startTime;
     DateTime endTime;
     // Start is called before the first frame update
     void Start()
     {
 
-        AppEvent.Closebook += new EventHandler(closebook_click);
+
 
     }
 
@@ -29,60 +36,121 @@ public class OpenBook : MonoBehaviour
     void Update()
     {
 
-        if (isOpenClicked || isClosedClicked)
+
+        if (isDiaryOpenClicked || isDiaryClosedClicked)
         {
-            transform.Rotate(rotationVector * Time.deltaTime);
+            transform.Rotate(RotationVector * Time.deltaTime);
             endTime = DateTime.Now;
 
-            if (isOpenClicked)
+            if (isDiaryOpenClicked)
             {
 
                 if ((endTime - startTime).TotalSeconds >= 1 && transform.eulerAngles.y > -180)
                 {
                     transform.eulerAngles = new Vector3(0, 180, 0);
-                    isOpenClicked = false;
-                    gameObject.SetActive(false);
-                    insideBackcover.SetActive(false);
-                    openedbook.SetActive(true);
+                    isDiaryOpenClicked = false;
+                    DiaryCover.SetActive(false);
+                    DiaryInsideBackcover.SetActive(false);
+                    DiaryOpenedbook.SetActive(true);
                 }
             }
-            if (isClosedClicked)
+            if (isDiaryClosedClicked)
             {
                 if ((endTime - startTime).TotalSeconds >= 1 && transform.eulerAngles.y > 0)
                 {
                     transform.eulerAngles = new Vector3(0, 0, 0);
-                    isClosedClicked = false;
+                    isDiaryClosedClicked = false;
                 }
             }
         }
+
+        if (isContactOpenClicked || isContactClosedClicked)
+        {
+
+
+            transform.Rotate(RotationVector * Time.deltaTime);
+            endTime = DateTime.Now;
+
+            if (isContactOpenClicked)
+            {
+
+                if ((endTime - startTime).TotalSeconds >= 1 && transform.eulerAngles.y < 180)
+                {
+                    transform.eulerAngles = new Vector3(0, -180, 0);
+                    isContactOpenClicked = false;
+                    ContactCover.SetActive(false);
+                    ContactInsideBackcover.SetActive(false);
+                    ContactOpenedbook.SetActive(true);
+                }
+            }
+            if (isContactClosedClicked)
+            {
+                if ((endTime - startTime).TotalSeconds >= 1 && transform.eulerAngles.y > 0)
+                {
+                    transform.eulerAngles = new Vector3(0, 0, 0);
+                    isContactClosedClicked = false;
+                }
+            }
+        }
+
     }
 
-    public void OpenButtonClick()
+    public void DiaryOpenButtonClick()
     {
-        isOpenClicked = true;
+        isDiaryOpenClicked = true;
         startTime = DateTime.Now;
-        rotationVector = new Vector3(0, 180, 0);
+        RotationVector = new Vector3(0, 180, 0);
 
         PlayOpenBookSound();
-        FlipPage.Page = 1;
-        FlipPage.isClicked = true;
+        FlipPage.DiaryPage = 1;
+        FlipPage.isDiaryClicked = true;
         
+    }
+    public void ContactOpenButtonClick()
+    {
+        isContactOpenClicked = true;
+        startTime = DateTime.Now;
+        RotationVector = new Vector3(0, -180, 0);
+
+
+        PlayOpenBookSound();
+        FlipPage.ContactPage = 1;
+        FlipPage.isContactClicked = true;
+
     }
 
 
-     void closebook_click(object sender,EventArgs e)
+    public void DiaryCloseButtonClick()
     {
-        gameObject.SetActive(true);
-        openedbook.SetActive(false);
-        insideBackcover.SetActive(true);
+        FlipPage.DiaryPage = 0;
+        DiaryCover.SetActive(true);
+        DiaryOpenedbook.SetActive(false);
+        DiaryInsideBackcover.SetActive(true);
 
-        isClosedClicked = true;
+        isDiaryClosedClicked = true;
         startTime = DateTime.Now;
-        rotationVector = new Vector3(0, -180, 0);
+        RotationVector = new Vector3(0, -180, 0);
 
         PlayClosedBookSound();
         
     }
+
+    public void ContactCloseButtonClick()
+    {
+        FlipPage.ContactPage = 0;
+        ContactCover.SetActive(true);
+        ContactOpenedbook.SetActive(false);
+        ContactInsideBackcover.SetActive(true);
+
+        isContactClosedClicked = true;
+        startTime = DateTime.Now;
+        RotationVector = new Vector3(0, 180, 0);
+
+
+        PlayClosedBookSound();
+
+    }
+
     void PlayOpenBookSound()
     {
         if ((audioSource != null) && (OpenBookSound != null))
