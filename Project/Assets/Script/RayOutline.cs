@@ -19,16 +19,4 @@ public class RayOutline : MonoBehaviour
     {
         GetComponent<Outline>().enabled = false;
     }
-
-    //private void Update()
-    //{
-    //    if (RayScript.hit.collider.name == this.gameObject.name)
-    //    {
-    //        GetComponent<Outline>().enabled = true;
-    //    }
-    //    else
-    //    {
-    //        GetComponent<Outline>().enabled = false;
-    //    }
-    //}
 }

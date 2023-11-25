@@ -11,14 +11,9 @@ public class RayScript : MonoBehaviour
     // 射線長度
     float raylength = 2f;
     // 打到的東西
-    static public RaycastHit hit;
+    public static RaycastHit hit;
 
     public LevelText01 levelText01;
-
-    // 對話框
-    public GameObject DialogueBG;
-    // 按空白處
-    public GameObject clickSpace;
 
     // 判斷是不是聽得懂動物語
     bool CanHear = false;
@@ -103,12 +98,5 @@ public class RayScript : MonoBehaviour
         {
             isHit = false;
         }
-    }
-
-    public void ButtonClick()
-    {
-        LevelText01.isTalking = false;
-        DialogueBG.SetActive(false);
-        clickSpace.SetActive(false);
     }
 }

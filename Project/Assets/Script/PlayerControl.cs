@@ -18,8 +18,8 @@ public class PlayerControl : MonoBehaviour
     void Update()
     {
         // 方向量值
-        float h = -Input.GetAxis("Horizontal");
-        float v = -Input.GetAxis("Vertical");
+        float h = Input.GetAxis("Horizontal");
+        float v = Input.GetAxis("Vertical");
 
         // 將自身座標轉成世界座標，保持以自身前後左右走
         Vector3 moveDirection = new Vector3(h, 0, v).normalized;
@@ -56,7 +56,7 @@ public class PlayerControl : MonoBehaviour
         }
 
         // 點擊東西後不動不轉
-        if (LevelText01.isTalking == true)
+        if (LevelText01.isTalking)
         {
             moveSpeed = 0;
             rotatSpeed = 0;

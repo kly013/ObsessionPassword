@@ -7,7 +7,8 @@ using UnityEngine.UI;
 public class LevelText01 : MonoBehaviour
 {
     // 判斷是否在看對話
-    static public bool isTalking = false;
+    static public bool isTalking;
+    bool isThose;
 
     // 對話框
     public GameObject DialogueBG;
@@ -20,7 +21,8 @@ public class LevelText01 : MonoBehaviour
 
     public void notHearText(string gameobjName)
     {
-        switch(gameobjName)
+        isThose = true;
+        switch (gameobjName)
         {
             case "Bed":
             case "Pillow":
@@ -220,8 +222,12 @@ public class LevelText01 : MonoBehaviour
                 objtext = "好大看起來很好吃的西瓜";
                 break;
             default:
-                isTalking = false;
+                isThose = false;
                 break;
+        }
+        if(isThose)
+        {
+            isTalking = true;
         }
         if(isTalking)
         {
@@ -233,7 +239,7 @@ public class LevelText01 : MonoBehaviour
 
     public void canHearText(String gameobjName)
     {
-        isTalking = true;
+        isThose = true;
         switch (gameobjName)
         {
             case "Bed":
@@ -421,8 +427,12 @@ public class LevelText01 : MonoBehaviour
                 objtext = "主人和爺爺每次吃這個看起來都很開心";
                 break;
             default:
-                isTalking = false;
+                isThose = false;
                 break;
+        }
+        if (isThose)
+        {
+            isTalking = true;
         }
         if (isTalking)
         {

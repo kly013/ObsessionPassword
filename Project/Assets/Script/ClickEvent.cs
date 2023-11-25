@@ -16,8 +16,6 @@ public class ClickEvent : MonoBehaviour
     public GameObject[]  ClickObjTalk;
     public Text ObjTalk;
 
-    static public bool isTalking=false;
-
     private void Update()
     {
         if (clickNum > 0)

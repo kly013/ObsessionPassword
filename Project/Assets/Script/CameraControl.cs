@@ -10,6 +10,7 @@ public class CameraControl : MonoBehaviour
     BackToOrig backToOrig;
 
     public static bool isChange;
+    public static bool isR1;
 
     public void CameraChange(string name)
     {
@@ -32,6 +33,8 @@ public class CameraControl : MonoBehaviour
                 player.transform.position = cameraPos[3].transform.position;
                 break;
             case "Refrigerator001":
+                RayScript.hit.collider.GetComponent<MeshCollider>().enabled = false;
+                isR1 = true;
                 player.transform.position = cameraPos[4].transform.position;
                 break;
             case "Refrigerator002":
