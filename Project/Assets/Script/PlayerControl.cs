@@ -28,7 +28,7 @@ public class PlayerControl : MonoBehaviour
 
         // 滑鼠 xy 軸量值
         float mouseX = -Input.GetAxis("Mouse X") * rotatSpeed * Time.deltaTime;
-        float mouseY = -Input.GetAxis("Mouse Y") * rotatSpeed * Time.deltaTime;
+        float mouseY = Input.GetAxis("Mouse Y") * rotatSpeed * Time.deltaTime;
 
         // 判斷有沒有在走路
         if (h == 0 && v == 0)
@@ -53,7 +53,6 @@ public class PlayerControl : MonoBehaviour
         else
         {
             transform.Translate(moveDirection * moveSpeed * Time.deltaTime, Space.World);
-            Vector3 roat = new Vector3(transform.rotation.x, transform.rotation.y, transform.rotation.z);
         }
 
         // 點擊東西後不動不轉
@@ -65,7 +64,7 @@ public class PlayerControl : MonoBehaviour
         else
         {
             moveSpeed = 1f;
-            rotatSpeed= 150;
+            rotatSpeed= 100;
         }
     }
 }

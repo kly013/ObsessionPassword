@@ -4,64 +4,54 @@ using UnityEngine;
 
 public class CameraControl : MonoBehaviour
 {
-    public GameObject CameraMain;
-    public GameObject Camera01;
-    public GameObject Camera02;
-    public GameObject Cursor;
-    public GameObject BackButton;
+    public GameObject player;
+    public GameObject[] cameraPos;
+    Vector3 playerPos;
+    BackToOrig backToOrig;
 
-    static public bool CursorControl;
+    public static bool isChange;
 
-    void Start()
+    public void CameraChange(string name)
     {
-        CameraMain.SetActive(true);
-        BackButton.SetActive(false);
-    }
+        playerPos = player.transform.position;
+        
+        isChange = true;
 
-    private void Awake()
-    {
-        Camera01.SetActive(false);
-        Camera02.SetActive(false);
-    }
+        switch (name)
+        {
+            case "Shelf002":
+                player.transform.position = cameraPos[0].transform.position;
+                break;
+            case "Table004":
+                player.transform.position = cameraPos[1].transform.position;
+                break;
+            case "Sink":
+                player.transform.position = cameraPos[2].transform.position;
+                break;
+            case "Table002":
+                player.transform.position = cameraPos[3].transform.position;
+                break;
+            case "Refrigerator001":
+                player.transform.position = cameraPos[4].transform.position;
+                break;
+            case "Refrigerator002":
+                player.transform.position = cameraPos[5].transform.position;
+                break;
+            case "Refrigerator003":
+                player.transform.position = cameraPos[6].transform.position;
+                break;
+            default:
+                isChange = false;
+                break;
+        }
 
-    void Update()
-    {
-        //if (Input.GetKeyDown(KeyCode.P))
-        //{
-        //    CursorControl = true;
-        //    Cursor.SetActive(false);
-        //    Camera01.SetActive(true);
-        //    CameraMain.SetActive(false);
-        //    GameObject.Find("Player").GetComponent<RayScript>().enabled = false;
-        //}
-    }
-
-    void ClickBedRoomTable()
-    {
-        CursorControl = true;
-        Cursor.SetActive(false);
-        Camera01.SetActive(true);
-        CameraMain.SetActive(false);
-        GameObject.Find("Player").GetComponent<RayScript>().enabled = false;
-    }
-
-    void ClickShelf()
-    {
-        CursorControl = true;
-        Cursor.SetActive(false);
-        Camera02.SetActive(true);
-        Camera02.transform.position = new Vector3(0.01f, -0.72f, 0.9f);
-        Debug.Log(Camera02.transform.position);
-        CameraMain.SetActive(false);
-        GameObject.Find("Player").GetComponent<RayScript>().enabled = false;
-    }
-
-    void BackToMainCamera()
-    {
-        Cursor.SetActive(true);
-        CameraMain.SetActive(true);
-        Camera01.SetActive(false);
-        Camera02.SetActive(false);
-        GameObject.Find("Player").GetComponent<RayScript>().enabled = true;
+        if(isChange)
+        {
+            player.transform.rotation = new Quaternion(0, 0, 0, 0);
+            LevelText01.isTalking = true;
+            backToOrig = GetComponent<BackToOrig>();
+            backToOrig.enabled = true;
+            backToOrig.ToOrig(player, playerPos);
+        }
     }
 }

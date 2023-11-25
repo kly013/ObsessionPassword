@@ -9,7 +9,7 @@ public class RayScript : MonoBehaviour
     // 射線
     Ray ray;
     // 射線長度
-    float raylength = 1.5f;
+    float raylength = 2f;
     // 打到的東西
     static public RaycastHit hit;
 
@@ -27,6 +27,7 @@ public class RayScript : MonoBehaviour
 
     public ClickComputer clickComputer;
     public OpenDoor openDoor;
+    public CameraControl cameraControl;
 
     void Start()
     {
@@ -74,7 +75,7 @@ public class RayScript : MonoBehaviour
                 if (hit.collider.gameObject.tag == "key")
                 {
                     //print(hit.collider.name);
-                    CanHear = true;
+                    CanHear = !CanHear;
                 }
 
                 if (CanHear)
@@ -88,37 +89,19 @@ public class RayScript : MonoBehaviour
                     levelText01.notHearText(hit.collider.name);
                 }
 
-                openDoor.HitByRaycast();
+                openDoor.HitByRaycast(hit.collider.name);
+                cameraControl.CameraChange(hit.collider.name);
 
                 if (hit.collider.name == "Computer")
                 {
                     clickComputer.OnClick();
                     LevelText01.isTalking = true;
                 }
-
-                ClickBedRoomTable();
-                ClickShelf02();
             }
         }
         else
         {
             isHit = false;
-        }
-    }
-
-    void ClickBedRoomTable()
-    {
-        if(hit.collider.name== "Table002")
-        {
-            hit.transform.SendMessage("ClickBedRoomTable", gameObject, SendMessageOptions.DontRequireReceiver);
-        }
-    }
-
-    void ClickShelf02()
-    {
-        if (hit.collider.name == "Shelf002")
-        {
-            hit.transform.SendMessage("ClickShelf", gameObject, SendMessageOptions.DontRequireReceiver);
         }
     }
 

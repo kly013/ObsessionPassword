@@ -20,7 +20,6 @@ public class LevelText01 : MonoBehaviour
 
     public void notHearText(string gameobjName)
     {
-        isTalking = true;
         switch(gameobjName)
         {
             case "Bed":

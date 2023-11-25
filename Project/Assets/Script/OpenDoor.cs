@@ -9,12 +9,11 @@ public class OpenDoor : MonoBehaviour
     bool isOpen;
     bool[] isthisOpen = Enumerable.Repeat(false, 15).ToArray();
 
-    public void HitByRaycast() //被射線打到時會進入此方法
+    public void HitByRaycast(string name) //被射線打到時會進入此方法
     {
         //print("EEEEEE");
 
         OpenDoorAnim = RayScript.hit.collider.GetComponent<Animator>();
-        string name = RayScript.hit.collider.name;
         int thisNum = -1;
 
         switch (name)
@@ -74,7 +73,7 @@ public class OpenDoor : MonoBehaviour
             }
 
             isthisOpen[thisNum] = isOpen;
-            print("isOpen = " + isOpen);
+            //print("isOpen = " + isOpen);
 
             switch (name)
             {
