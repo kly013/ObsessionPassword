@@ -10,6 +10,8 @@ public class ClickComputer : MonoBehaviour
     public void OnClick()
     {
         screen.SetActive(true);
+        LevelController.isClickComputer = true;
+        GetComponent<ComputerBack>().enabled = true;
     }
 
     public void onClickFolder()
@@ -20,11 +22,5 @@ public class ClickComputer : MonoBehaviour
     public void onClickClose()
     {
         folder.SetActive(false);
-    }
-
-    public void onClickBack()
-    {
-        screen.SetActive(false);
-        LevelText01.isTalking = false;
     }
 }

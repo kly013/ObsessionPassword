@@ -11,7 +11,10 @@ public class ClickSpace : MonoBehaviour
 
     public void onClick()
     {
-        LevelText01.isTalking = false;
+        if (!LevelController.isClickComputer && !LevelController.isChangeCamera)
+        {
+            LevelText01.isTalking = false;
+        }
         DialogueBG.SetActive(false);
         clickSpace.SetActive(false);
     }

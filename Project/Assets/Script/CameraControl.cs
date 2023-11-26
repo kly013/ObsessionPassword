@@ -4,57 +4,66 @@ using UnityEngine;
 
 public class CameraControl : MonoBehaviour
 {
-    public GameObject player;
-    public GameObject[] cameraPos;
-    Vector3 playerPos;
-    BackToOrig backToOrig;
+    //public GameObject player;
+    //public GameObject[] cameraPos;
+    //Transform playerTra;
+    //BackToOrig backToOrig;
+    //MeshCollider meshCollider;
 
-    public static bool isChange;
-    public static bool isR1;
+    //public static bool isChange;
 
-    public void CameraChange(string name)
-    {
-        playerPos = player.transform.position;
-        
-        isChange = true;
+    //public void CameraChange(string name)
+    //{
+    //    playerTra = player.transform;
+    //    meshCollider = RayScript.hit.collider.GetComponent<MeshCollider>();
 
-        switch (name)
-        {
-            case "Shelf002":
-                player.transform.position = cameraPos[0].transform.position;
-                break;
-            case "Table004":
-                player.transform.position = cameraPos[1].transform.position;
-                break;
-            case "Sink":
-                player.transform.position = cameraPos[2].transform.position;
-                break;
-            case "Table002":
-                player.transform.position = cameraPos[3].transform.position;
-                break;
-            case "Refrigerator001":
-                RayScript.hit.collider.GetComponent<MeshCollider>().enabled = false;
-                isR1 = true;
-                player.transform.position = cameraPos[4].transform.position;
-                break;
-            case "Refrigerator002":
-                player.transform.position = cameraPos[5].transform.position;
-                break;
-            case "Refrigerator003":
-                player.transform.position = cameraPos[6].transform.position;
-                break;
-            default:
-                isChange = false;
-                break;
-        }
+    //    isChange = true;
 
-        if(isChange)
-        {
-            player.transform.rotation = new Quaternion(0, 0, 0, 0);
-            LevelText01.isTalking = true;
-            backToOrig = GetComponent<BackToOrig>();
-            backToOrig.enabled = true;
-            backToOrig.ToOrig(player, playerPos);
-        }
-    }
+    //    switch (name)
+    //    {
+    //        case "Shelf002":
+    //            player.transform.position = cameraPos[0].transform.position;
+    //            player.transform.rotation = cameraPos[0].transform.rotation;
+    //            break;
+    //        case "Table004":
+    //            player.transform.position = cameraPos[1].transform.position;
+    //            player.transform.rotation = cameraPos[1].transform.rotation;
+    //            break;
+    //        case "Sink":
+    //            player.transform.position = cameraPos[2].transform.position;
+    //            player.transform.rotation = cameraPos[2].transform.rotation;
+    //            break;
+    //        case "Table002":
+    //            player.transform.position = cameraPos[3].transform.position;
+    //            player.transform.rotation = cameraPos[3].transform.rotation;
+    //            break;
+    //        case "Refrigerator001":
+    //            player.transform.position = cameraPos[4].transform.position;
+    //            player.transform.rotation = cameraPos[4].transform.rotation;
+    //            break;
+    //        case "Refrigerator002":
+    //            player.transform.position = cameraPos[5].transform.position;
+    //            player.transform.rotation = cameraPos[5].transform.rotation;
+    //            break;
+    //        case "Refrigerator003":
+    //            player.transform.position = cameraPos[6].transform.position;
+    //            player.transform.rotation = cameraPos[6].transform.rotation;
+    //            break;
+    //        default:
+    //            isChange = false;
+    //            break;
+    //    }
+
+    //    if(isChange)
+    //    {
+    //        backToOrig = GetComponent<BackToOrig>();
+    //        backToOrig.enabled = true;
+            
+    //        meshCollider.enabled = false;
+
+    //        backToOrig.ToOrig(player, playerTra, meshCollider);
+
+    //        LevelController.isChangeCamera = true;
+    //    }
+    //}
 }

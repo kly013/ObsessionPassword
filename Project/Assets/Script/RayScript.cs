@@ -12,14 +12,12 @@ public class RayScript : MonoBehaviour
     float raylength = 2f;
     // 打到的東西
     public static RaycastHit hit;
-
-    public LevelText01 levelText01;
-
     // 判斷是不是聽得懂動物語
     bool CanHear = false;
 
     public static bool isHit = false;
 
+    public LevelText01 levelText01;
     public ClickComputer clickComputer;
     public OpenDoor openDoor;
     public CameraControl cameraControl;
@@ -62,11 +60,10 @@ public class RayScript : MonoBehaviour
             //當射線打到物件時會在Scene視窗畫出黃線，方便查閱
             Debug.DrawLine(ray.origin, hit.point, Color.yellow);
 
-            //在Console視窗印出被射線打到的物件名稱，方便查閱
-            //print("這個在射線名字是" + hit.transform.name);
-
             if (Input.GetMouseButtonDown(0))
             {
+                print(hit.transform.name);
+
                 if (hit.collider.gameObject.tag == "key")
                 {
                     //print(hit.collider.name);
@@ -85,7 +82,7 @@ public class RayScript : MonoBehaviour
                 }
 
                 openDoor.HitByRaycast(hit.collider.name);
-                cameraControl.CameraChange(hit.collider.name);
+                //cameraControl.CameraChange(hit.collider.name);
 
                 if (hit.collider.name == "Computer")
                 {

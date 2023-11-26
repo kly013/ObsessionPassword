@@ -7,6 +7,9 @@ public class LevelController : MonoBehaviour
     public static float gameTimer = 0;
     public static int levelnum = 1;
 
+    public static bool isChangeCamera;
+    public static bool isClickComputer;
+
     void Start()
     {
         gameTimer = 0;

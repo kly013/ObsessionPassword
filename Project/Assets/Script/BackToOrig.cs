@@ -4,27 +4,26 @@ using UnityEngine;
 
 public class BackToOrig : MonoBehaviour
 {
-    GameObject Player;
-    Vector3 PlayerPos;
-    public GameObject r1;
+    //GameObject Player;
+    //Transform PlayerTra;
+    //MeshCollider meshColl;
 
-    void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            Player.transform.position = PlayerPos;
-            if(CameraControl.isR1)
-            {
-                r1.GetComponent<MeshCollider>().enabled = true;
-            }
-            LevelText01.isTalking = false;
-            GetComponent<BackToOrig>().enabled = false;
-        }
-    }
+    //void Update()
+    //{
+    //    if(Input.GetKeyDown(KeyCode.Space))
+    //    {
+    //        Player.transform.position = PlayerTra.position;
+    //        Player.transform.rotation = PlayerTra.rotation;
+    //        meshColl.enabled = true;
+    //        LevelController.isChangeCamera = false;
+    //        GetComponent<BackToOrig>().enabled = false;
+    //    }
+    //}
 
-    public void ToOrig(GameObject player, Vector3 playerPos)
-    {
-        Player = player;
-        PlayerPos = playerPos;
-    }
+    //public void ToOrig(GameObject player, Transform playerTra, MeshCollider meshCollider)
+    //{
+    //    Player = player;
+    //    PlayerTra = playerTra;
+    //    meshColl = meshCollider;
+    //}
 }
