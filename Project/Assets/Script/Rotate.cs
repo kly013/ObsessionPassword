@@ -14,6 +14,8 @@ public class Rotate : MonoBehaviour
     public GameObject DialogueBG;
     public GameObject choseText;
 
+    public BagController bagController;
+
     bool isEnter = true;
 
     void Update()
@@ -24,7 +26,6 @@ public class Rotate : MonoBehaviour
             {
                 axisX = -Input.GetAxis("Mouse X");
                 axisY = Input.GetAxis("Mouse Y");
-                print("x = " + axisX + ", y = " + axisY);
                 rotateObj.transform.Rotate(new Vector3(0, axisX * speed, axisY * speed), Space.World);
             }
         }
@@ -49,12 +50,17 @@ public class Rotate : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.F))
         {
-            DialogueBG.SetActive(false);
-            choseText.SetActive(false);
-            LevelController.isTakeLook = false;
-            LevelText01.isTalking = false;
-            this.enabled = false;
-            Destroy(rotateObj);
+            if (BagController.toolsNum <= 2)
+            {
+                print(BagController.toolsNum);
+                DialogueBG.SetActive(false);
+                choseText.SetActive(false);
+                bagController.addTools(rotateObj.name);
+                LevelController.isTakeLook = false;
+                LevelText01.isTalking = false;
+                this.enabled = false;
+                Destroy(rotateObj);
+            }
         }
     }
 
