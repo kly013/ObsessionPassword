@@ -26,10 +26,10 @@ public class LevelText01 : MonoBehaviour
         {
             case "Bed":
             case "Pillow":
-                objtext = "很大很舒服的床";
+                objtext = "能接住疲累身軀的大床";
                 break;
             case "BirthdayCake":
-                objtext = "蛋糕看起來很好吃";
+                objtext = "綿密柔軟的生日蛋糕";
                 break;
             case "Book001":
             case "Book002":
@@ -39,25 +39,25 @@ public class LevelText01 : MonoBehaviour
             case "Book006":
             case "Book007":
             case "Book008":
-                objtext = "各式各樣的書";
+                objtext = "知識就是力量";
                 break;
             case "Book009":
-                objtext = "像是本日記";
+                objtext = "記錄著時光流逝的老舊日記本，不知道裡面有沒有藏著什麼秘密。";
                 break;
             case "Book010":
             case "Book011":
             case "Book012":
-                objtext = "像是爺爺的書";
+                objtext = "活到老學到老";
                 break;
             case "Book014":
             case "Book015":
             case "Book016":
-                objtext = "一疊作業本，想到就頭痛";
+                objtext = "驗收上課內容有沒有讀入腦袋";
                 break;
             case "Bowl001":
             case "Bowl002":
             case "Bowl003":
-                objtext = "一般的碗";
+                objtext = "個人的小碗";
                 break;
             case "Bowl004":
                 objtext = "可以裝沙拉的碗";
@@ -66,20 +66,30 @@ public class LevelText01 : MonoBehaviour
                 objtext = "大碗公";
                 break;
             case "ContactBook":
-                objtext = "看起來是聯絡簿";
+                objtext = "老師跟家長聯絡的橋樑";
                 break;
             case "Cellphone":
-                objtext = "一般的手機，但好像沒電";
+                objtext = "是智慧型手機，但好像沒電了。";
                 break;
             case "Chair001":
+                objtext = "小凳子";
+                break;
             case "Chair002":
+                objtext = "高凳子";
+                break;
             case "Chair003":
+                objtext = "柔軟舒適的椅子";
+                break;
             case "Chair004":
             case "Chair005":
             case "Chair006":
+                objtext = "客廳座椅";
+                break;
             case "Chair007":
+                objtext = "長板凳";
+                break;
             case "Chair008":
-                objtext = "一般的椅子";
+                objtext = "一般的木頭椅子";
                 break;
             case "Clock":
                 objtext = "老舊的時鐘，但好像不會動";
@@ -89,7 +99,7 @@ public class LevelText01 : MonoBehaviour
             case "Clothes007":
             case "Clothes008":
             case "Clothes009":
-                objtext = "感覺是爺爺的衣服";
+                objtext = "成熟穩重的衣服";
                 break;
             case "Cup001":
             case "Cup002":
@@ -107,21 +117,21 @@ public class LevelText01 : MonoBehaviour
                 objtext = "很漂亮的檯燈";
                 break;
             case "DogFoods":
-                objtext = "看起來是狗飼料";
+                objtext = "狗的主要能量來源";
                 break;
             case "Charger":
-                objtext = "像是手機的充電器";
+                objtext = "將電力注入手機的充電器";
                 break;
             case "Chipsticks":
-                objtext = "吃飯用的筷子";
+                objtext = "東方國家的主要餐具";
                 break;
             case "ForkAndSpoon":
-                objtext = "吃飯用的湯匙和叉子";
+                objtext = "湯匙和叉子比較方便";
                 break;
             case "Flour001":
             case "Flour002":
             case "Flour003":
-                objtext = "很多的高級麵粉";
+                objtext = "很多的高級麵粉，做麵食很方便。";
                 break;
             case "Flower001":
             case "Flower002":
@@ -130,15 +140,15 @@ public class LevelText01 : MonoBehaviour
                 objtext = "裝飾用的假花盆栽";
                 break;
             case "GasStove":
-                objtext = "一般煮飯的瓦斯爐";
+                objtext = "料理三餐的重要爐具";
                 break;
             case "IceCreamBox001":
             case "IceCreamBox002":
             case "IceCreamBox003":
-                objtext = "看起來很好吃的冰淇淋";
+                objtext = "炎炎夏日的救贖";
                 break;
             case "Kennel":
-                objtext = "像是寵物的窩";
+                objtext = "柔軟舒適的狗窩";
                 break;
             case "Letter001":
             case "Letter002":
@@ -147,16 +157,16 @@ public class LevelText01 : MonoBehaviour
                 objtext = "好多的信，但別亂打開看好了";
                 break;
             case "Magnifier":
-                objtext = "一般的放大鏡";
+                objtext = "看不清太小的字時就要用放大鏡";
                 break;
             case "MonthlyCalendar":
-                objtext = "一般的月曆";
+                objtext = "記錄重要事情月曆";
                 break;
             case "Pan":
-                objtext = "炒菜用的鍋子";
+                objtext = "樸素好用的平底鍋";
                 break;
             case "Paste":
-                objtext = "看起來像漿糊";
+                objtext = "漿糊是天然的黏合劑";
                 break;
             case "Pen001":
             case "Pen002":
@@ -165,7 +175,7 @@ public class LevelText01 : MonoBehaviour
             case "Pen005":
             case "Pen006":
             case "Pen007":
-                objtext = "幾枝普通的筆";
+                objtext = "書寫的重要工具";
                 break;
             case "PhotoFrame":
                 objtext = "照片裡的大家看起來都很開心";
@@ -181,10 +191,10 @@ public class LevelText01 : MonoBehaviour
             case "PopsicleBox003":
             case "PopsicleBox004":
             case "PopsicleBox005":
-                objtext = "好多看起來很好吃的冰";
+                objtext = "清爽好吃的冰棒";
                 break;
             case "Milk":
-                objtext = "一般的牛奶";
+                objtext = "香醇濃厚的牛奶";
                 break;
             case "AluminumCan001":
             case "AluminumCan002":
@@ -203,10 +213,10 @@ public class LevelText01 : MonoBehaviour
             case "Seasoning003":
             case "Seasoning004":
             case "Seasoning005":
-                objtext = "放著各式調味料的瓶子";
+                objtext = "料理中多樣香味的來源";
                 break;
             case "Sink":
-                objtext = "一般的水龍頭";
+                objtext = "請節約用水";
                 break;
             case "Spatula":
             case "Spoon":
@@ -214,7 +224,7 @@ public class LevelText01 : MonoBehaviour
                 break;
             case "WaterBowl":
             case "FoodBowl":
-                objtext = "像是寵物用的碗";
+                objtext = "寵物專屬的碗";
                 break;
             case "Watermelon001":
             case "Watermelon002":
