@@ -21,6 +21,7 @@ public class RayScript : MonoBehaviour
     public ClickComputer clickComputer;
     public OpenDoor openDoor;
     public CameraControl cameraControl;
+    public TakeLook takeLook;
 
     void Start()
     {
@@ -83,6 +84,7 @@ public class RayScript : MonoBehaviour
 
                 openDoor.HitByRaycast(hit.collider.name);
                 //cameraControl.CameraChange(hit.collider.name);
+                takeLook.onClickCanTakeLook(hit.collider.gameObject);
 
                 if (hit.collider.name == "Computer")
                 {

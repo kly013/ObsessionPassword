@@ -195,8 +195,7 @@ public class LevelText01 : MonoBehaviour
             case "Wine004":
                 objtext = "各式各樣的飲料";
                 break;
-            case "Scissors001":
-            case "Scissors002":
+            case "Scissors":
                 objtext = "一把剪刀";
                 break;
             case "Seasoning001":
@@ -229,11 +228,14 @@ public class LevelText01 : MonoBehaviour
         {
             isTalking = true;
         }
-        if(isTalking)
+        if (isTalking && !LevelController.isClickComputer)
         {
             DialogueBG.SetActive(true);
             ObjTalk.text = objtext;
-            clickSpace.SetActive(true);
+            if(!LevelController.isTakeLook)
+            {
+                clickSpace.SetActive(true);
+            }
         }
     }
 

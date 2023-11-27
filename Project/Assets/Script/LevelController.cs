@@ -9,6 +9,7 @@ public class LevelController : MonoBehaviour
 
     public static bool isChangeCamera;
     public static bool isClickComputer;
+    public static bool isTakeLook;
 
     void Start()
     {

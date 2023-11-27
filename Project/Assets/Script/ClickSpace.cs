@@ -11,7 +11,7 @@ public class ClickSpace : MonoBehaviour
 
     public void onClick()
     {
-        if (!LevelController.isClickComputer && !LevelController.isChangeCamera)
+        if (!LevelController.isClickComputer && !LevelController.isTakeLook)
         {
             LevelText01.isTalking = false;
         }
