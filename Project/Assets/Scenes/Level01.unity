@@ -446,7 +446,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 0.19607843}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -860,11 +860,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
+  m_IgnoreReversedGraphics: 0
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 23
 --- !u!114 &326147537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -925,6 +925,7 @@ RectTransform:
   - {fileID: 1551179169}
   - {fileID: 96775106}
   - {fileID: 882682485}
+  - {fileID: 999245211}
   - {fileID: 1906988983}
   - {fileID: 2041947237}
   m_Father: {fileID: 0}
@@ -1719,7 +1720,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &999245211
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1731,12 +1732,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.9, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1906988983}
+  m_Father: {fileID: 326147539}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 259.99997, y: -154.99997}
+  m_AnchoredPosition: {x: -90, y: 30.6}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &999245212
@@ -1771,7 +1772,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
-    m_LineSpacing: 1
+    m_LineSpacing: 1.3
   m_Text: "\uFF26 \u6536 \u8D77 \u7269 \u4EF6\n\u7A7A \u767D \u9375 \u8FD4 \u56DE"
 --- !u!222 &999245213
 CanvasRenderer:
@@ -2398,6 +2399,7 @@ GameObject:
   - component: {fileID: 1510190664}
   - component: {fileID: 1510190665}
   - component: {fileID: 1510190666}
+  - component: {fileID: 1510190667}
   m_Layer: 0
   m_Name: LevelController
   m_TagString: Untagged
@@ -2525,6 +2527,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DialogueBG: {fileID: 1719991249}
   choseText: {fileID: 999245210}
+  bagController: {fileID: 1510190667}
+--- !u!114 &1510190667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1510190657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b9dde81e51c04c428c302ffdbb8a77e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toolsImg: []
+  imgPos:
+  - {fileID: 135376962}
+  - {fileID: 2094424772}
+  - {fileID: 1697715250}
 --- !u!1 &1551179168
 GameObject:
   m_ObjectHideFlags: 0
@@ -2851,7 +2871,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 0.5882353}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -3275,9 +3295,8 @@ RectTransform:
   - {fileID: 815410882}
   - {fileID: 447654890}
   - {fileID: 24584328}
-  - {fileID: 999245211}
   m_Father: {fileID: 326147539}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3432,7 +3451,7 @@ RectTransform:
   - {fileID: 1697715251}
   - {fileID: 1269616557}
   m_Father: {fileID: 326147539}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -3796,7 +3815,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 0.5882353}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
