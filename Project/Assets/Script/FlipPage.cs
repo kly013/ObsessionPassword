@@ -20,13 +20,17 @@ public class FlipPage : MonoBehaviour
     static public int ContactPage=0;
 
     bool isDiaryPage1;
+    bool isDiaryPage2;
 
     bool isContactPage1;
     bool isContactPage3;
+    bool isContactPage4;
 
+    public GameObject DiaryFirstPageButton;
     public GameObject DiaryPage01;
     public GameObject DiaryPage02;
     public GameObject DiaryPage03;
+    public GameObject ContactFirstPageButton;
     public GameObject ContactPage01;
     public GameObject ContactPage02;
     public GameObject ContactPage03;
@@ -52,6 +56,7 @@ public class FlipPage : MonoBehaviour
 
         //Debug.Log("Contact"+ContactPage);
         //Debug.Log("Diary"+DiaryPage);
+        //Debug.Log(isDiaryPage4);
 
         if (isDiaryClicked)
         {
@@ -65,7 +70,6 @@ public class FlipPage : MonoBehaviour
                 transform.rotation = startRotation;
             }
         }
-        //Debug.Log((endTime - startTime).TotalMilliseconds);
         DiaryPagesShow();
 
 
@@ -131,24 +135,42 @@ public class FlipPage : MonoBehaviour
 
         if (DiaryPage <= 1 && (endTime - startTime).TotalMinutes >= 0.002)
         {
+            DiaryFirstPageButton.SetActive(false);
             isDiaryPage1 = true;
             DiaryPage = 1;
             DiaryPage01.SetActive(true);
         }
+
         if (isDiaryPage1==true&&DiaryPage == 2 && (endTime - startTime).TotalMinutes >= 0.002)
         {
+            DiaryFirstPageButton.SetActive(true);
             isDiaryPage1 = false;
+            isDiaryPage2 = true;
             DiaryPage02.SetActive(true);
 
         }else if(DiaryPage==2 && (endTime - startTime).TotalMilliseconds >= 900 )
         {
+            isDiaryPage2 = true;
             DiaryPage02.SetActive(true);
         }
-        if (DiaryPage >= 3 && (endTime - startTime).TotalMinutes >= 0.002)
+
+        if (isDiaryPage2 == true && DiaryPage == 3 && (endTime - startTime).TotalMinutes >= 0.002)
         {
-            DiaryPage = 3;
-            DiaryPage03.SetActive(true);    
+            isDiaryPage2 = false;
+            DiaryPage03.SetActive(true);
         }
+        else if (DiaryPage == 3 && (endTime - startTime).TotalMilliseconds >= 900)
+        {
+            DiaryPage03.SetActive(true);
+        }
+
+
+        if (DiaryPage >= 4 && (endTime - startTime).TotalMinutes >= 0.002)
+        {
+            DiaryPage = 4;
+            DiaryPage03.SetActive(false);
+        }
+
 
         if (DiaryPage <= 1 && (endTime - startTime).TotalSeconds >= 0.9)
         {
@@ -162,7 +184,7 @@ public class FlipPage : MonoBehaviour
             DiaryPage01.SetActive(false);
             DiaryPage03.SetActive(false);
         }
-        if (DiaryPage >= 3 && (endTime - startTime).TotalSeconds >= 0.1)
+        if (DiaryPage == 3 && (endTime - startTime).TotalSeconds >= 0.1)
         {
             DiaryPage = 3;
             DiaryPage01.SetActive(false);
@@ -176,23 +198,31 @@ public class FlipPage : MonoBehaviour
 
         if (ContactPage <= 1 && isContactPage3 == false && (endTime - startTime).TotalMinutes >= 0.5)
         {
+            ContactFirstPageButton.SetActive(false);
             ContactPage = 1;
             ContactPage01.SetActive(true);
             ContactPage02.SetActive(true);
 
         }
 
-        if (ContactPage >= 2 && (endTime - startTime).TotalSeconds >= 0.9)
+        if (ContactPage == 2 && (endTime - startTime).TotalSeconds >= 0.9)
         {
+            ContactFirstPageButton.SetActive(true);
             isContactPage3 = true;
             ContactPage = 2;
             ContactPage03.SetActive(true);
 
         }
+        if (ContactPage >= 3 && (endTime - startTime).TotalSeconds >= 0.9)
+        {
+            isContactPage4 = true;
+            ContactPage = 3;
+            ContactPage03.SetActive(false);
+        }
 
         if (isContactPage3 == true && ContactPage == 1 && (endTime - startTime).TotalSeconds >= 0.09)
         {
-
+            
             isContactPage1 = true;
             isContactPage3 = false;
             ContactPage = 1;
@@ -200,10 +230,20 @@ public class FlipPage : MonoBehaviour
         }
         if (isContactPage1 == true && ContactPage == 1 && (endTime - startTime).TotalMilliseconds >= 1000)
         {
+            ContactFirstPageButton.SetActive(false);
             isContactPage1 = false;
             isContactPage3 = false;
             ContactPage = 1;
             ContactPage02.SetActive(true);
+        }
+
+        if (isContactPage4 == true && ContactPage == 2 && (endTime - startTime).TotalSeconds >= 0.09)
+        {
+            isContactPage1 = false;
+            isContactPage3 = false;
+            isContactPage4 = false;
+            ContactPage = 2;
+            ContactPage03.SetActive(true);
         }
 
 
@@ -212,13 +252,13 @@ public class FlipPage : MonoBehaviour
             ContactPage = 1;
             ContactPage03.SetActive(false);
         }
-        if (ContactPage >= 2 && (endTime - startTime).TotalSeconds >= 0.9)
+        if (ContactPage == 2 && (endTime - startTime).TotalSeconds >= 0.9)
         {
             ContactPage = 2;
             ContactPage01.SetActive(false);
 
         }
-        if (ContactPage >= 2 && (endTime - startTime).TotalSeconds >= 0.09)
+        if (ContactPage == 2 && (endTime - startTime).TotalSeconds >= 0.09)
         {
             ContactPage = 2;
             ContactPage02.SetActive(false);
