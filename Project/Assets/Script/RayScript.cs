@@ -6,83 +6,102 @@ using UnityEngine.UI;
 
 public class RayScript : MonoBehaviour
 {
-    // ®g½u
+    // å°„ç·š
     Ray ray;
-    // ®g½uªø«×
+    // å°„ç·šé•·åº¦
     float raylength = 2f;
-    // ¥´¨ìªºªF¦è
+    // æ‰“åˆ°çš„æ±è¥¿
     public static RaycastHit hit;
-    // §PÂ_¬O¤£¬OÅ¥±oÀ´°Êª«»y
+    // åˆ¤æ–·æ˜¯ä¸æ˜¯è½å¾—æ‡‚å‹•ç‰©èª
     bool CanHear = false;
 
+    // åˆ¤æ–·æ˜¯å¦æœ‰æ‰“åˆ°æ±è¥¿
     public static bool isHit = false;
 
+    // æ‰“åˆ°æ±è¥¿å°æ‡‰é¡¯ç¤ºçš„æ–‡å­—
     public LevelText01 levelText01;
+    // é»é›»è…¦å¾Œçš„è¡Œç‚º
     public ClickComputer clickComputer;
+    // é»é–€å¾Œçš„é–‹é—œå‹•ç•«
     public OpenDoor openDoor;
-    public CameraControl cameraControl;
+    // æ”å½±æ©Ÿæ§åˆ¶(ç•«é¢å”èª¿å•é¡Œå…ˆæ‹¿æ‰)
+    //public CameraControl cameraControl;
+    // é»æ“Šå¯ä»¥æ‹¿èµ·çš„ç‰©å“å¾Œçš„å‹•ä½œ
     public TakeLook takeLook;
 
     void Start()
     {
-        // ¶}©lÃö±¼´£¥Ü©M¹ï¸Ü®Ø
+        // é–‹å§‹é—œæ‰æç¤ºå’Œå°è©±æ¡†
         //PressE.SetActive(false);
         //DialogueBG.SetActive(false);
 
-        // ¹«¼Ğ³]©wµøµ¡¤¤
+        // é¼ æ¨™è¨­å®šè¦–çª—ä¸­
         Cursor.lockState = CursorLockMode.Locked;
-        // ÁôÂÃ¹«¼Ğ
+        // éš±è—é¼ æ¨™
         Cursor.visible = false;
     }
 
     void Update()
     {
-        // ¹ï¸Ü®É
-        if (LevelText01.isTalking)
+        // æŒ‰altæˆ–å°è©±æ™‚
+        if (Input.GetButton(Keycode.Alt)
         {
-            // ¹«¼Ğ¥X²{
+            // é¼ æ¨™å‡ºç¾
+            Cursor.visible = true;
+        }
+        else if (LevelText01.isTalking)
+        {
+            // è§£é–æ§åˆ¶é¼ æ¨™åœ¨è¦–çª—å…§
             Cursor.lockState = CursorLockMode.None;
+            // é¼ æ¨™å‡ºç¾
             Cursor.visible = true;
         }
         else
         {
-            Cursor.lockState = CursorLockMode.Locked;
+            // æ§åˆ¶é¼ æ¨™åœ¨è¦–çª—å…§
+            Cursor.lockState = CursorLockMode.Confined;
+            // é¼ æ¨™éš±è—
             Cursor.visible = false;
         }
 
-        // Äá¼v¾÷®g¨ìµe­±¥¿¤¤¥¡ªº®g½u
+        // æ”å½±æ©Ÿå°„åˆ°ç•«é¢æ­£ä¸­å¤®çš„å°„ç·š
         ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2, 0));
-
-        // (®g½u,out ³Q®g½u¥´¨ìªºª«¥ó,®g½uªø«×)¡Aout hit ·N«ä¬O¡G§â"³Q®g½u¥´¨ìªºª«¥ó"±aµ¹hit
+        
         //if (Physics.Raycast(ray, out hit, raylength) && !EventSystem.current.IsPointerOverGameObject())
+        
+        // ï¼ˆå°„ç·š, out è¢«å°„ç·šæ‰“åˆ°çš„ç‰©ä»¶, å°„ç·šé•·åº¦ï¼‰ï¼Œout hit æ„æ€æ˜¯ï¼šæŠŠ"è¢«å°„ç·šæ‰“åˆ°çš„ç‰©ä»¶"å¸¶çµ¦hit
         if (Physics.Raycast(ray, out hit, raylength))
         {
+            // æ‰“åˆ°ç‰©é«”ï¼ˆç”¨ä¾†çµ¦å…¶ä»–scriptåˆ¤æ–·ï¼Œé¿å… hit == null æƒ…å½¢ï¼‰
             isHit = true;
 
-            //·í®g½u¥´¨ìª«¥ó®É·|¦bSceneµøµ¡µe¥X¶À½u¡A¤è«K¬d¾\
+            //ç•¶å°„ç·šæ‰“åˆ°ç‰©ä»¶æ™‚æœƒåœ¨Sceneè¦–çª—ç•«å‡ºé»ƒç·šï¼Œæ–¹ä¾¿æŸ¥é–±
             Debug.DrawLine(ray.origin, hit.point, Color.yellow);
 
+            // æŒ‰ä¸‹æ»‘é¼ å³éµ
             if (Input.GetMouseButtonDown(0))
             {
-                print(hit.transform.name);
+                //print(hit.transform.name);
 
+                // é»å ´æ™¯å…§ tag è¨­å®šæˆ key çš„ç‰©ä»¶ï¼Œåˆ‡æ› CanHear
                 if (hit.collider.gameObject.tag == "key")
                 {
                     //print(hit.collider.name);
                     CanHear = !CanHear;
                 }
-
+                
                 if (CanHear)
                 {
-                    //HearDogText();
+                    // canHear çš„æ–‡å­—å…§å®¹
                     levelText01.canHearText(hit.collider.name);
                 }
                 else
                 {
-                    //ClickObjectDialogueText();
+                    // notHear çš„æ–‡å­—å…§å®¹
                     levelText01.notHearText(hit.collider.name);
                 }
-
+                
+                // é»æ“Šéœ€è¦é–‹é–€çš„ç‰©ä»¶çš„é–‹é–€
                 openDoor.HitByRaycast(hit.collider.name);
                 //cameraControl.CameraChange(hit.collider.name);
                 takeLook.onClickCanTakeLook(hit.collider.gameObject);
