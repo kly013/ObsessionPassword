@@ -48,6 +48,7 @@ public class RayScript : MonoBehaviour
         {
             // 鼠標出現
             Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
         }
         else if (LevelText01.isTalking)
         {
@@ -59,7 +60,7 @@ public class RayScript : MonoBehaviour
         else
         {
             // 控制鼠標在視窗內
-            Cursor.lockState = CursorLockMode.Confined;
+            Cursor.lockState = CursorLockMode.Locked;
             // 鼠標隱藏
             Cursor.visible = false;
         }

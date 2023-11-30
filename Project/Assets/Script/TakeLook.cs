@@ -11,31 +11,6 @@ public class TakeLook : MonoBehaviour
 
     public void onClickCanTakeLook(GameObject gameobj)
     {
-        //switch (gameobj.name)
-        //{
-        //    case "Book001":
-        //    case "Book002":
-        //    case "Book003":
-        //    case "Book004":
-        //    case "Book005":
-        //    case "Book006":
-        //    case "Book007":
-        //    case "Book008":
-        //    case "Book009":
-        //    case "Book010":
-        //    case "Book011":
-        //    case "Book012":
-        //        LevelController.isTakeLook = true;
-        //        LevelText01.isTalking = true;
-        //        GameObject gameObj = Resources.Load<GameObject>(gameobj.name);
-        //        GameObject rotateobj = Instantiate(gameObj, objPos);
-        //        gameobj.SetActive(false);
-        //        backText.SetActive(true);
-        //        rotate.enabled = true;
-        //        rotate.RotateObj(rotateobj, gameobj);
-        //        break;
-        //}
-
         GameObject gameObj = Resources.Load<GameObject>(gameobj.name);
         if (gameObj != null)
         {

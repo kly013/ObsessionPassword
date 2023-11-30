@@ -50,9 +50,9 @@ public class Rotate : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.F))
         {
-            if (BagController.toolsNum <= 2)
+            if (BagController.posNum <= 2)
             {
-                print(BagController.toolsNum);
+                print(BagController.posNum);
                 DialogueBG.SetActive(false);
                 choseText.SetActive(false);
                 bagController.addTools(rotateObj.name);

@@ -8,7 +8,6 @@ public class RayOutline : MonoBehaviour
     {
         if(RayScript.isHit)
         {
-            print(RayScript.hit.collider.name);
             if (RayScript.hit.collider.name == this.gameObject.name)
             {
                 GetComponent<Outline>().enabled = true;
