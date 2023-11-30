@@ -44,7 +44,7 @@ public class RayScript : MonoBehaviour
     void Update()
     {
         // 按alt或對話時
-        if (Input.GetButton(Keycode.Alt)
+        if (Input.GetKey(KeyCode.LeftAlt))
         {
             // 鼠標出現
             Cursor.visible = true;
