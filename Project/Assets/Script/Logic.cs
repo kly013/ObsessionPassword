@@ -1,14 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Logic : MonoBehaviour
 {
     public GameObject objImg;
-    public GameObject[] obj;
-
-    public Sprite[] toolsImg;
-    public GameObject[] imgPos;
+    public Sprite[] imgs;
 
     bool isPaste = false;
 
@@ -16,18 +14,25 @@ public class Logic : MonoBehaviour
     {
         if (LevelController.selectName == "Scissors" && LevelController.clickName == "PhotoDog")
         {
-            //Instantiate(obj[0], pos);
+            imgChange(0);
         }
 
         if (LevelController.selectName == "PhotoCutDog" && LevelController.clickName == "Paste")
         {
-            //Instantiate(obj[1], pos);
             isPaste = true;
+            imgChange(1);
         }
 
-        if (LevelController.selectName == "PhotoCutDog" && isPaste)
+        if (LevelController.selectName == "PhotoCutDog" && isPaste && LevelController.clickName == "Photo2020")
         {
-            //Instantiate(obj[2], pos);
+            imgChange(2);
         }
+    }
+
+    void imgChange(int num)
+    {
+        objImg.SetActive(true);
+        Sprite sp = objImg.GetComponent<Sprite>();
+        sp = imgs[num];
     }
 }
