@@ -11,6 +11,9 @@ public class LevelController : MonoBehaviour
     public static bool isClickComputer;
     public static bool isTakeLook;
 
+    public static string selectName;
+    public static string clickName;
+
     void Start()
     {
         gameTimer = 0;

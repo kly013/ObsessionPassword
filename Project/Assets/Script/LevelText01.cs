@@ -230,6 +230,9 @@ public class LevelText01 : MonoBehaviour
             case "Watermelon002":
                 objtext = "好大看起來很好吃的西瓜";
                 break;
+            case "PhotoDog":
+                objtext = "一張狗狗的照片";
+                break;
             default:
                 isThose = false;
                 break;

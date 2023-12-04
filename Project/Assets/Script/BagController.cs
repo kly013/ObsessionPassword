@@ -27,6 +27,8 @@ public class BagController : MonoBehaviour
         Book015,
         Book016,
         Charger,
+        ContactBook,
+        Diary,
         DogBowl001,
         DogBowl002,
         DogCollar,
@@ -48,6 +50,8 @@ public class BagController : MonoBehaviour
         Pen005,
         Pen006,
         Pen007,
+        Photo2020,
+        PhotoDog,
         PhotoFrame,
         PopsicleBox001,
         PopsicleBox002,
@@ -70,6 +74,7 @@ public class BagController : MonoBehaviour
     public GameObject[] imgPos;
     public static int toolsNum = 0;
     public static int posNum = 0;
+    public Button[] button;
 
     Tools tools;
 
@@ -78,20 +83,13 @@ public class BagController : MonoBehaviour
         name = name.Substring(0, name.Length - 7);
         try
         {
-            print("AAA");
-            print(name);
+            //print(name);
             Tools result = (Tools)Enum.Parse(typeof(Tools), name);
-            print("BBB");
             toolsNum = (int)result;
-            print("CCC");
             imgPos[posNum].SetActive(true);
-            print("DDD");
             Image img = imgPos[posNum].GetComponent<Image>();
-            print("EEE");
             img.sprite = toolsImg[toolsNum];
-            print("FFF");
             posNum++;
-            print("GGG");
         }
         catch
         {
@@ -99,8 +97,25 @@ public class BagController : MonoBehaviour
         }
     }
 
-    public void onClick()
+    public void OnButtonClick()
     {
+        print(gameObject.name);
+        
 
+        Image buttonImage = GetComponent<Image>();
+
+        // 檢查是否成功獲取 Image
+        if (buttonImage != null)
+        {
+            // 在這裡使用 buttonImage 進行其他操作
+            Sprite sourceSprite = buttonImage.sprite;
+            LevelController.selectName = sourceSprite.name;
+            //button.interactable = false;
+            Debug.Log("按鈕的 Source Image 是：" + sourceSprite.name);
+        }
+        else
+        {
+            Debug.LogWarning("未找到 Image 元件");
+        }
     }
 }

@@ -82,6 +82,8 @@ public class RayScript : MonoBehaviour
             // 按下滑鼠右鍵
             if (Input.GetMouseButtonDown(0))
             {
+                LevelController.clickName = hit.collider.name;
+
                 // 點場景內 tag 設定成 key 的物件，切換 CanHear
                 if (hit.collider.gameObject.tag == "key")
                 {

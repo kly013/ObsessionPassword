@@ -52,7 +52,7 @@ public class Rotate : MonoBehaviour
         {
             if (BagController.posNum <= 2)
             {
-                print(BagController.posNum);
+                //print(BagController.posNum);
                 DialogueBG.SetActive(false);
                 choseText.SetActive(false);
                 bagController.addTools(rotateObj.name);
