@@ -74,9 +74,6 @@ public class BagController : MonoBehaviour
     public GameObject[] imgPos;
     public static int toolsNum = 0;
     public static int posNum = 0;
-    public Button[] button;
-
-    Tools tools;
 
     public void addTools(string name)
     {
@@ -99,23 +96,6 @@ public class BagController : MonoBehaviour
 
     public void OnButtonClick()
     {
-        print(gameObject.name);
-        
-
-        Image buttonImage = GetComponent<Image>();
-
-        // 檢查是否成功獲取 Image
-        if (buttonImage != null)
-        {
-            // 在這裡使用 buttonImage 進行其他操作
-            Sprite sourceSprite = buttonImage.sprite;
-            LevelController.selectName = sourceSprite.name;
-            //button.interactable = false;
-            Debug.Log("按鈕的 Source Image 是：" + sourceSprite.name);
-        }
-        else
-        {
-            Debug.LogWarning("未找到 Image 元件");
-        }
+       
     }
 }

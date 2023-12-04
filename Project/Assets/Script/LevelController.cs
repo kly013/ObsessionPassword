@@ -13,6 +13,7 @@ public class LevelController : MonoBehaviour
 
     public static string selectName;
     public static string clickName;
+    public static int taskNum = 0;
 
     void Start()
     {
@@ -22,5 +23,13 @@ public class LevelController : MonoBehaviour
     void Update()
     {
         gameTimer += Time.deltaTime;
+
+        if(Input.GetKey(KeyCode.K))
+        {
+            if(Input.GetKey(KeyCode.Alpha1))
+            {
+                selectName = "Scissors";
+            }
+        }
     }
 }

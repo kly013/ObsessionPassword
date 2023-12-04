@@ -11,10 +11,13 @@ public class ClickEvent : MonoBehaviour
     int clickNum = 0;
     float timelag = 0.5f;
 
-    public GameObject DialogueBG;
+    bool isSelected = false;
+    Button button;
 
-    public GameObject[]  ClickObjTalk;
-    public Text ObjTalk;
+    private void Start()
+    {
+        button = GetComponent<Button>();
+    }
 
     private void Update()
     {
@@ -36,24 +39,30 @@ public class ClickEvent : MonoBehaviour
     }
 
     // 滑鼠點擊
-    void OnMouseDown()
+    public void OnClick()
     {
         clickNum++;
-        print("clickNum = " + clickNum);
+        //print("clickNum = " + clickNum);
 
         if (clickNum == 1)
         {
             clickTimer = LevelController.gameTimer;
-            print("開始計時");
+            //print("開始計時");
         }
     }
 
     void onceClickEvent()
     {
-        print("觸發單擊事件");
+        //print("觸發單擊事件");
+        //print(gameObject.name);
+
+        Image buttonImage = GetComponent<Image>();
+        Sprite sourceSprite = buttonImage.sprite;
+        LevelController.selectName = sourceSprite.name;
+        //Debug.Log("按鈕的 Source Image 是：" + sourceSprite.name);
     }
     void doubleClickEvent()
     {
-        print("觸發雙擊事件");
+        //print("觸發雙擊事件");
     }
 }

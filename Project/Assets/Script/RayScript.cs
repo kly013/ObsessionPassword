@@ -89,7 +89,7 @@ public class RayScript : MonoBehaviour
                 {
                     CanHear = !CanHear;
                 }
-                
+
                 if (CanHear)
                 {
                     // canHear 的文字內容

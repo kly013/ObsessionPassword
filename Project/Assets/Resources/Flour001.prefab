@@ -12,8 +12,6 @@ GameObject:
   - component: {fileID: 7827755503221761925}
   - component: {fileID: 259087534381324308}
   - component: {fileID: 5223422183498877713}
-  - component: {fileID: 5223422183498877715}
-  - component: {fileID: 5223422183498877714}
   m_Layer: 0
   m_Name: Flour001
   m_TagString: Untagged
@@ -98,33 +96,3 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 6140108957560100332, guid: 70dec6cc2be635148b5e6248c8d07f15, type: 3}
---- !u!114 &5223422183498877715
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5223422183498877712}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffb21b2c7b6c92545bc8cf143901a4fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &5223422183498877714
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5223422183498877712}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outlineMode: 0
-  outlineColor: {r: 1, g: 1, b: 1, a: 1}
-  outlineWidth: 2
-  precomputeOutline: 0
-  bakeKeys: []
-  bakeValues: []
