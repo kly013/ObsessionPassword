@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 3412359125486678931}
   - component: {fileID: 5857819889611349865}
   - component: {fileID: 6039472151635866371}
+  - component: {fileID: 7771980874334883392}
+  - component: {fileID: 718866747910263729}
   m_Layer: 0
   m_Name: Book002
   m_TagString: Untagged
@@ -95,3 +97,33 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.14892264, y: 0.03827799, z: 0.24495947}
   m_Center: {x: 0.000000007450581, y: -0.019138735, z: -0.000000048428774}
+--- !u!114 &7771980874334883392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2212238098606021950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffb21b2c7b6c92545bc8cf143901a4fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &718866747910263729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2212238098606021950}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []

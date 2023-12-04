@@ -28,6 +28,7 @@ public class RayScript : MonoBehaviour
     //public CameraControl cameraControl;
     // 點擊可以拿起的物品後的動作
     public TakeLook takeLook;
+    public Logic logic;
 
     void Start()
     {
@@ -90,26 +91,35 @@ public class RayScript : MonoBehaviour
                     CanHear = !CanHear;
                 }
 
-                if (CanHear)
-                {
-                    // canHear 的文字內容
-                    levelText01.canHearText(hit.collider.name);
-                }
-                else
-                {
-                    // notHear 的文字內容
-                    levelText01.notHearText(hit.collider.name);
-                }
-                
                 // 點擊需要開門的物件的開門
                 openDoor.HitByRaycast(hit.collider.name);
-                //cameraControl.CameraChange(hit.collider.name);
-                takeLook.onClickCanTakeLook(hit.collider.gameObject);
 
-                if (hit.collider.name == "Computer")
+                print("s = "+LevelController.selectName);
+                print("c = "+LevelController.clickName);
+
+                logic.GameLogic(hit.collider.name);
+
+                if (!LevelController.isTask)
                 {
-                    clickComputer.OnClick();
-                    LevelText01.isTalking = true;
+                    if (CanHear)
+                    {
+                        // canHear 的文字內容
+                        levelText01.canHearText(hit.collider.name);
+                    }
+                    else
+                    {
+                        // notHear 的文字內容
+                        levelText01.notHearText(hit.collider.name);
+                    }
+
+                    //cameraControl.CameraChange(hit.collider.name);
+                    takeLook.onClickCanTakeLook(hit.collider.gameObject);
+
+                    if (hit.collider.name == "Computer")
+                    {
+                        clickComputer.OnClick();
+                        LevelText01.isTalking = true;
+                    }
                 }
             }
         }

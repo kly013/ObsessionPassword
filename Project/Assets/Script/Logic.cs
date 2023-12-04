@@ -31,8 +31,10 @@ public class Logic : MonoBehaviour
 
     void imgChange(int num)
     {
+        LevelController.isTask = true;
         objImg.SetActive(true);
         Sprite sp = objImg.GetComponent<Sprite>();
         sp = imgs[num];
+        LevelText01.isTalking = true;
     }
 }

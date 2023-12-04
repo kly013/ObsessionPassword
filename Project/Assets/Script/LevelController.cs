@@ -14,6 +14,7 @@ public class LevelController : MonoBehaviour
     public static string selectName;
     public static string clickName;
     public static int taskNum = 0;
+    public static bool isTask = false;
 
     void Start()
     {

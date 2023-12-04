@@ -10,13 +10,25 @@ public class RayOutline : MonoBehaviour
         {
             if (RayScript.hit.collider.name == this.gameObject.name)
             {
-                GetComponent<Outline>().enabled = true;
+                Outline outline = GetComponent<Outline>();
+                if (outline != null)
+                {
+                    outline.enabled = true;
+                }
             }
         }
     }
 
     void OnMouseExit()
     {
-        GetComponent<Outline>().enabled = false;
+        Outline outline = GetComponent<Outline>();
+        try
+        {
+            outline.enabled = false;
+        }
+        catch
+        {
+
+        }
     }
 }
