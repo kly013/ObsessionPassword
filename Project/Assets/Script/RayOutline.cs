@@ -8,12 +8,15 @@ public class RayOutline : MonoBehaviour
     {
         if(RayScript.isHit)
         {
-            if (RayScript.hit.collider.name == this.gameObject.name)
+            if (RayScript.hit.collider != null)
             {
-                Outline outline = GetComponent<Outline>();
-                if (outline != null)
+                if (RayScript.hit.collider.name == this.gameObject.name)
                 {
-                    outline.enabled = true;
+                    Outline outline = GetComponent<Outline>();
+                    if (outline != null)
+                    {
+                        outline.enabled = true;
+                    }
                 }
             }
         }
@@ -22,13 +25,9 @@ public class RayOutline : MonoBehaviour
     void OnMouseExit()
     {
         Outline outline = GetComponent<Outline>();
-        try
+        if (outline != null)
         {
             outline.enabled = false;
-        }
-        catch
-        {
-
         }
     }
 }

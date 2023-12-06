@@ -68,9 +68,9 @@ public class RayScript : MonoBehaviour
 
         // 攝影機射到畫面正中央的射線
         ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2, 0));
-        
+
         //if (Physics.Raycast(ray, out hit, raylength) && !EventSystem.current.IsPointerOverGameObject())
-        
+
         // （射線, out 被射線打到的物件, 射線長度），out hit 意思是：把"被射線打到的物件"帶給hit
         if (Physics.Raycast(ray, out hit, raylength))
         {
@@ -94,8 +94,7 @@ public class RayScript : MonoBehaviour
                 // 點擊需要開門的物件的開門
                 openDoor.HitByRaycast(hit.collider.name);
 
-                print("s = "+LevelController.selectName);
-                print("c = "+LevelController.clickName);
+                print("s = "+LevelController.selectName+ " , c = " + LevelController.clickName);
 
                 logic.GameLogic(hit.collider.name);
 
