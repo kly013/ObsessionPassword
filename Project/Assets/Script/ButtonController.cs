@@ -20,7 +20,7 @@ public class ButtonController : MonoBehaviour
 
     public void OnClickStart()
     {
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene("Level01");
     }
 
     public void OnClickExit()
@@ -30,11 +30,11 @@ public class ButtonController : MonoBehaviour
 
     public void OnClickContinue()
     {
-        GameObject.Find("PauseControl").GetComponent<PauseController>().ResumeGame();
+        GameObject.Find("PauseController").GetComponent<PauseController>().ResumeGame();
     }
     public void BackStartMenu()
     {
         SceneManager.LoadScene("StartMenu");
-        GameObject.Find("PauseControl").GetComponent<PauseController>().ResumeGame();
+        GameObject.Find("PauseController").GetComponent<PauseController>().ResumeGame();
     }
 }

@@ -28,7 +28,7 @@ public class PauseController : MonoBehaviour
             CheckUser();
         }
         timer += Time.deltaTime;
-        Debug.Log(timer.ToString("0"));
+        //Debug.Log(timer.ToString("0"));
 
     }
 
@@ -46,11 +46,13 @@ public class PauseController : MonoBehaviour
             
             if (Time.timeScale == 1)
             {
+                LevelText01.isTalking = true;
                 PauseGame();
                 PausePanel.gameObject.SetActive(true);
             }
             else
             {
+                LevelText01.isTalking = false;
                 ResumeGame();
                 PausePanel.gameObject.SetActive(false);
 
