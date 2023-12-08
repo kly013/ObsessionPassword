@@ -30,6 +30,17 @@ public class LevelController : MonoBehaviour
             if(Input.GetKey(KeyCode.Alpha1))
             {
                 selectName = "Scissors";
+                clickName = "";
+            }
+            if(Input.GetKey(KeyCode.Alpha2))
+            {
+                selectName = "Scissors";
+                clickName = "";
+            }
+            if(Input.GetKey(KeyCode.Alpha3))
+            {
+                selectName = "Scissors";
+                clickName = "";
             }
         }
     }
