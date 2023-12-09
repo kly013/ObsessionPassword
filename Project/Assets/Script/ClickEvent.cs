@@ -11,7 +11,7 @@ public class ClickEvent : MonoBehaviour
     int clickNum = 0;
     float timelag = 0.5f;
 
-    bool isSelected = false;
+    // bool isSelected = false;
     Button button;
 
     private void Start()

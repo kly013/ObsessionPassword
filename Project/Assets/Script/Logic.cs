@@ -12,7 +12,8 @@ public class Logic : MonoBehaviour
 
     public void GameLogic(string name)
     {
-        if (LevelController.selectName == "Scissors" && LevelController.clickName == "PhotoDog")
+        if (LevelController.selectName == "Scissors" && LevelController.clickName == "PhotoDog"
+             || LevelController.clickName == "Scissors" && LevelController.selectName == "PhotoDog")
         {
             imgChange(0);
         }
