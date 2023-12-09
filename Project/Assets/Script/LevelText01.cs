@@ -222,8 +222,8 @@ public class LevelText01 : MonoBehaviour
             case "Spoon":
                 objtext = "煮飯用的廚具";
                 break;
-            case "WaterBowl":
-            case "FoodBowl":
+            case "DogBowl001":
+            case "DogBowl002":
                 objtext = "寵物專屬的碗";
                 break;
             case "Watermelon001":

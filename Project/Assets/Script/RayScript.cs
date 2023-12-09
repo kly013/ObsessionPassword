@@ -100,15 +100,18 @@ public class RayScript : MonoBehaviour
 
                 if (!LevelController.isTask)
                 {
-                    if (CanHear)
+                    if (!LevelText01.isTalking)
                     {
-                        // canHear 的文字內容
-                        levelText01.canHearText(hit.collider.name);
-                    }
-                    else
-                    {
-                        // notHear 的文字內容
-                        levelText01.notHearText(hit.collider.name);
+                        if (CanHear)
+                        {
+                            // canHear 的文字內容
+                            levelText01.canHearText(hit.collider.name);
+                        }
+                        else
+                        {
+                            // notHear 的文字內容
+                            levelText01.notHearText(hit.collider.name);
+                        }
                     }
 
                     //cameraControl.CameraChange(hit.collider.name);

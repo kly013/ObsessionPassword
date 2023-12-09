@@ -11,6 +11,7 @@ public class TakeLook : MonoBehaviour
 
     public void onClickCanTakeLook(GameObject gameobj)
     {
+        //print(gameobj.name);
         GameObject gameObj = Resources.Load<GameObject>(gameobj.name);
         if (gameObj != null)
         {
