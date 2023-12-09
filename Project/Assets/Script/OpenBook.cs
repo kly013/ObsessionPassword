@@ -104,7 +104,7 @@ public class OpenBook : MonoBehaviour
         PlayOpenBookSound();
         FlipPage.DiaryPage = 1;
         FlipPage.isDiaryClicked = true;
-        
+
     }
     public void ContactOpenButtonClick()
     {
@@ -132,7 +132,7 @@ public class OpenBook : MonoBehaviour
         RotationVector = new Vector3(0, -180, 0);
 
         PlayClosedBookSound();
-        
+
     }
 
     public void ContactCloseButtonClick()

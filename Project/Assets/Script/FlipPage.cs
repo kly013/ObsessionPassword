@@ -8,7 +8,7 @@ public class FlipPage : MonoBehaviour
 {
     Vector3 rotationVector;
     Vector3 startPosition;
-    Quaternion startRotation;   
+    Quaternion startRotation;
     DateTime startTime;
     DateTime endTime;
 
@@ -16,8 +16,8 @@ public class FlipPage : MonoBehaviour
     public AudioClip FlipBookSound;
     static public bool isDiaryClicked;
     static public bool isContactClicked;
-    static public int DiaryPage=0;
-    static public int ContactPage=0;
+    static public int DiaryPage = 0;
+    static public int ContactPage = 0;
 
     bool isDiaryPage1;
     bool isDiaryPage2;
@@ -141,14 +141,15 @@ public class FlipPage : MonoBehaviour
             DiaryPage01.SetActive(true);
         }
 
-        if (isDiaryPage1==true&&DiaryPage == 2 && (endTime - startTime).TotalMinutes >= 0.002)
+        if (isDiaryPage1 == true && DiaryPage == 2 && (endTime - startTime).TotalMinutes >= 0.002)
         {
             DiaryFirstPageButton.SetActive(true);
             isDiaryPage1 = false;
             isDiaryPage2 = true;
             DiaryPage02.SetActive(true);
 
-        }else if(DiaryPage==2 && (endTime - startTime).TotalMilliseconds >= 900 )
+        }
+        else if (DiaryPage == 2 && (endTime - startTime).TotalMilliseconds >= 900)
         {
             isDiaryPage2 = true;
             DiaryPage02.SetActive(true);
@@ -222,7 +223,7 @@ public class FlipPage : MonoBehaviour
 
         if (isContactPage3 == true && ContactPage == 1 && (endTime - startTime).TotalSeconds >= 0.09)
         {
-            
+
             isContactPage1 = true;
             isContactPage3 = false;
             ContactPage = 1;

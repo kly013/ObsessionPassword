@@ -15,7 +15,7 @@ public class PauseController : MonoBehaviour
     //SkillPanel=¹ÏÅ²illustratedBookªºPanel
     void Start()
     {
-        
+        LevelText01.isTalking = false;
         PausePanel.gameObject.SetActive(false);
 
 
@@ -67,6 +67,7 @@ public class PauseController : MonoBehaviour
 
     void PauseGame()
     {
+
         Time.timeScale = 0;
         isPause = true;
              
@@ -74,6 +75,16 @@ public class PauseController : MonoBehaviour
 
     public void ResumeGame()
     {
+        LevelText01.isTalking = false;
+        Time.timeScale = 1;
+        isPause = false;
+        PausePanel.gameObject.SetActive(false);
+
+    }
+
+    public void BackMenu()
+    {
+        LevelText01.isTalking = true;
         Time.timeScale = 1;
         isPause = false;
         PausePanel.gameObject.SetActive(false);

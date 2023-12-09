@@ -35,6 +35,6 @@ public class ButtonController : MonoBehaviour
     public void BackStartMenu()
     {
         SceneManager.LoadScene("StartMenu");
-        GameObject.Find("PauseController").GetComponent<PauseController>().ResumeGame();
+        GameObject.Find("PauseController").GetComponent<PauseController>().BackMenu();
     }
 }
