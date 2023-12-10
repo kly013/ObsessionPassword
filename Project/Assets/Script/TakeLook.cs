@@ -20,8 +20,21 @@ public class TakeLook : MonoBehaviour
             GameObject rotateobj = Instantiate(gameObj, objPos);
             gameobj.SetActive(false);
             choseText.SetActive(true);
-            rotate.enabled = true;
-            rotate.RotateObj(rotateobj, gameobj);
+
+            if (gameobj.name == "ContactBook")
+            {
+                OpenBook.isContactBook = true;
+            }
+            else if (gameobj.name == "Diary")
+            {
+                OpenBook.isDiary = true;
+            }
+            else
+            {
+                print(gameobj.name);
+                rotate.enabled = true;
+                rotate.RotateObj(rotateobj, gameobj);
+            }
         }
     }
 }

@@ -493,7 +493,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7156266735392685276}
   m_Layer: 0
-  m_Name: FlipDiary
+  m_Name: Diary
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

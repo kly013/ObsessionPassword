@@ -40,52 +40,60 @@ public class FlipPage : MonoBehaviour
         startRotation = transform.rotation;
         startPosition = transform.position;
 
-        DiaryPage01.SetActive(false);
-        DiaryPage02.SetActive(false);
-        DiaryPage03.SetActive(false);
-        ContactPage01.SetActive(false);
-        ContactPage02.SetActive(false);
-        ContactPage03.SetActive(false);
-
-
+        if (OpenBook.isDiary)
+        {
+            DiaryPage01.SetActive(false);
+            DiaryPage02.SetActive(false);
+            DiaryPage03.SetActive(false);
+        }
+        if (OpenBook.isContactBook)
+        {
+            ContactPage01.SetActive(false);
+            ContactPage02.SetActive(false);
+            ContactPage03.SetActive(false);
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-
         //Debug.Log("Contact"+ContactPage);
         //Debug.Log("Diary"+DiaryPage);
         //Debug.Log(isDiaryPage4);
 
-        if (isDiaryClicked)
+        if (OpenBook.isDiary)
         {
-            transform.Rotate(rotationVector * Time.deltaTime);
-
-            endTime = DateTime.Now;
-            if ((endTime - startTime).TotalSeconds >= 1)
+            if (isDiaryClicked)
             {
-                isDiaryClicked = false;
-                transform.position = startPosition;
-                transform.rotation = startRotation;
+                transform.Rotate(rotationVector * Time.deltaTime);
+
+                endTime = DateTime.Now;
+                if ((endTime - startTime).TotalSeconds >= 1)
+                {
+                    isDiaryClicked = false;
+                    transform.position = startPosition;
+                    transform.rotation = startRotation;
+                }
             }
+            DiaryPagesShow();
         }
-        DiaryPagesShow();
 
-
-        if (isContactClicked)
+        if (OpenBook.isContactBook)
         {
-            transform.Rotate(rotationVector * Time.deltaTime);
-
-            endTime = DateTime.Now;
-            if ((endTime - startTime).TotalSeconds >= 1)
+            if (isContactClicked)
             {
-                isContactClicked = false;
-                transform.position = startPosition;
-                transform.rotation = startRotation;
+                transform.Rotate(rotationVector * Time.deltaTime);
+
+                endTime = DateTime.Now;
+                if ((endTime - startTime).TotalSeconds >= 1)
+                {
+                    isContactClicked = false;
+                    transform.position = startPosition;
+                    transform.rotation = startRotation;
+                }
             }
+            ContactPagesShow();
         }
-        ContactPagesShow();
     }
 
 
@@ -196,14 +204,12 @@ public class FlipPage : MonoBehaviour
 
     void ContactPagesShow()
     {
-
         if (ContactPage <= 1 && isContactPage3 == false && (endTime - startTime).TotalMinutes >= 0.5)
         {
             ContactFirstPageButton.SetActive(false);
             ContactPage = 1;
             ContactPage01.SetActive(true);
             ContactPage02.SetActive(true);
-
         }
 
         if (ContactPage == 2 && (endTime - startTime).TotalSeconds >= 0.9)
@@ -212,8 +218,8 @@ public class FlipPage : MonoBehaviour
             isContactPage3 = true;
             ContactPage = 2;
             ContactPage03.SetActive(true);
-
         }
+
         if (ContactPage >= 3 && (endTime - startTime).TotalSeconds >= 0.9)
         {
             isContactPage4 = true;

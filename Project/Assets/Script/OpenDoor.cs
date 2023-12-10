@@ -57,6 +57,9 @@ public class OpenDoor : MonoBehaviour
             case "SlidingDoor004":
                 thisNum = 12;
                 break;
+            case "Door001":
+                thisNum = 13;
+                break;
         }
 
         //print("ThisNum = " + thisNum);
@@ -90,6 +93,7 @@ public class OpenDoor : MonoBehaviour
                 case "WardrobeDoor002":
                 case "SlidingDoor003":
                 case "SlidingDoor004":
+                case "Door001":
                     OpenDoorAnim.SetBool("isOpen", isOpen);
                     break;
             }
