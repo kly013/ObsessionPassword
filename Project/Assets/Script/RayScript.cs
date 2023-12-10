@@ -112,10 +112,11 @@ public class RayScript : MonoBehaviour
                             // notHear 的文字內容
                             levelText01.notHearText(hit.collider.name);
                         }
-                    }
 
-                    //cameraControl.CameraChange(hit.collider.name);
-                    takeLook.onClickCanTakeLook(hit.collider.gameObject);
+
+                        //cameraControl.CameraChange(hit.collider.name);
+                        takeLook.onClickCanTakeLook(hit.collider.gameObject);
+                    }
 
                     if (hit.collider.name == "Computer")
                     {

@@ -5,9 +5,11 @@ using UnityEngine;
 public class PlayerControl : MonoBehaviour
 {
     // 移動速度
-    public float moveSpeed;
+    public float movespeed = 1;
+    float moveSpeed;
     // 轉頭速度
-    public float rotatSpeed;
+    public float rotatspeed = 100;
+    float rotatSpeed;
 
     // 計算 xy 軸旋轉
     float xRotation = 0;
@@ -63,8 +65,8 @@ public class PlayerControl : MonoBehaviour
         }
         else
         {
-            moveSpeed = 1f;
-            rotatSpeed = 200;
+            moveSpeed = movespeed;
+            rotatSpeed = rotatspeed;
         }
     }
 }

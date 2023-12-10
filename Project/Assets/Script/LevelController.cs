@@ -16,6 +16,8 @@ public class LevelController : MonoBehaviour
     public static int taskNum = 0;
     public static bool isTask = false;
 
+    
+
     void Start()
     {
         gameTimer = 0;
@@ -25,7 +27,7 @@ public class LevelController : MonoBehaviour
     {
         gameTimer += Time.deltaTime;
 
-        if(Input.GetKey(KeyCode.K))
+        if(Input.GetKey(KeyCode.LeftShift))
         {
             if(Input.GetKey(KeyCode.Alpha1))
             {
