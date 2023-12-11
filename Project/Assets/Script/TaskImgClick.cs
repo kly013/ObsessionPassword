@@ -13,10 +13,11 @@ public class TaskImgClick : MonoBehaviour
     public void onClick()
     {
         print("change");
-        Sprite sp = tool.GetComponent<Sprite>();
-        sp = toolsImg[taskNum];
+        Image img = tool.GetComponent<Image>();
+        img.sprite = toolsImg[taskNum];
         LevelText01.isTalking = false;
         photodog.SetActive(false);
         this.gameObject.SetActive(false);
+        taskNum++;
     }
 }

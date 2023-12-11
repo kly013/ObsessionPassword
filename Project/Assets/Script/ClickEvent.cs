@@ -53,7 +53,7 @@ public class ClickEvent : MonoBehaviour
 
     void onceClickEvent()
     {
-        //print("觸發單擊事件");
+        print("觸發單擊事件");
         //print(gameObject.name);
 
         Image buttonImage = GetComponent<Image>();
