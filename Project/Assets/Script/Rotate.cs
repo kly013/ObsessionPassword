@@ -20,20 +20,31 @@ public class Rotate : MonoBehaviour
 
     void Update()
     {
-        if (!isEnter)
+        if (gameObj.name == "ContactBook")
         {
-            if (Input.GetMouseButton(0))
-            {
-                axisX = -Input.GetAxis("Mouse X");
-                axisY = Input.GetAxis("Mouse Y");
-                rotateObj.transform.Rotate(new Vector3(0, axisX * speed, axisY * speed), Space.World);
-            }
+            OpenBook.isContactBook = true;
+        }
+        else if (gameObj.name == "Diary")
+        {
+            OpenBook.isDiary = true;
         }
         else
         {
-            if (Input.GetMouseButtonUp(0))
+            if (!isEnter)
             {
-                isEnter = false;
+                if (Input.GetMouseButton(0))
+                {
+                    axisX = -Input.GetAxis("Mouse X");
+                    axisY = Input.GetAxis("Mouse Y");
+                    rotateObj.transform.Rotate(new Vector3(0, axisX * speed, axisY * speed), Space.World);
+                }
+            }
+            else
+            {
+                if (Input.GetMouseButtonUp(0))
+                {
+                    isEnter = false;
+                }
             }
         }
 

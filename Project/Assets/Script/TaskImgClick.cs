@@ -12,7 +12,7 @@ public class TaskImgClick : MonoBehaviour
 
     public void onClick()
     {
-        print("change");
+        //print("change");
         Image img = tool.GetComponent<Image>();
         img.sprite = toolsImg[taskNum];
         LevelText01.isTalking = false;

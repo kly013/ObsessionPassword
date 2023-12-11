@@ -21,20 +21,9 @@ public class TakeLook : MonoBehaviour
             gameobj.SetActive(false);
             choseText.SetActive(true);
 
-            if (gameobj.name == "ContactBook")
-            {
-                OpenBook.isContactBook = true;
-            }
-            else if (gameobj.name == "Diary")
-            {
-                OpenBook.isDiary = true;
-            }
-            else
-            {
-                print(gameobj.name);
-                rotate.enabled = true;
-                rotate.RotateObj(rotateobj, gameobj);
-            }
+            print(gameobj.name);
+            rotate.enabled = true;
+            rotate.RotateObj(rotateobj, gameobj);
         }
     }
 }
