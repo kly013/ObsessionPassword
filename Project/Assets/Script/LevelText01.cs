@@ -89,7 +89,7 @@ public class LevelText01 : MonoBehaviour
                 objtext = "老師跟家長聯絡的橋樑";
                 break;
             case "Cellphone":
-                objtext = "是智慧型手機，但好像沒電了。";
+                objtext = "是智慧型手機，但好像沒電了";
                 break;
             case "Chair001":
                 objtext = "小凳子";
@@ -151,7 +151,7 @@ public class LevelText01 : MonoBehaviour
             case "Flour001":
             case "Flour002":
             case "Flour003":
-                objtext = "很多的高級麵粉，做麵食很方便。";
+                objtext = "很多的高級麵粉，做麵食很方便";
                 break;
             case "Flower001":
             case "Flower002":
@@ -358,7 +358,7 @@ public class LevelText01 : MonoBehaviour
             case "Cup003":
             case "Cup004":
             case "Cup005":
-                objtext = "爺爺和主人的杯子跟我的碗一樣！ 裝喝的都會變色，好好玩！";
+                objtext = "爺爺和主人會拿著喝水";
                 break;
             case "CuttingBoard001":
             case "CuttingBoard002":
@@ -366,14 +366,14 @@ public class LevelText01 : MonoBehaviour
                 objtext = "爺爺煮飯的時候常會拿出來";
                 break;
             case "DogFoods":
-                objtext = "好香，聞到又餓了，好想吃呀~";
+                objtext = "好香，聞到又餓了，好想吃呀～";
                 break;
             case "Charger":
                 objtext = "主人都會把它接著那黑黑的東西";
                 break;
             case "Chipsticks":
             case "ForkAndSpoon":
-                objtext = "看爺爺跟主人吃飯都會用，為什麼不能直接用嘴吃呢?";
+                objtext = "看爺爺跟主人吃飯都會用，為什麼不能直接用嘴吃呢？";
                 break;
             case "Flour001":
             case "Flour002":
@@ -432,7 +432,7 @@ public class LevelText01 : MonoBehaviour
                 objtext = "去年爺爺生日好好玩！一直也很期待今年的......";
                 break;
             case "Milk":
-                objtext = "主人最喜歡喝的！跟我喜歡喝的顏色一樣！";
+                objtext = "主人最喜歡喝的！";
                 break;
             case "AluminumCan001":
             case "AluminumCan002":

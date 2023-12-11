@@ -26,16 +26,31 @@ public class Logic : MonoBehaviour
 
         if (LevelController.selectName == "PhotoCutDog" && isPaste && LevelController.clickName == "Photo")
         {
+            // print("FinishPhoto");
             imgChange(2);
+            LevelController.isFinishPhoto = true;
         }
+
+        if(LevelController.isCheatPhoto)
+        {
+            // print("FinishPhoto");
+            imgChange(2);
+            LevelController.isFinishPhoto = true;
+        }
+
+        //if (LevelController.selectName == "Charger" && LevelController.clickName == "PhotoDog"
+        //     || LevelController.clickName == "Scissors" && LevelController.selectName == "Charger")
+        //{
+
+        //}
     }
 
     void imgChange(int num)
     {
         LevelController.isTask = true;
         objImg.SetActive(true);
-        Sprite sp = objImg.GetComponent<Sprite>();
-        sp = imgs[num];
+        Image img = objImg.GetComponent<Image>();
+        img.sprite = imgs[num];
         LevelText01.isTalking = true;
     }
 }

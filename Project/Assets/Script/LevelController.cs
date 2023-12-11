@@ -17,7 +17,9 @@ public class LevelController : MonoBehaviour
     public static bool isTask = false;
 
     public static bool isFinishTime;
-    
+    public static bool isFinishPhoto;
+
+    public static bool isCheatPhoto;
 
     void Start()
     {
@@ -33,17 +35,16 @@ public class LevelController : MonoBehaviour
             if(Input.GetKey(KeyCode.Alpha1))
             {
                 selectName = "Scissors";
-                clickName = "";
+                clickName = "PhotoDog";
             }
             if(Input.GetKey(KeyCode.Alpha2))
             {
-                selectName = "Scissors";
-                clickName = "";
+                selectName = "PhotoCutDog";
+                clickName = "Paste";
             }
             if(Input.GetKey(KeyCode.Alpha3))
             {
-                selectName = "Scissors";
-                clickName = "";
+                isCheatPhoto = true;
             }
         }
     }

@@ -10487,7 +10487,7 @@ MonoBehaviour:
   imgs:
   - {fileID: 21300000, guid: 13c8781e42ad2fe4b99c151548e3a04f, type: 3}
   - {fileID: 21300000, guid: 13c8781e42ad2fe4b99c151548e3a04f, type: 3}
-  - {fileID: 21300000, guid: a484f7e60895c9042bbb0b4a466dcdec, type: 3}
+  - {fileID: 21300000, guid: db5ec8747ef01c645bbfbf251c4530e3, type: 3}
 --- !u!1 &1519632242 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7432297235091661593, guid: e777d8c7f22ca4a468f0d89e2e07cdfa, type: 3}
@@ -28759,7 +28759,7 @@ GameObject:
   - component: {fileID: 4533602640269825951}
   - component: {fileID: 2676177357383320136}
   m_Layer: 0
-  m_Name: Photo2020
+  m_Name: Photo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
