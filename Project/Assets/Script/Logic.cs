@@ -24,7 +24,7 @@ public class Logic : MonoBehaviour
             imgChange(1);
         }
 
-        if (LevelController.selectName == "PhotoCutDog" && isPaste && LevelController.clickName == "Photo2020")
+        if (LevelController.selectName == "PhotoCutDog" && isPaste && LevelController.clickName == "Photo")
         {
             imgChange(2);
         }

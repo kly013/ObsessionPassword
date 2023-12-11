@@ -142,7 +142,7 @@ GameObject:
   - component: {fileID: 6620482962970301890}
   - component: {fileID: -1174754619288074533}
   m_Layer: 0
-  m_Name: Photo2020
+  m_Name: Photo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

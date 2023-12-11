@@ -20,12 +20,16 @@ public class LevelText01 : MonoBehaviour
     string objtext = "";
 
     string[] tips = { "被賦予特殊功能可以跟狗狗溝通的物品" ,
-        "點擊可以切換自言自語或聽狗狗說模式",
-        "多次點擊會給提示",
+    "點擊可以切換自言自語或聽狗狗說模式",
+    "多次點擊會給提示",
     "執念內容即是關卡提示",
     "希望也能在今年爺爺生日留下紀念",
     "每年都會拍照當紀念",
-    "想辦法製造出一張"};
+    "想辦法製造出一張不一樣的有大家的照片",
+    "想要陪爺爺度過今年生日",
+    "可以試著更變場景內唯一可以調的時間"};
+
+    int tipNum = 0;
 
     public void notHearText(string gameobjName)
     {
@@ -41,15 +45,23 @@ public class LevelText01 : MonoBehaviour
                 break;
             case "Book001":
             case "Book002":
+                objtext = "知識就是力量";
+                break;
             case "Book003":
             case "Book004":
             case "Book005":
-            case "Book006":
-            case "Book007":
-            case "Book008":
-                objtext = "知識就是力量";
+                objtext = "童話故事書";
                 break;
-            case "Book009":
+            case "Book006":
+                objtext = "英文看不懂很需要";
+                break;
+            case "Book007":
+                objtext = "神秘的書";
+                break;
+            case "Book008":
+                objtext = "很多中文字的書";
+                break;
+            case "Diary":
                 objtext = "記錄著時光流逝的老舊日記本，不知道裡面有沒有藏著什麼秘密。";
                 break;
             case "Book010":
@@ -235,7 +247,12 @@ public class LevelText01 : MonoBehaviour
                 objtext = "寵物專屬的碗";
                 break;
             case "DogCollar":
-                //objtext = tips[];
+                objtext = tips[tipNum];
+                tipNum++;
+                if (tipNum > 8)
+                {
+                    tipNum = 0;
+                }
                 break;
             case "Watermelon001":
             case "Watermelon002":
@@ -285,7 +302,7 @@ public class LevelText01 : MonoBehaviour
             case "Book008":
                 objtext = "主人常拿下來看";
                 break;
-            case "Book009":
+            case "Diary":
                 objtext = "爺爺每天都會拿出來";
                 break;
             case "Book010":
@@ -449,7 +466,12 @@ public class LevelText01 : MonoBehaviour
                 objtext = "好想要裡面一直裝滿滿的";
                 break;
             case "DogCollar":
-                objtext = "可以切換取消溝通";
+                objtext = tips[tipNum];
+                tipNum++;
+                if (tipNum > 8)
+                {
+                    tipNum = 0;
+                }
                 break;
             case "Watermelon001":
             case "Watermelon002":
