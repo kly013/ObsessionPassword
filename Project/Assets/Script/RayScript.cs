@@ -47,11 +47,17 @@ public class RayScript : MonoBehaviour
         // 按alt或對話時
         if (Input.GetKey(KeyCode.LeftAlt))
         {
-            // 鼠標出現
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
+            //// 鼠標出現
+            //Cursor.visible = true;
+            //Cursor.lockState = CursorLockMode.None;
+            LevelText01.isTalking = true;
         }
-        else if (LevelText01.isTalking)
+        if (Input.GetKeyUp(KeyCode.LeftAlt))
+        {
+            LevelText01.isTalking = false;
+        }
+        
+        if (LevelText01.isTalking)
         {
             // 解鎖控制鼠標在視窗內
             Cursor.lockState = CursorLockMode.None;
