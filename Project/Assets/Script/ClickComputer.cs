@@ -16,12 +16,26 @@ public class ClickComputer : MonoBehaviour
     int min = 0;
     int hr = 0;
 
+    int accelerate = 2;
+
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.K))
+        {
+            LevelController.gameTimer *= accelerate;
+        }
+        if (LevelController.gameTimer >= 86400)
+        {
+            LevelController.gameTimer = 0;
+        }
+        Timer();
+    }
+
     public void OnClick()
     {
         screen.SetActive(true);
         LevelController.isClickComputer = true;
         GetComponent<ComputerBack>().enabled = true;
-        Timer();
     }
 
     public void onClickFolder()
@@ -36,10 +50,10 @@ public class ClickComputer : MonoBehaviour
 
     public void Timer()
     {
-        timeWindows.SetActive(true);
+        //print(LevelController.gameTimer);
         sec = (int)LevelController.gameTimer % 60;
         min = (int)LevelController.gameTimer / 60;
-        hr = min / 60;
+        hr = min / 60 + 13;
 
         if (min < 10)
         {
@@ -47,6 +61,10 @@ public class ClickComputer : MonoBehaviour
         }
         else
         {
+            if (min > 59)
+            {
+                min = min % 60;
+            }
             timeMin.text = min.ToString();
         }
 
@@ -56,7 +74,16 @@ public class ClickComputer : MonoBehaviour
         }
         else
         {
+            if (hr > 23)
+            {
+                hr = hr % 24;
+            }
             timeHour.text = hr.ToString();
         }
+    }
+
+    public void onClickTime()
+    {
+        timeWindows.SetActive(true);
     }
 }

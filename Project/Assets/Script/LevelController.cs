@@ -16,6 +16,7 @@ public class LevelController : MonoBehaviour
     public static int taskNum = 0;
     public static bool isTask = false;
 
+    public static bool isFinishTime;
     
 
     void Start()
