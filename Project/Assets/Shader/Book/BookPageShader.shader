@@ -35,7 +35,6 @@
 
 		Cull back
 
-		//开始渲染正面
 
 		CGPROGRAM
 
@@ -78,7 +77,6 @@
 
 		Cull front
 
-		//开始渲染反面 其实和就是拷贝了一份正面渲染的代码 除了变量名要改
 
 		CGPROGRAM
 
