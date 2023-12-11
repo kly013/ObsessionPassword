@@ -7,7 +7,7 @@ public class OpenDoor : MonoBehaviour
 {
     Animator OpenDoorAnim;
     bool isOpen;
-    bool[] isthisOpen = Enumerable.Repeat(false, 15).ToArray();
+    bool[] isthisOpen = Enumerable.Repeat(false, 18).ToArray();
 
     public void HitByRaycast(string name) //被射線打到時會進入此方法
     {
@@ -51,14 +51,20 @@ public class OpenDoor : MonoBehaviour
             case "WardrobeDoor002":
                 thisNum = 10;
                 break;
-            case "SlidingDoor003":
+            case "SlidingDoor001":
                 thisNum = 11;
                 break;
-            case "SlidingDoor004":
+            case "SlidingDoor002":
                 thisNum = 12;
                 break;
-            case "Door001":
+            case "SlidingDoor003":
                 thisNum = 13;
+                break;
+            case "SlidingDoor004":
+                thisNum = 14;
+                break;
+            case "Door001":
+                thisNum = 15;
                 break;
         }
 
@@ -91,6 +97,8 @@ public class OpenDoor : MonoBehaviour
                 case "Drawer005":
                 case "WardrobeDoor001":
                 case "WardrobeDoor002":
+                case "SlidingDoor001":
+                case "SlidingDoor002":
                 case "SlidingDoor003":
                 case "SlidingDoor004":
                 case "Door001":
