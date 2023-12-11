@@ -226,6 +226,9 @@ public class LevelText01 : MonoBehaviour
             case "DogBowl002":
                 objtext = "寵物專屬的碗";
                 break;
+            case "DogCollar":
+                objtext = "被賦予特殊功能可以跟狗狗溝通的道具";
+                break;
             case "Watermelon001":
             case "Watermelon002":
                 objtext = "好大看起來很好吃的西瓜";
@@ -433,9 +436,12 @@ public class LevelText01 : MonoBehaviour
             case "Spoon":
                 objtext = "爺爺煮飯都會用到";
                 break;
-            case "WaterBowl":
-            case "FoodBowl":
+            case "DogBowl001":
+            case "DogBowl002":
                 objtext = "好想要裡面一直裝滿滿的";
+                break;
+            case "DogCollar":
+                objtext = "可以切換取消溝通";
                 break;
             case "Watermelon001":
             case "Watermelon002":
