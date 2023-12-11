@@ -19,6 +19,14 @@ public class LevelText01 : MonoBehaviour
 
     string objtext = "";
 
+    string[] tips = { "被賦予特殊功能可以跟狗狗溝通的物品" ,
+        "點擊可以切換自言自語或聽狗狗說模式",
+        "多次點擊會給提示",
+    "執念內容即是關卡提示",
+    "希望也能在今年爺爺生日留下紀念",
+    "每年都會拍照當紀念",
+    "想辦法製造出一張"};
+
     public void notHearText(string gameobjName)
     {
         isThose = true;
@@ -227,7 +235,7 @@ public class LevelText01 : MonoBehaviour
                 objtext = "寵物專屬的碗";
                 break;
             case "DogCollar":
-                objtext = "被賦予特殊功能可以跟狗狗溝通的道具";
+                //objtext = tips[];
                 break;
             case "Watermelon001":
             case "Watermelon002":
