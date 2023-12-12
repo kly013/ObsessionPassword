@@ -18,6 +18,7 @@ TagManager:
   - BanyanTree_Leaf
   - CamphorTree_Leaf
   - PistaciaTree_Leaf
+  - Battery
   layers:
   - Default
   - TransparentFX
