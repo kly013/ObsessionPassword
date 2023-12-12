@@ -8,7 +8,7 @@ public class LevelText02 : MonoBehaviour
 {
     // 判斷是否在看對話
     static public bool isTalking;
-    bool isThose;  // 保持原始名稱
+    bool isThose;
 
     // 對話框
     public GameObject DialogueBG;
@@ -41,11 +41,14 @@ public class LevelText02 : MonoBehaviour
 
         switch (objectType)
         {
-            case "Leaf":
-                objtext = isThose ? "葉子" : "葉子";
-                break;
             case "BanyanTree":
                 objtext = isThose ? "榮樹" : "這個燒了會產生大量的煙，不太適合拿來當柴燒。";
+                break;
+            case "BanyanTree_Branches":
+                objtext = isThose ? "散落的樹枝。" : "榮樹的樹枝。";
+                break;
+            case "BanyanTree_Leaf":
+                objtext = isThose ? "不知道什麼樹的樹葉。" : "榮樹的葉子。";
                 break;
             case "BanyanTreeHome":
                 objtext = isThose ? "樹林中的大樹。" : "還好還有這裡可以躲雨。";
@@ -53,8 +56,20 @@ public class LevelText02 : MonoBehaviour
             case "CamphorTree":
                 objtext = isThose ? "蟑樹" : "這個木頭有一個香香的味道。";
                 break;
+            case "CamphorTree_Branches":
+                objtext = isThose ? "散落的樹枝。" : "蟑樹的樹枝。";
+                break;
+            case "CamphorTree_Leaf":
+                objtext = isThose ? "不知道什麼樹的樹葉。" : "蟑樹的葉子。";
+                break;
             case "WaxTree":
                 objtext = isThose ? "目辣樹" : "我記得這樹的果實很適合當燃料。";
+                break;
+            case "WaxTree_Branches":
+                objtext = isThose ? "散落的樹枝。" : "目辣樹的樹枝。";
+                break;
+            case "WaxTree_Leaf":
+                objtext = isThose ? "不知道什麼樹的樹葉。" : "目辣樹的葉子。";
                 break;
             case "Battery":
                 objtext = isThose ? "太好了，可以幫沒電的物品更換電池了。" : "人類的東西，不知道是什麼。";
@@ -62,14 +77,11 @@ public class LevelText02 : MonoBehaviour
             case "Bone":
                 objtext = isThose ? "骨頭" : "骨頭";
                 break;
-            case "Box":
-                objtext = isThose ? "看起來很好吃，菌褶是白色的。" : "好吃的菇，每次抓不到小動物都會吃這個。";
-                break;
             case "Branches":
                 objtext = isThose ? "散落的樹枝。" : "拿來生火很好用。";
                 break;
             case "Cloth":
-                objtext = isThose ? "看起來是某人遺落的衣服。" : "濕衣服，蓋著更冷了。";
+                objtext = isThose ? "看起來是散落的布料。" : "濕答答的，蓋著更冷了。";
                 break;
             case "Group":
                 objtext = isThose ? "倒塌的枯樹" : "體積很大很適合躲避天敵。";
@@ -85,6 +97,12 @@ public class LevelText02 : MonoBehaviour
                 break;
             case "Pistacia":
                 objtext = isThose ? "煌蓮木" : "我記得這樹的果實很適合當燃料。";
+                break;
+            case "Pistacia_Branches":
+                objtext = isThose ? "散落的樹枝。" : "煌蓮木的樹枝。";
+                break;
+            case "Pistacia_Leaf":
+                objtext = isThose ? "不知道什麼樹的樹葉。" : "煌蓮木的葉子。";
                 break;
             case "RoundStone":
                 objtext = isThose ? "圓圓的石頭，看著蠻可愛的。" : "別踩那些石頭，踩到很容易跌倒。";
@@ -126,6 +144,13 @@ public class LevelText02 : MonoBehaviour
     // 取得物件類別
     private string GetObjectType(string objName)
     {
+        // 檢查名稱是否包含括號
+        if (objName.Contains("(") && objName.EndsWith(")"))
+        {
+            // 移除括號及其內容
+            objName = objName.Substring(0, objName.LastIndexOf('('));
+        }
+
         int index = objName.IndexOfAny("0123456789".ToCharArray()); // 找到第一個數字的索引
         if (index != -1)
         {
