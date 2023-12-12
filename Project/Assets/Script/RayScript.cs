@@ -24,11 +24,12 @@ public class RayScript : MonoBehaviour
     public ClickComputer clickComputer;
     // 點門後的開關動畫
     public OpenDoor openDoor;
-    // 攝影機控制(畫面協調問題先拿掉)
-    //public CameraControl cameraControl;
     // 點擊可以拿起的物品後的動作
     public TakeLook takeLook;
     public Logic logic;
+
+    public GameObject contactBook;
+    public GameObject diary;
 
     void Start()
     {
@@ -100,7 +101,7 @@ public class RayScript : MonoBehaviour
                 // 點擊需要開門的物件的開門
                 openDoor.HitByRaycast(hit.collider.name);
 
-                print("s = " + LevelController.selectName + " , c = " + LevelController.clickName);
+                //print("s = " + LevelController.selectName + " , c = " + LevelController.clickName);
 
                 logic.GameLogic(hit.collider.name);
 
@@ -128,6 +129,18 @@ public class RayScript : MonoBehaviour
                     {
                         clickComputer.OnClick();
                         LevelText01.isTalking = true;
+                    }
+
+                    if (hit.collider.name == "ContactBook")
+                    {
+                        LevelText01.isTalking = true;
+                        contactBook.SetActive(true);
+                    }
+
+                    if (hit.collider.name == "Diary")
+                    {
+                        LevelText01.isTalking = true;
+                        diary.SetActive(true);
                     }
                 }
             }
