@@ -34,9 +34,12 @@ public class BagController02 : MonoBehaviour
     public GameObject toolImage;
     public GameObject clickSpace;
     public GameObject choseText;
+    GameObject toolObj;
 
-    public void changeToolsImg(string name)
+    public void changeToolsImg(GameObject obj)
     {
+        toolObj = obj;
+        string name = obj.tag;
         Tools result = (Tools)Enum.Parse(typeof(Tools), name);
         toolsNum = (int)result;
         Image image = toolImage.GetComponent<Image>();
@@ -48,12 +51,10 @@ public class BagController02 : MonoBehaviour
 
     public void addTools()
     {
-        string name = toolImage.tag;
+        print("aaa");
         try
         {
-            //print(name);
-            Tools result = (Tools)Enum.Parse(typeof(Tools), name);
-            toolsNum = (int)result;
+            toolObj.SetActive(false);
             imgPos[posNum].SetActive(true);
             Image img = imgPos[posNum].GetComponent<Image>();
             img.sprite = toolsImg[toolsNum];

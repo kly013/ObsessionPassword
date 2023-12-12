@@ -100,7 +100,7 @@ public class CursorRay : MonoBehaviour
 
                 if (hit.collider.tag != "Untagged" && hit.collider.tag != "key")
                 {
-                    bagController02.changeToolsImg(hit.collider.tag);
+                    bagController02.changeToolsImg(hit.collider.gameObject);
                 }
             }
         }

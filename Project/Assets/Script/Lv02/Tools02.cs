@@ -33,4 +33,9 @@ public class Tools02 : MonoBehaviour
             }
         }
     }
+
+    public void getObj()
+    {
+
+    }
 }
