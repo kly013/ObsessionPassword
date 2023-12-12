@@ -79,22 +79,24 @@ public class CursorRay : MonoBehaviour
                     CanHear = !CanHear;
                 }
 
-                if (!LevelController.isTask)
-                {
-                    if (!LevelText02.isTalking)
-                    {
-                        if (CanHear)
-                        {
-                            // canHear 的文字內容
-                            levelText02.canHearText(hit.collider.name);
-                        }
-                        else
-                        {
-                            // notHear 的文字內容
-                            levelText02.notHearText(hit.collider.name);
-                        }
-                    }
-                }
+
+                //if (!LevelText02.isTalking)
+                //{
+                //    if (CanHear)
+                //    {
+                //        // canHear 的文字內容
+                //        levelText02.canHearText(hit.collider.name);
+                //    }
+                //    else
+                //    {
+                //        // notHear 的文字內容
+                //        levelText02.notHearText(hit.collider.name);
+                //    }
+                //}
+                //if (!LevelController.isTask)
+                //{
+                    
+                //}
             }
         }
         else
