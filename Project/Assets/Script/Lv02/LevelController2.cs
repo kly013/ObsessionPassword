@@ -1,0 +1,19 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class LevelController2 : MonoBehaviour
+{
+    public static float gameTimer = 0;
+    public static int levelnum = 1;
+
+    void Start()
+    {
+        gameTimer = 0;
+    }
+    
+    void Update()
+    {
+        gameTimer += Time.deltaTime;
+    }
+}
