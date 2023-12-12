@@ -13,8 +13,8 @@ public class ClickComputer : MonoBehaviour
     public Text timeMin;
 
     int sec = 0;
-    int min = 0;
-    int hr = 0;
+    public static int min = 0;
+    public static int hr = 0;
 
     int accelerate = 2;
 

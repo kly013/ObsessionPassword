@@ -89,7 +89,14 @@ public class LevelText01 : MonoBehaviour
                 objtext = "老師跟家長聯絡的橋樑";
                 break;
             case "Cellphone":
-                objtext = "是智慧型手機，但好像沒電了";
+                if(!Logic.notChange)
+                {
+                    objtext = "是智慧型手機，但好像沒電了";
+                }
+                else
+                {
+                    objtext = "充電中……";
+                }
                 break;
             case "Chair001":
                 objtext = "小凳子";
@@ -269,7 +276,7 @@ public class LevelText01 : MonoBehaviour
         {
             isTalking = true;
         }
-        if (isTalking && !LevelController.isClickComputer)
+        if (isTalking && !LevelController.isClickComputer && !Logic.isElectrified)
         {
             DialogueBG.SetActive(true);
             ObjTalk.text = objtext;
@@ -331,7 +338,14 @@ public class LevelText01 : MonoBehaviour
                 objtext = "主人每天都會拿出來看";
                 break;
             case "Cellphone":
-                objtext = "不太喜歡，主人有了之後看他都比看我多";
+                if (!Logic.notChange)
+                {
+                    objtext = "不太喜歡，主人有了之後看他都比看我多";
+                }
+                else
+                {
+                    objtext = "充電中……";
+                }
                 break;
             case "Chair001":
             case "Chair002":
@@ -485,7 +499,7 @@ public class LevelText01 : MonoBehaviour
         {
             isTalking = true;
         }
-        if (isTalking)
+        if (isTalking && !LevelController.isClickComputer && !Logic.isElectrified)
         {
             DialogueBG.SetActive(true);
             ObjTalk.text = objtext;

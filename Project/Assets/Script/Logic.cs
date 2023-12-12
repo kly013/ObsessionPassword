@@ -8,7 +8,16 @@ public class Logic : MonoBehaviour
     public GameObject objImg;
     public Sprite[] imgs;
 
+    public GameObject clickCellphone;
+
     bool isPaste = false;
+
+    float waitTime = 5;
+    float curTime;
+    bool isFirst = true;
+
+    public static bool notChange = false;
+    public static bool isElectrified = false;
 
     public void GameLogic(string name)
     {
@@ -38,11 +47,24 @@ public class Logic : MonoBehaviour
             LevelController.isFinishPhoto = true;
         }
 
-        //if (LevelController.selectName == "Charger" && LevelController.clickName == "PhotoDog"
-        //     || LevelController.clickName == "Scissors" && LevelController.selectName == "Charger")
-        //{
+        if (LevelController.selectName == "Charger" && LevelController.clickName == "Cellphone")
+        {
+            if (isFirst)
+            {
+                notChange = true;
+                curTime = LevelController.gameTimer;
+                isFirst = false;
+            }
+            else if (LevelController.gameTimer - curTime < waitTime)
+            {
 
-        //}
+            }
+            else
+            {
+                isElectrified = true;
+                clickCellphone.SetActive(true);
+            }
+        }
     }
 
     void imgChange(int num)
