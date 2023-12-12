@@ -63,7 +63,7 @@ public class LevelText02 : MonoBehaviour
                 objtext = isThose ? "不知道什麼樹的樹葉。" : "蟑樹的葉子。";
                 break;
             case "WaxTree":
-                objtext = isThose ? "目辣樹" : "我記得這樹的果實很適合當燃料。";
+                objtext = isThose ? "目辣樹" : "我記得這樹很適合當燃料。";
                 break;
             case "WaxTree_Branches":
                 objtext = isThose ? "散落的樹枝。" : "目辣樹的樹枝。";
@@ -96,7 +96,7 @@ public class LevelText02 : MonoBehaviour
                 objtext = isThose ? "手電筒，沒電了需要換電池。" : "每次被照到眼睛都好痛。";
                 break;
             case "Pistacia":
-                objtext = isThose ? "煌蓮木" : "我記得這樹的果實很適合當燃料。";
+                objtext = isThose ? "煌蓮木" : "我記得這樹很適合當燃料。";
                 break;
             case "Pistacia_Branches":
                 objtext = isThose ? "散落的樹枝。" : "煌蓮木的樹枝。";
