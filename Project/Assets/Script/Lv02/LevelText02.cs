@@ -133,16 +133,12 @@ public class LevelText02 : MonoBehaviour
     // 顯示對話框的方法
     private void ShowDialogue()
     {
-        print("ccc");
-        print("isThose = " + isThose);
         if (isThose)
         {
-            print("ddd");
             isTalking = true;
         }
         if (isTalking)
         {
-            print("eee");
             DialogueBG.SetActive(true);
             ObjTalk.text = objtext;
             clickSpace.SetActive(true);

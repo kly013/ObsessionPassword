@@ -86,7 +86,6 @@ public class CursorRay : MonoBehaviour
                 
                 if (!LevelText02.isTalking)
                 {
-                    print("aaaa");
                     if (CanHear)
                     {
                         // canHear 的文字內容
@@ -101,7 +100,6 @@ public class CursorRay : MonoBehaviour
 
                 if (hit.collider.tag != "Untagged" && hit.collider.tag != "key")
                 {
-                    print("bbbbb");
                     bagController02.changeToolsImg(hit.collider.tag);
                 }
             }
