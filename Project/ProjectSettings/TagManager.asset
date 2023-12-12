@@ -6,6 +6,14 @@ TagManager:
   tags:
   - key
   - pressE
+  - WaxTree_Branches
+  - Pistacia_Branches
+  - CamphorTree_Branches
+  - BanyanTree_Branches
+  - BanyanTree
+  - WaxTree
+  - PistaciaTree
+  - CamphorTree
   layers:
   - Default
   - TransparentFX
