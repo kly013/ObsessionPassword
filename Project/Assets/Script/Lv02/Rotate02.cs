@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Rotate : MonoBehaviour
+public class Rotate02 : MonoBehaviour
 {
     float speed = 3f;
 
@@ -14,7 +14,7 @@ public class Rotate : MonoBehaviour
     public GameObject DialogueBG;
     public GameObject choseText;
 
-    public BagController bagController;
+    public BagController02 bagController02;
 
     bool isEnter = true;
 
@@ -42,20 +42,20 @@ public class Rotate : MonoBehaviour
             DialogueBG.SetActive(false);
             gameObj.SetActive(true);
             choseText.SetActive(false);
-            LevelController.isTakeLook = false;
-            LevelText01.isTalking = false;
+            LevelController02.isTakeLook = false;
+            LevelText02.isTalking = false;
             this.enabled = false;
             Destroy(rotateObj);
         }
 
-        if(Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.F))
         {
             if (BagController.posNum <= 2)
             {
                 //print(BagController.posNum);
                 DialogueBG.SetActive(false);
                 choseText.SetActive(false);
-                bagController.addTools(rotateObj);
+                bagController02.addTools(rotateObj);
                 LevelController.isTakeLook = false;
                 LevelText01.isTalking = false;
                 this.enabled = false;
