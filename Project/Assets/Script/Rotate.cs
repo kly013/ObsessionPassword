@@ -20,6 +20,19 @@ public class Rotate : MonoBehaviour
 
     void Update()
     {
+        //if (gameObj.name == "ContactBook")
+        //{
+        //    OpenBook.isContactBook = true;
+        //}
+        //else if (gameObj.name == "Diary")
+        //{
+        //    OpenBook.isDiary = true;
+        //}
+        //else
+        //{
+
+        //}
+
         if (!isEnter)
         {
             if (Input.GetMouseButton(0))

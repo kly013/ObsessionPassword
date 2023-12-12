@@ -19,6 +19,11 @@ TagManager:
   - CamphorTree_Leaf
   - PistaciaTree_Leaf
   - Battery
+  - Clothes
+  - Match
+  - RoundStone
+  - SharpStone
+  - SmoothStone
   layers:
   - Default
   - TransparentFX

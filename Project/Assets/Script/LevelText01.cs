@@ -61,9 +61,7 @@ public class LevelText01 : MonoBehaviour
             case "Book008":
                 objtext = "很多中文字的書";
                 break;
-            case "Diary":
-                objtext = "記錄著時光流逝的老舊日記本，不知道裡面有沒有藏著什麼秘密。";
-                break;
+
             case "Book010":
             case "Book011":
             case "Book012":
@@ -84,9 +82,6 @@ public class LevelText01 : MonoBehaviour
                 break;
             case "Bowl005":
                 objtext = "大碗公";
-                break;
-            case "ContactBook":
-                objtext = "老師跟家長聯絡的橋樑";
                 break;
             case "Cellphone":
                 if(!Logic.notChange)
@@ -309,9 +304,6 @@ public class LevelText01 : MonoBehaviour
             case "Book008":
                 objtext = "主人常拿下來看";
                 break;
-            case "Diary":
-                objtext = "爺爺每天都會拿出來";
-                break;
             case "Book010":
             case "Book011":
             case "Book012":
@@ -334,9 +326,7 @@ public class LevelText01 : MonoBehaviour
             case "Plate005":
                 objtext = "裡面每次都會放好多好吃的食物";
                 break;
-            case "ContactBook":
-                objtext = "主人每天都會拿出來看";
-                break;
+
             case "Cellphone":
                 if (!Logic.notChange)
                 {

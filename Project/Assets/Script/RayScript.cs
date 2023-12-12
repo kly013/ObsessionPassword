@@ -30,6 +30,10 @@ public class RayScript : MonoBehaviour
 
     public GameObject contactBook;
     public GameObject diary;
+    public GameObject crossHair;
+
+    static public Vector3 startPos;
+    static public Vector3 startRotation;
 
     void Start()
     {
@@ -45,6 +49,9 @@ public class RayScript : MonoBehaviour
 
     void Update()
     {
+        
+
+
         // 按alt或對話時
         if (Input.GetKey(KeyCode.LeftAlt))
         {
@@ -133,21 +140,62 @@ public class RayScript : MonoBehaviour
 
                     if (hit.collider.name == "ContactBook")
                     {
+                        startPos = gameObject.transform.position;
+                        startRotation = gameObject.transform.rotation.eulerAngles;
                         LevelText01.isTalking = true;
                         contactBook.SetActive(true);
+                        Debug.Log(gameObject.transform.position);
+                        Debug.Log(gameObject.transform.rotation.eulerAngles);
                     }
 
                     if (hit.collider.name == "Diary")
                     {
+                        startPos = gameObject.transform.position;
+                        startRotation = gameObject.transform.rotation.eulerAngles;
                         LevelText01.isTalking = true;
                         diary.SetActive(true);
+                        crossHair.SetActive(false);
                     }
                 }
+            }
+
+            if (Input.GetMouseButtonUp(0))
+            {
+
+                if (hit.collider.name == "ContactBook")
+                {
+                    LevelText01.isTalking = true;
+                    contactBook.SetActive(true);
+                    gameObject.transform.position = new Vector3(1.398f, 5.729f, 20.329f);
+                    gameObject.transform.eulerAngles = new Vector3(0, 0, 0);
+                    crossHair.SetActive(false);
+                }
+                if (hit.collider.name == "Diary")
+                {
+                    LevelText01.isTalking = true;
+                    diary.SetActive(true);
+                    gameObject.transform.position = new Vector3(5.9f, 5.85f, 19.64f);
+                    gameObject.transform.eulerAngles = new Vector3(0, 0, 0);
+                    crossHair.SetActive(false);
+                }
+
             }
         }
         else
         {
             isHit = false;
+        }
+
+        
+
+
+        if (BooksSpaceBack.goBack == true)
+        {
+            crossHair.SetActive(true);
+            gameObject.transform.position = startPos;
+            gameObject.transform.rotation = Quaternion.Euler(new Vector3(startRotation.x,startRotation.y,startRotation.z));
+            LevelText01.isTalking = false;
+            BooksSpaceBack.goBack = false;
         }
     }
 }

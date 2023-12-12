@@ -21,6 +21,8 @@ public class CursorRay : MonoBehaviour
     // 打到東西對應顯示的文字
     public LevelText02 levelText02;
 
+    public GameObject toolsImg;
+
     void Start()
     {
         // 鼠標設定視窗中
@@ -79,24 +81,24 @@ public class CursorRay : MonoBehaviour
                     CanHear = !CanHear;
                 }
 
+                if (!LevelText02.isTalking)
+                {
+                    if (CanHear)
+                    {
+                        // canHear 的文字內容
+                        levelText02.canHearText(hit.collider.name);
+                    }
+                    else
+                    {
+                        // notHear 的文字內容
+                        levelText02.notHearText(hit.collider.name);
+                    }
+                }
 
-                //if (!LevelText02.isTalking)
-                //{
-                //    if (CanHear)
-                //    {
-                //        // canHear 的文字內容
-                //        levelText02.canHearText(hit.collider.name);
-                //    }
-                //    else
-                //    {
-                //        // notHear 的文字內容
-                //        levelText02.notHearText(hit.collider.name);
-                //    }
-                //}
-                //if (!LevelController.isTask)
-                //{
-                    
-                //}
+                if (hit.collider.tag != "Untagged" && hit.collider.tag != "key")
+                {
+                    toolsImg.SetActive(true);
+                }
             }
         }
         else

@@ -8,7 +8,22 @@ public class BagController02 : MonoBehaviour
 {
     enum Tools
     {
-        
+        BanyanTree_Branches,
+        BanyanTree_Leaf,
+        Battery,
+        CamphorTree_Branches,
+        CamphorTree_Leaf,
+        Clothes,
+        FlashLight,
+        Lighter,
+        Match,
+        Pistacia_Braches,
+        Pistacia_Leaf,
+        RoundStone,
+        SharpStone,
+        SmoothStone,
+        WaxTree_Braches,
+        WaxTree_Leaf
     }
 
     public Sprite[] toolsImg;
@@ -18,7 +33,7 @@ public class BagController02 : MonoBehaviour
 
     public void addTools(GameObject obj)
     {
-        string name = obj.name.Substring(0, obj.name.Length - 7);
+        string name = obj.tag;
         try
         {
             //print(name);
