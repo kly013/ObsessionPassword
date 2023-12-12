@@ -9,7 +9,7 @@ public class CursorRay : MonoBehaviour
     // 射線
     Ray ray;
     // 射線長度
-    float raylength = 2f;
+    float raylength = 10f;
     // 打到的東西
     public static RaycastHit hit;
     // 判斷是不是聽得懂動物語
@@ -21,7 +21,7 @@ public class CursorRay : MonoBehaviour
     // 打到東西對應顯示的文字
     public LevelText02 levelText02;
 
-    public GameObject toolsImg;
+    public BagController02 bagController02;
 
     void Start()
     {
@@ -36,14 +36,14 @@ public class CursorRay : MonoBehaviour
         // 按alt或對話時
         if (Input.GetKey(KeyCode.LeftAlt))
         {
-            LevelText01.isTalking = true;
+            LevelText02.isTalking = true;
         }
         if (Input.GetKeyUp(KeyCode.LeftAlt))
         {
-            LevelText01.isTalking = false;
+            LevelText02.isTalking = false;
         }
         
-        if (LevelText01.isTalking)
+        if (LevelText02.isTalking)
         {
             // 解鎖控制鼠標在視窗內
             Cursor.lockState = CursorLockMode.None;
@@ -75,14 +75,18 @@ public class CursorRay : MonoBehaviour
             {
                 LevelController.clickName = hit.collider.name;
 
+                print(hit.collider.name);
+
                 // 點場景內 tag 設定成 key 的物件，切換 CanHear
                 if (hit.collider.gameObject.tag == "key")
                 {
                     CanHear = !CanHear;
                 }
 
+                
                 if (!LevelText02.isTalking)
                 {
+                    print("aaaa");
                     if (CanHear)
                     {
                         // canHear 的文字內容
@@ -97,7 +101,8 @@ public class CursorRay : MonoBehaviour
 
                 if (hit.collider.tag != "Untagged" && hit.collider.tag != "key")
                 {
-                    toolsImg.SetActive(true);
+                    print("bbbbb");
+                    bagController02.changeToolsImg(hit.collider.tag);
                 }
             }
         }

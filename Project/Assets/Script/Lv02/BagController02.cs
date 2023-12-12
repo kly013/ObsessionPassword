@@ -31,6 +31,16 @@ public class BagController02 : MonoBehaviour
     int toolsNum = 0;
     public static int posNum = 0;
 
+    public GameObject toolImage;
+
+    public void changeToolsImg(string name)
+    {
+        Tools result = (Tools)Enum.Parse(typeof(Tools), name);
+        toolsNum = (int)result;
+        Image image = toolImage.GetComponent<Image>();
+        image.sprite = toolsImg[toolsNum];
+    }
+
     public void addTools(GameObject obj)
     {
         string name = obj.tag;
