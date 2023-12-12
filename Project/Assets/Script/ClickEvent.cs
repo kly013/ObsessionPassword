@@ -9,15 +9,13 @@ public class ClickEvent : MonoBehaviour
     // 點擊時間
     float clickTimer = 0;
     int clickNum = 0;
-    float timelag = 0.5f;
+    float timelag = 0.3f;
 
     // bool isSelected = false;
-    Button button;
 
-    private void Start()
-    {
-        button = GetComponent<Button>();
-    }
+    GameObject obj;
+
+    public BagController bagController;
 
     private void Update()
     {
@@ -53,7 +51,7 @@ public class ClickEvent : MonoBehaviour
 
     void onceClickEvent()
     {
-        print("觸發單擊事件");
+        //print("觸發單擊事件");
         //print(gameObject.name);
 
         Image buttonImage = GetComponent<Image>();
@@ -64,5 +62,23 @@ public class ClickEvent : MonoBehaviour
     void doubleClickEvent()
     {
         //print("觸發雙擊事件");
+        Image buttonImage = GetComponent<Image>();
+        Sprite sourceSprite = buttonImage.sprite;
+
+        for (int i = 0; i < 3; i++)
+        {
+            if (LevelController.toolsList[i].name == sourceSprite.name)
+            {
+                obj = LevelController.toolsList[i];
+                break;
+            }
+        }
+
+        if (obj != null)
+        {
+            //print("not null");
+            obj.gameObject.SetActive(true);
+            bagController.onChangePos(this.gameObject.name);
+        }
     }
 }

@@ -21,6 +21,8 @@ public class LevelController : MonoBehaviour
 
     public static bool isCheatPhoto;
 
+    public static List<GameObject> toolsList = new List<GameObject>();
+
     void Start()
     {
         gameTimer = 0;
