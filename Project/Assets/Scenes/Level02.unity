@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.07719328, g: 0.16142923, b: 0.2722811, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -19530,7 +19530,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4031134986158949423, guid: b7026551f9b3a684498ac3e79a442dee, type: 3}
       propertyPath: m_Name
-      value: Day Night Cycle
+      value: DayNightCycle
       objectReference: {fileID: 0}
     - target: {fileID: 4031134986158949423, guid: b7026551f9b3a684498ac3e79a442dee, type: 3}
       propertyPath: m_IsActive
