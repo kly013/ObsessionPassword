@@ -35,11 +35,23 @@ public class RayScript : MonoBehaviour
     static public Vector3 startPos;
     static public Vector3 startRotation;
 
+    private AudioSource audioSource;
+    public AudioClip touch;
+    public AudioClip SlidingDoor;
+    public AudioClip DogBowl;
+    public AudioClip Drawer;
+    public AudioClip DogFoods;
+    public AudioClip Refrigerator;
+    public AudioClip CabinetDoor;
+    public AudioClip Clock;
+
     void Start()
     {
         // 開始關掉提示和對話框
         //PressE.SetActive(false);
         //DialogueBG.SetActive(false);
+
+        audioSource = GetComponent<AudioSource>();
 
         // 鼠標設定視窗中
         Cursor.lockState = CursorLockMode.Locked;
@@ -49,7 +61,7 @@ public class RayScript : MonoBehaviour
 
     void Update()
     {
-        
+
 
 
         // 按alt或對話時
@@ -64,7 +76,7 @@ public class RayScript : MonoBehaviour
         {
             LevelText01.isTalking = false;
         }
-        
+
         if (LevelText01.isTalking)
         {
             // 解鎖控制鼠標在視窗內
@@ -98,6 +110,9 @@ public class RayScript : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 LevelController.clickName = hit.collider.name;
+
+                // 根據被點擊的物件播放不同音效
+                PlayClickSound(hit.collider.name);
 
                 // 點場景內 tag 設定成 key 的物件，切換 CanHear
                 if (hit.collider.gameObject.tag == "key")
@@ -186,16 +201,63 @@ public class RayScript : MonoBehaviour
             isHit = false;
         }
 
-        
-
-
         if (BooksSpaceBack.goBack == true)
         {
             crossHair.SetActive(true);
             gameObject.transform.position = startPos;
-            gameObject.transform.rotation = Quaternion.Euler(new Vector3(startRotation.x,startRotation.y,startRotation.z));
+            gameObject.transform.rotation = Quaternion.Euler(new Vector3(startRotation.x, startRotation.y, startRotation.z));
             LevelText01.isTalking = false;
             BooksSpaceBack.goBack = false;
+        }
+    }
+
+    void PlayClickSound(string objectName)
+    {
+        // 根據被點擊的物件名稱選擇要播放的音效
+        switch (objectName)
+        {
+            case "SlidingDoor001":
+            case "SlidingDoor002":
+            case "SlidingDoor003":
+            case "SlidingDoor004":
+                audioSource.clip = SlidingDoor;
+                break;
+            case "DogBowl001":
+                audioSource.clip = DogBowl;
+                break;
+            case "Drawer001":
+            case "Drawer002":
+            case "Drawer003":
+            case "Drawer004":
+            case "Drawer005":
+                audioSource.clip = Drawer;
+                break;
+            case "DogFoods":
+                audioSource.clip = DogFoods;
+                break;
+            case "Refrigerator002":
+            case "Refrigerator003":
+                audioSource.clip = Refrigerator;
+                break;
+            case "CabinetDoor001":
+            case "CabinetDoor002":
+            case "WardrobeDoor001":
+            case "WardrobeDoor002":
+                audioSource.clip = CabinetDoor;
+                break;
+            case "Clock":
+                audioSource.clip = Clock;
+                break;
+            default:
+                // 默認的音效
+                audioSource.clip = touch;
+                break;
+        }
+
+        // 播放音效
+        if (audioSource.clip != null)
+        {
+            audioSource.Play();
         }
     }
 }
