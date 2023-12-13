@@ -23,5 +23,6 @@ public class TaskImgClick : MonoBehaviour
         {
             taskNum++;
         }
+        LevelController.isTask = false;
     }
 }

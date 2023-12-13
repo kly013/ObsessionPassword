@@ -123,7 +123,7 @@ public class RayScript : MonoBehaviour
                 // 點擊需要開門的物件的開門
                 openDoor.HitByRaycast(hit.collider.name);
 
-                //print("s = " + LevelController.selectName + " , c = " + LevelController.clickName);
+                print("s = " + LevelController.selectName + " , c = " + LevelController.clickName);
 
                 logic.GameLogic(hit.collider.name);
 

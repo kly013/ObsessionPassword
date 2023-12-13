@@ -12145,7 +12145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4833eccd67274e44894cb9ebdb93a325, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bagController: {fileID: 0}
+  bagController: {fileID: 1510190667}
 --- !u!114 &1510190669
 MonoBehaviour:
   m_ObjectHideFlags: 0
