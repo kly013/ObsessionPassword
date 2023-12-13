@@ -7710,6 +7710,49 @@ Transform:
   m_Father: {fileID: 27892424}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!1 &898672805
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 898672807}
+  - component: {fileID: 898672806}
+  m_Layer: 0
+  m_Name: LevelPass
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &898672806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 898672805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4241142bf4367dc4eac743a0858da238, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &898672807
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 898672805}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.4660733, y: -1.1009953, z: 1.3395729}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 26
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &900902628
 GameObject:
   m_ObjectHideFlags: 0
@@ -24125,7 +24168,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1156932274165738432, guid: 1f04175fdce4b2244af92291bac0106e, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4895391390147174780, guid: 1f04175fdce4b2244af92291bac0106e, type: 3}
       propertyPath: m_RootOrder
@@ -28919,7 +28962,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7015598566061184342, guid: 42e2c56613860e14d85249260448a014, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
@@ -31766,7 +31809,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!23 &2688793916005248559
 MeshRenderer:
@@ -33225,6 +33268,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5223422183498877712, guid: 5cc303d13add5bb46a2a159746047d4b, type: 3}
       propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5223422183498877713, guid: 5cc303d13add5bb46a2a159746047d4b, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6823243585800784983, guid: 5cc303d13add5bb46a2a159746047d4b, type: 3}
@@ -36672,7 +36719,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2296701505837627178, guid: d744bdfc616fa6c47a98f25d840eb5cc, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4677690036714149180, guid: d744bdfc616fa6c47a98f25d840eb5cc, type: 3}
       propertyPath: m_RootOrder
@@ -36724,11 +36771,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4677690036714149181, guid: d744bdfc616fa6c47a98f25d840eb5cc, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7514104001743433067, guid: d744bdfc616fa6c47a98f25d840eb5cc, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
@@ -37017,6 +37064,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1599861887213222422, guid: d1f070e88b5c6d74d9919961d0c544d0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8729739849143742690, guid: d1f070e88b5c6d74d9919961d0c544d0, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8729739849143742691, guid: d1f070e88b5c6d74d9919961d0c544d0, type: 3}
@@ -47802,7 +47853,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9000703561969921294, guid: 5a06a787f6073ac45878e338c086277f, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
@@ -49250,6 +49301,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6520409298363029053}
     m_Modifications:
+    - target: {fileID: 6153543990067251912, guid: d28d851c35843fa4aa9af93c7b12d650, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6153543990067251913, guid: d28d851c35843fa4aa9af93c7b12d650, type: 3}
       propertyPath: m_Name
       value: Flour002
