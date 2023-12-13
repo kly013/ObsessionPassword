@@ -21619,10 +21619,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -32490,6 +32490,10 @@ PrefabInstance:
       value: Watermelon001
       objectReference: {fileID: 0}
     - target: {fileID: 5893677458613916059, guid: 3385cf9552b85ad42abc2702fd7163a7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893677458613916059, guid: 3385cf9552b85ad42abc2702fd7163a7, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
@@ -41719,6 +41723,10 @@ PrefabInstance:
       value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 5795956893497134556, guid: d9decf51020ca934fb1a578851684008, type: 3}
+      propertyPath: Clock
+      value: 
+      objectReference: {fileID: 8300000, guid: b35bd6f17663125408b28f924fe6d6a7, type: 3}
+    - target: {fileID: 5795956893497134556, guid: d9decf51020ca934fb1a578851684008, type: 3}
       propertyPath: diary
       value: 
       objectReference: {fileID: 4893963313536192545}
@@ -41726,6 +41734,22 @@ PrefabInstance:
       propertyPath: logic
       value: 
       objectReference: {fileID: 1510190669}
+    - target: {fileID: 5795956893497134556, guid: d9decf51020ca934fb1a578851684008, type: 3}
+      propertyPath: touch
+      value: 
+      objectReference: {fileID: 8300000, guid: 8ed79637394212944866d3c5a60e1dec, type: 3}
+    - target: {fileID: 5795956893497134556, guid: d9decf51020ca934fb1a578851684008, type: 3}
+      propertyPath: Drawer
+      value: 
+      objectReference: {fileID: 8300000, guid: 6f905d3f0b5825745a3c2a9e93822385, type: 3}
+    - target: {fileID: 5795956893497134556, guid: d9decf51020ca934fb1a578851684008, type: 3}
+      propertyPath: DogBowl
+      value: 
+      objectReference: {fileID: 8300000, guid: f8a0e74fefe8c1b44bc8ded90b175d88, type: 3}
+    - target: {fileID: 5795956893497134556, guid: d9decf51020ca934fb1a578851684008, type: 3}
+      propertyPath: DogFoods
+      value: 
+      objectReference: {fileID: 8300000, guid: 4633f36a71b55ff4f93ca2ce6acdc1bf, type: 3}
     - target: {fileID: 5795956893497134556, guid: d9decf51020ca934fb1a578851684008, type: 3}
       propertyPath: openDoor
       value: 
@@ -41739,6 +41763,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 882682484}
     - target: {fileID: 5795956893497134556, guid: d9decf51020ca934fb1a578851684008, type: 3}
+      propertyPath: CabinetDoor
+      value: 
+      objectReference: {fileID: 8300000, guid: 4d8c2f7a1673dab4b894a7f683109445, type: 3}
+    - target: {fileID: 5795956893497134556, guid: d9decf51020ca934fb1a578851684008, type: 3}
+      propertyPath: SlidingDoor
+      value: 
+      objectReference: {fileID: 8300000, guid: 12208c57bc10e6d4b8b38bb35fbaa267, type: 3}
+    - target: {fileID: 5795956893497134556, guid: d9decf51020ca934fb1a578851684008, type: 3}
       propertyPath: contactBook
       value: 
       objectReference: {fileID: 1281015837473139110}
@@ -41746,6 +41778,10 @@ PrefabInstance:
       propertyPath: levelText01
       value: 
       objectReference: {fileID: 1510190660}
+    - target: {fileID: 5795956893497134556, guid: d9decf51020ca934fb1a578851684008, type: 3}
+      propertyPath: Refrigerator
+      value: 
+      objectReference: {fileID: 8300000, guid: 195476a7401f24647a63f0fec9bd79d8, type: 3}
     - target: {fileID: 5795956893497134556, guid: d9decf51020ca934fb1a578851684008, type: 3}
       propertyPath: clickComputer
       value: 
@@ -43823,7 +43859,7 @@ RectTransform:
   m_GameObject: {fileID: 6622745759119885091}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1545136790}
   - {fileID: 6622745758824170706}
