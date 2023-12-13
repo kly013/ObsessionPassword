@@ -114,6 +114,7 @@ public class BagController : MonoBehaviour
             else
             {
                 imgPos[0].SetActive(false);
+                posNum = 0;
             }
 
             img3 = imgPos[2].GetComponent<Image>();
@@ -141,6 +142,7 @@ public class BagController : MonoBehaviour
             else
             {
                 imgPos[1].SetActive(false);
+                posNum = 1;
             }
         }
 
