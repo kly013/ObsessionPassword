@@ -12,6 +12,12 @@ public class LevelController02 : MonoBehaviour
     public static string selectName;
     public static string clickName;
 
+    public static List<GameObject> toolsList = new List<GameObject>();
+
+    public static bool isPower;
+
+    public static bool isLv02Finish;
+
     void Start()
     {
         gameTimer = 0;

@@ -23,6 +23,8 @@ public class CursorRay : MonoBehaviour
 
     public BagController02 bagController02;
 
+    public Logic02 logic02; 
+
     void Start()
     {
         // 鼠標設定視窗中
@@ -73,9 +75,9 @@ public class CursorRay : MonoBehaviour
             // 按下滑鼠右鍵
             if (Input.GetMouseButtonDown(0))
             {
-                LevelController.clickName = hit.collider.name;
+                LevelController02.clickName = hit.collider.tag;
 
-                print(hit.collider.name);
+                //print(hit.collider.name);
 
                 // 點場景內 tag 設定成 key 的物件，切換 CanHear
                 if (hit.collider.gameObject.tag == "key")
@@ -83,7 +85,9 @@ public class CursorRay : MonoBehaviour
                     CanHear = !CanHear;
                 }
 
-                
+                logic02.GameLogic(hit.collider.gameObject);
+
+
                 if (!LevelText02.isTalking)
                 {
                     if (CanHear)
@@ -100,7 +104,14 @@ public class CursorRay : MonoBehaviour
 
                 if (hit.collider.tag != "Untagged" && hit.collider.tag != "key")
                 {
-                    bagController02.changeToolsImg(hit.collider.gameObject);
+                    if (LevelController02.isPower && LevelController02.clickName == "Battery")
+                    {
+
+                    }
+                    else
+                    {
+                        bagController02.changeToolsImg(hit.collider.gameObject);
+                    }
                 }
             }
         }

@@ -56,6 +56,7 @@ public class BagController02 : MonoBehaviour
         {
             toolObj.SetActive(false);
             imgPos[posNum].SetActive(true);
+            LevelController02.toolsList.Add(toolObj);
             Image img = imgPos[posNum].GetComponent<Image>();
             img.sprite = toolsImg[toolsNum];
             posNum++;
@@ -86,6 +87,7 @@ public class BagController02 : MonoBehaviour
             else
             {
                 imgPos[0].SetActive(false);
+                posNum = 0;
             }
 
             img3 = imgPos[2].GetComponent<Image>();
@@ -113,6 +115,7 @@ public class BagController02 : MonoBehaviour
             else
             {
                 imgPos[1].SetActive(false);
+                posNum = 1;
             }
         }
 

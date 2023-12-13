@@ -4,13 +4,21 @@ using UnityEngine;
 
 public class Logic02 : MonoBehaviour
 {
-    void Start()
-    {
-        
-    }
+    public Light spotlight;
+    int times = 0;
 
-    void Update()
+    public GameObject ghost;
+
+    public void GameLogic(GameObject obj)
     {
-        
+        if (LevelController02.selectName == "FlashLight" && LevelController02.clickName == "Battery")
+        {
+            spotlight.enabled = true;
+            times++;
+            obj.SetActive(false);
+            spotlight.intensity = spotlight.intensity + times;
+            LevelController02.isPower = true;
+            ghost.SetActive(true);
+        }
     }
 }
