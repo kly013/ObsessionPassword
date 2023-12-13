@@ -31,8 +31,8 @@ public class StartDialogue : MonoBehaviour
         {
             LevelText01.isTalking = true;
         }
-        //Debug.Log(LevelText01.isTalking);
-        //Debug.Log(dialogueText);
+        Debug.Log(LevelText01.isTalking);
+        Debug.Log(dialogueText);
     }
 
     public void DialogueText()

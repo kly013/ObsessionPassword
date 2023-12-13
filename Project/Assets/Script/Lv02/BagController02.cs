@@ -51,7 +51,7 @@ public class BagController02 : MonoBehaviour
 
     public void addTools()
     {
-        print("aaa");
+        //print("aaa");
         try
         {
             toolObj.SetActive(false);

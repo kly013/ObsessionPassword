@@ -9,6 +9,8 @@ public class PauseController : MonoBehaviour
     private bool gameisPause;
     private float timer = 0;
 
+    AudioSource audioSource;
+
     // Start is called before the first frame update
 
 
@@ -17,8 +19,7 @@ public class PauseController : MonoBehaviour
     {
         LevelText01.isTalking = false;
         PausePanel.gameObject.SetActive(false);
-
-
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -29,15 +30,12 @@ public class PauseController : MonoBehaviour
         }
         timer += Time.deltaTime;
         //Debug.Log(timer.ToString("0"));
-
     }
 
     public void setGamePaused(bool isPaused)
     {
         gameisPause = isPaused;
     }
-
-
 
     public void CheckUser()
     {
@@ -65,32 +63,44 @@ public class PauseController : MonoBehaviour
 
     public void OnClickContinue()
     {
+        if (audioSource.clip != null)
+        {
+            audioSource.Play();
+        }
         ResumeGame();
     }
 
     void PauseGame()
     {
-
+        if (audioSource.clip != null)
+        {
+            audioSource.Play();
+        }
         Time.timeScale = 0;
         isPause = true;
-             
     }
 
     public void ResumeGame()
     {
+        if (audioSource.clip != null)
+        {
+            audioSource.Play();
+        }
         LevelText01.isTalking = false;
         Time.timeScale = 1;
         isPause = false;
         PausePanel.gameObject.SetActive(false);
-
     }
 
     public void BackMenu()
     {
+        if (audioSource.clip != null)
+        {
+            audioSource.Play();
+        }
         LevelText01.isTalking = true;
         Time.timeScale = 1;
         isPause = false;
         PausePanel.gameObject.SetActive(false);
-
     }
 }

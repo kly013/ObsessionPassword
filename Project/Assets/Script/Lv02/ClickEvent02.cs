@@ -54,7 +54,7 @@ public class ClickEvent02 : MonoBehaviour
         Image buttonImage = GetComponent<Image>();
         Sprite sourceSprite = buttonImage.sprite;
 
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < LevelController02.toolsList.Count; i++)
         {
             if (LevelController02.toolsList[i].name == sourceSprite.name)
             {

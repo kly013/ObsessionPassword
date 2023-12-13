@@ -19,8 +19,6 @@ public class PauseController2 : MonoBehaviour
     {
         LevelText02.isTalking = false;
         PausePanel.gameObject.SetActive(false);
-
-
     }
 
     void Update()
@@ -31,7 +29,6 @@ public class PauseController2 : MonoBehaviour
         }
         timer += Time.deltaTime;
         //Debug.Log(timer.ToString("0"));
-
     }
 
     public void setGamePaused(bool isPaused)
@@ -61,7 +58,6 @@ public class PauseController2 : MonoBehaviour
                 PausePanel.gameObject.SetActive(false);
                 crossHair.SetActive(true);
                 tools.SetActive(true);
-
             }
         }
     }
