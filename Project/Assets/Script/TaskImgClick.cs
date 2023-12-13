@@ -19,6 +19,9 @@ public class TaskImgClick : MonoBehaviour
         LevelText01.isTalking = false;
         photodog.SetActive(false);
         this.gameObject.SetActive(false);
-        taskNum++;
+        if (taskNum < 2)
+        {
+            taskNum++;
+        }
     }
 }
