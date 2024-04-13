@@ -4,25 +4,27 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float speed = 5f; // 移動速度
-    private bool isColliding = false; // 判斷是否與牆壁碰撞
+    // 移動速度
+    public float speed = 5f;
+    // 判斷是否與牆壁碰撞
+    private bool isColliding = false; 
 
     void Update()
     {
-        // 如果未與牆壁碰撞，則允許移動
+        // 未與牆壁碰撞，則允許移動
         if (!isColliding)
         {
-            // 獲取玩家輸入
+            // 移動輸入
             float horizontalInput = Input.GetAxis("Horizontal");
             float verticalInput = Input.GetAxis("Vertical");
 
             // 計算移動方向
             Vector3 moveDirection = new Vector3(horizontalInput, 0f, verticalInput).normalized;
 
-            // 將移動方向轉換為角色的本地空間方向
+            // 將移動方向轉換為角色的本地座標方向
             Vector3 localMoveDirection = transform.TransformDirection(moveDirection);
 
-            // 使用本地空間方向進行移動
+            // 使用本地座標方向進行移動
             transform.position += localMoveDirection * speed * Time.deltaTime;
         }
     }

@@ -13,11 +13,13 @@ public class CursorOnUI : MonoBehaviour
 
     private void Update()
     {
+        // •k¡‰≈„•‹
         if(Input.GetMouseButtonDown(1))
         {
             Cursor.visible = true;
             print("1");
         }
+        // •™¡‰¡Ù¬√
         else if (Input.GetMouseButtonDown(0))
         {
             Cursor.visible = false;

@@ -18,6 +18,7 @@ public class HomeBtn : MonoBehaviour
 
     private void Update()
     {
+        // 播完換場景
         if (!videoPlayer.isPlaying && videoPlayer.time >= videoPlayer.length)
         {
             LevelController.level++;
@@ -25,22 +26,31 @@ public class HomeBtn : MonoBehaviour
         }
     }
 
+    // 按start
     public void onClickStart()
     {
+        // 播按鍵音效
         MusicController.instance.PlaySoundEffect("clickBtn");
+        // 播影片
         video.SetActive(true);
         videoPlayer.Play();
     }
 
+    // 按Exit
     public void onClickExit()
     {
+        // 播按鍵音效
         MusicController.instance.PlaySoundEffect("clickBtn");
         Application.Quit();
     }
 
+    // 按skip
     public void onClickSkip()
     {
+        // 播按鍵音效
         MusicController.instance.PlaySoundEffect("clickBtn");
+
+        // 直接換場景
         LevelController.level++;
         SceneManager.LoadScene("Level01");
     }

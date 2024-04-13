@@ -8,7 +8,7 @@ public class CameraController : MonoBehaviour
     public static CameraController instance;
 
     // 鼠標靈敏度
-    public float sensitivity = 2f;
+    public float sensitivity = 3f;
     // 玩家角色的 Transform 組件
     public Transform playerTransform; 
 
