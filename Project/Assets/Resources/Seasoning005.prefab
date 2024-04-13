@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 3455452979876373315}
   - component: {fileID: 4642975776368304700}
   - component: {fileID: 255110481926553654}
-  - component: {fileID: 6196210040210379507}
   - component: {fileID: -8755389545732488023}
   m_Layer: 0
   m_Name: Seasoning005
@@ -97,18 +96,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.06184409, y: 0.06184409, z: 0.1630749}
   m_Center: {x: 0, y: 0, z: 0.08153745}
---- !u!114 &6196210040210379507
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2300802979405329027}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffb21b2c7b6c92545bc8cf143901a4fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &-8755389545732488023
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 1129912115665111022}
   - component: {fileID: 2254905692148046905}
   - component: {fileID: -72995770552935395}
-  - component: {fileID: 4628320235103507473}
   - component: {fileID: 6421187701287958378}
   m_Layer: 0
   m_Name: Pen006
@@ -97,18 +96,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.15161481, y: 0.123734765, z: 0.0107041355}
   m_Center: {x: 0.07580741, y: -0.061867382, z: 0.00050512864}
---- !u!114 &4628320235103507473
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3555429215219580374}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffb21b2c7b6c92545bc8cf143901a4fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &6421187701287958378
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -11,9 +11,6 @@ GameObject:
   - component: {fileID: 5795956893497134559}
   - component: {fileID: 5795956893497134545}
   - component: {fileID: 5795956893497134558}
-  - component: {fileID: 5795956893497134547}
-  - component: {fileID: 5795956893497134556}
-  - component: {fileID: 5795956893497134557}
   - component: {fileID: 5795956893497134554}
   - component: {fileID: 5795956893497134544}
   m_Layer: 0
@@ -88,49 +85,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &5795956893497134547
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5795956893497134546}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f2b664ada8aa354eac21d5a45ec91f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 1
-  rotatSpeed: 100
---- !u!114 &5795956893497134556
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5795956893497134546}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30f613249bcf63c4e9c51a8fedfc7921, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  levelText01: {fileID: 0}
-  clickComputer: {fileID: 0}
-  openDoor: {fileID: 0}
-  takeLook: {fileID: 0}
-  logic: {fileID: 0}
---- !u!114 &5795956893497134557
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5795956893497134546}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11071e0e6ad66b647853337c73a885d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!54 &5795956893497134554
 Rigidbody:
   m_ObjectHideFlags: 0

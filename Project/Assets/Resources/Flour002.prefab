@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 3018697081880070685}
   - component: {fileID: 4721330348009328055}
   - component: {fileID: 6153543990067251912}
-  - component: {fileID: -2285710010035314975}
   - component: {fileID: 1167110030523869879}
   m_Layer: 0
   m_Name: Flour002
@@ -98,18 +97,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 7058681984779691595, guid: 70dec6cc2be635148b5e6248c8d07f15, type: 3}
---- !u!114 &-2285710010035314975
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6153543990067251913}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffb21b2c7b6c92545bc8cf143901a4fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1167110030523869879
 MonoBehaviour:
   m_ObjectHideFlags: 0

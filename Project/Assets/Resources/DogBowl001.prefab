@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 6109519054633561923}
   - component: {fileID: 4300079329370407576}
   - component: {fileID: 9000703561969921293}
-  - component: {fileID: 1342089855016589955}
   - component: {fileID: -2646275450900849022}
   m_Layer: 0
   m_Name: DogBowl001
@@ -97,18 +96,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.25057033, y: 0.25057033, z: 0.0566913}
   m_Center: {x: 0.00000017731517, y: 0.0000000019639794, z: -0.013971516}
---- !u!114 &1342089855016589955
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9000703561969921294}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffb21b2c7b6c92545bc8cf143901a4fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &-2646275450900849022
 MonoBehaviour:
   m_ObjectHideFlags: 0

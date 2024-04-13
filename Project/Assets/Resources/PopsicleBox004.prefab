@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 6586517087155310660}
   - component: {fileID: 5538929819232802622}
   - component: {fileID: 5002618680776775164}
-  - component: {fileID: -193529375692087928}
   - component: {fileID: -8587888084262799563}
   m_Layer: 0
   m_Name: PopsicleBox004
@@ -97,18 +96,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.16457687, y: 0.2550509, z: 0.31889647}
   m_Center: {x: 0.04093735, y: -0.11247481, z: -0.00000008195639}
---- !u!114 &-193529375692087928
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 166093786179387506}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffb21b2c7b6c92545bc8cf143901a4fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &-8587888084262799563
 MonoBehaviour:
   m_ObjectHideFlags: 0

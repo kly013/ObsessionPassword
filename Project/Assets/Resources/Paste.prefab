@@ -172,7 +172,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8306061067095285781}
   - component: {fileID: 8306061067095285780}
-  - component: {fileID: -2165445263107154476}
   - component: {fileID: 3987119290809436984}
   m_Layer: 0
   m_Name: Paste
@@ -210,18 +209,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.18063521, y: 0.163438, z: 0.09747555}
   m_Center: {x: 0.026685681, y: 0.01456441, z: 0.058836088}
---- !u!114 &-2165445263107154476
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8306061067095285782}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffb21b2c7b6c92545bc8cf143901a4fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &3987119290809436984
 MonoBehaviour:
   m_ObjectHideFlags: 0

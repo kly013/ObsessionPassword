@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 6113376516673141850}
   - component: {fileID: 1663789405499363954}
   - component: {fileID: 4863368076814317030}
-  - component: {fileID: 501743750508926310}
   - component: {fileID: 5993380627246210731}
   m_Layer: 0
   m_Name: PhotoDog
@@ -97,18 +96,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10.000008, y: 0.0000064888823, z: 10.000006}
   m_Center: {x: 0, y: -0.000015258789, z: -0.0000009536743}
---- !u!114 &501743750508926310
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2336143878951955561}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffb21b2c7b6c92545bc8cf143901a4fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &5993380627246210731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139,7 +126,6 @@ GameObject:
   - component: {fileID: 6275377279785519009}
   - component: {fileID: 3961856746842603441}
   - component: {fileID: 941201217751977674}
-  - component: {fileID: -6946179366880576915}
   - component: {fileID: 2328427306976645644}
   m_Layer: 0
   m_Name: PhotoDog
@@ -225,18 +211,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10.000008, y: 0.0000064888823, z: 10.000006}
   m_Center: {x: 0, y: -0.000015258789, z: -0.0000009536743}
---- !u!114 &-6946179366880576915
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8904982789106806583}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffb21b2c7b6c92545bc8cf143901a4fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2328427306976645644
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 8837995310752945242}
   - component: {fileID: 7067844752336539506}
   - component: {fileID: -3065948005284751485}
-  - component: {fileID: -9129311863392305198}
   - component: {fileID: 7521945462288699399}
   m_Layer: 0
   m_Name: IceCreamBox003
@@ -97,18 +96,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.22735175, y: 0.22735992, z: 0.187177}
   m_Center: {x: -0.0006656125, y: -0.0029817044, z: 0.029016785}
---- !u!114 &-9129311863392305198
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3050972692031112650}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffb21b2c7b6c92545bc8cf143901a4fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &7521945462288699399
 MonoBehaviour:
   m_ObjectHideFlags: 0

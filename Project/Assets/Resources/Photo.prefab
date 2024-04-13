@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 339851965587858357}
   - component: {fileID: 6562274622798189145}
   - component: {fileID: 9031648569497632785}
-  - component: {fileID: 7298001631327015866}
   - component: {fileID: 9119388359045629549}
   m_Layer: 0
   m_Name: Photo2020
@@ -97,18 +96,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10.000008, y: 0.0000064888823, z: 10.000006}
   m_Center: {x: 0, y: -0.000015258789, z: -0.0000009536743}
---- !u!114 &7298001631327015866
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8609833478599364009}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffb21b2c7b6c92545bc8cf143901a4fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &9119388359045629549
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139,7 +126,6 @@ GameObject:
   - component: {fileID: 5936494696898031058}
   - component: {fileID: 3715297765110912450}
   - component: {fileID: 611334646523831481}
-  - component: {fileID: 6620482962970301890}
   - component: {fileID: -1174754619288074533}
   m_Layer: 0
   m_Name: Photo
@@ -225,18 +211,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10.000008, y: 0.0000064888823, z: 10.000006}
   m_Center: {x: 0, y: -0.000015258789, z: -0.0000009536743}
---- !u!114 &6620482962970301890
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9142569687154492740}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffb21b2c7b6c92545bc8cf143901a4fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &-1174754619288074533
 MonoBehaviour:
   m_ObjectHideFlags: 0

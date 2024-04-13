@@ -6,25 +6,7 @@ TagManager:
   tags:
   - key
   - pressE
-  - WaxTree_Branches
-  - Pistacia_Branches
-  - CamphorTree_Branches
-  - BanyanTree_Branches
-  - BanyanTree
-  - WaxTree
-  - PistaciaTree
-  - CamphorTree
-  - WaxTree_Leaf
-  - BanyanTree_Leaf
-  - CamphorTree_Leaf
-  - PistaciaTree_Leaf
-  - Battery
-  - Clothes
-  - Match
-  - RoundStone
-  - SharpStone
-  - SmoothStone
-  - FlashLight
+  - Wall
   layers:
   - Default
   - TransparentFX
