@@ -22,6 +22,8 @@ public class RayScript : MonoBehaviour
     public LevelText01 levelText01;
     // 點電腦後的行為
     public ClickComputer clickComputer;
+    // 點擊手機事件
+    public ClickCellphone clickCellphone;
     // 點門後的開關動畫
     public OpenDoor openDoor;
     // 點擊可以拿起的物品後的動作
@@ -31,7 +33,7 @@ public class RayScript : MonoBehaviour
     public GameObject contactBook;
     public GameObject diary;
     public GameObject crossHair;
-    public GameObject camera;
+    public GameObject cam;
 
     static public Vector3 startPos;
     static public Vector3 startRotation;
@@ -152,7 +154,7 @@ public class RayScript : MonoBehaviour
 
                     if (hit.collider.name == "Computer")
                     {
-                        clickComputer.OnClick();
+                        clickComputer.onClick();
                         LevelText01.isTalking = true;
                     }
 
@@ -186,7 +188,7 @@ public class RayScript : MonoBehaviour
                     contactBook.SetActive(true);
                     gameObject.transform.position = new Vector3(1.398f, 5.729f, 20.329f);
                     gameObject.transform.eulerAngles = new Vector3(0, 0, 0);
-                    camera.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
+                    cam.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
                     crossHair.SetActive(false);
                 }
                 if (hit.collider.name == "Diary")
@@ -195,7 +197,7 @@ public class RayScript : MonoBehaviour
                     diary.SetActive(true);
                     gameObject.transform.position = new Vector3(5.9f, 5.85f, 19.64f);
                     gameObject.transform.eulerAngles = new Vector3(0, 0, 0);
-                    camera.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
+                    cam.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
                     crossHair.SetActive(false);
                 }
 

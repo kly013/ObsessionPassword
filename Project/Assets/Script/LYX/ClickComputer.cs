@@ -31,7 +31,7 @@ public class ClickComputer : MonoBehaviour
         Timer();
     }
 
-    public void OnClick()
+    public void onClick()
     {
         screen.SetActive(true);
         LevelController.isClickComputer = true;

@@ -47,7 +47,7 @@ public class Logic : MonoBehaviour
             LevelController.isFinishPhoto = true;
         }
 
-        if (LevelController.selectName == "Charger" && LevelController.clickName == "Cellphone")
+        if (LevelController.selectName == "charger" && LevelController.clickName == "Cellphone")
         {
             if (isFirst)
             {
@@ -57,7 +57,6 @@ public class Logic : MonoBehaviour
             }
             else if (LevelController.gameTimer - curTime < waitTime)
             {
-
             }
             else
             {
