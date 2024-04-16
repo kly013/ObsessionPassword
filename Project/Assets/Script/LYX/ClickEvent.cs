@@ -78,6 +78,7 @@ public class ClickEvent : MonoBehaviour
         {
             // ¼È©ñ
             //print("not null , "+ this.gameObject.name);
+            print(obj.name);
 
             obj.gameObject.SetActive(true);
             bagController.onChangePos(this.gameObject.name);

@@ -83,8 +83,10 @@ public class BagController : MonoBehaviour
     // 取得物品新增至道具欄
     public void addTools(GameObject obj)
     {
-        // 去掉(clone)文字
-        string name = obj.name.Substring(0, obj.name.Length - 7);
+        // 暫放
+        print(obj.name);
+        // 取得物品名稱
+        string name = obj.name;
 
         // 如果為Tools中所列道具，則出現相對應圖片
         try
@@ -102,6 +104,8 @@ public class BagController : MonoBehaviour
             Image img = imgPos[posNum].GetComponent<Image>();
             // 替換道具圖
             img.sprite = toolsImg[toolsNum];
+            // 新增進 toolsList
+            LevelController.toolsList.Add(obj);
             // 將欄位指向下一個位置(?!)
             posNum++;
         }
@@ -135,6 +139,10 @@ public class BagController : MonoBehaviour
             {
                 // 將第二欄位的圖片給第一欄位
                 img1.sprite = img2.sprite;
+                // 將 toolsList 位置 1 物件換到位置 0 
+                LevelController.toolsList[0] = LevelController.toolsList[1];
+                // 將 位置 1 物件移除
+                LevelController.toolsList.Remove(LevelController.toolsList[1]);
                 // 先將第二欄位隱藏
                 imgPos[1].SetActive(false);
                 // 將指向欄位換成第二欄位
@@ -147,6 +155,10 @@ public class BagController : MonoBehaviour
                 {
                     // 將第三欄位的圖片給第二欄位
                     img2.sprite = img3.sprite;
+                    // 將 toolsList 位置 2 物件換到位置 1
+                    LevelController.toolsList[1] = LevelController.toolsList[2];
+                    // 將 位置 2 物件移除
+                    LevelController.toolsList.Remove(LevelController.toolsList[2]);
                     // 將第二欄位改為顯示
                     imgPos[1].SetActive(true);
                     // 將第三欄位隱藏
@@ -160,6 +172,8 @@ public class BagController : MonoBehaviour
             {
                 // 直接將第一欄位隱藏
                 imgPos[0].SetActive(false);
+                // 將 位置 0 物件移除
+                LevelController.toolsList.Remove(LevelController.toolsList[0]);
                 // 指向欄位為第一欄位
                 posNum = 0;
             }
@@ -180,6 +194,10 @@ public class BagController : MonoBehaviour
             {
                 // 將第三欄位的圖片給第二欄位
                 img2.sprite = img3.sprite;
+                // 將 toolsList 位置 2 物件換到位置 1
+                LevelController.toolsList[1] = LevelController.toolsList[2];
+                // 將 位置 2 物件移除
+                LevelController.toolsList.Remove(LevelController.toolsList[2]);
                 // 將第二欄位改為顯示
                 imgPos[1].SetActive(true);
                 // 將第三欄位隱藏
@@ -192,6 +210,8 @@ public class BagController : MonoBehaviour
             {
                 // 將第二欄位隱藏
                 imgPos[1].SetActive(false);
+                // 將 位置 1 物件移除
+                LevelController.toolsList.Remove(LevelController.toolsList[1]);
                 // 指向第二欄位
                 posNum = 1;
             }
@@ -205,6 +225,8 @@ public class BagController : MonoBehaviour
 
             // 將第三欄位隱藏
             imgPos[2].SetActive(false);
+            // 將 位置 2 物件移除
+            LevelController.toolsList.Remove(LevelController.toolsList[2]);
             // 指向第三欄位
             posNum = 2;
         }

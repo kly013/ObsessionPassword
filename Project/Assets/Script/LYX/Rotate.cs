@@ -61,7 +61,7 @@ public class Rotate : MonoBehaviour
                 //print(BagController.posNum);
                 DialogueBG.SetActive(false);
                 choseText.SetActive(false);
-                bagController.addTools(rotateObj);
+                bagController.addTools(gameObj);
                 LevelController.isTakeLook = false;
                 LevelText01.isTalking = false;
                 this.enabled = false;
