@@ -1,121 +1,120 @@
-﻿Shader "Custom/BookPageShader" {
-	Properties{
+﻿Shader "Custom/DualMaterialShader" {
+    Properties{
+        // 正面
+        _FrontColor("Front Main Color", Color) = (1,1,1,1)
+        _FrontSpecColor("Front Specular Color", Color) = (0.5, 0.5, 0.5, 1)
+        _FrontShininess("Front Shininess", Range(0.03, 1)) = 0.078125
+        _FrontMainTex("Front Base (RGB) Gloss (A)", 2D) = "white" {}
+        _FrontBumpMap("Front Normalmap", 2D) = "bump" {}
 
-		//正面
+        // 反面
+        _BackColor("Back Main Color", Color) = (1,1,1,1)
+        _BackSpecColor("Back Specular Color", Color) = (0.5, 0.5, 0.5, 1)
+        _BackShininess("Back Shininess", Range(0.03, 1)) = 0.078125
+        _BackMainTex("Back Base (RGB) Gloss (A)", 2D) = "white" {}
+        _BackBumpMap("Back Normalmap", 2D) = "bump" {}
 
-		_Color("Main Color", Color) = (1,1,1,1)
+        // 控制翻頁
+        _Flip("Flip", Range(0, 1)) = 0
+    }
 
-		_SpecColor("Specular Color", Color) = (0.5, 0.5, 0.5, 1)
+        SubShader{
+            Tags { "RenderType" = "Opaque" }
+            LOD 400
 
-		_Shininess("Shininess", Range(0.03, 1)) = 0.078125
+            Cull Back
 
-		_MainTex("Base (RGB) Gloss (A)", 2D) = "white" {}
+            CGPROGRAM
+            #pragma surface surf BlinnPhong
 
-		_BumpMap("Normalmap", 2D) = "bump" {}
+            sampler2D _FrontMainTex;
+            sampler2D _FrontBumpMap;
+            fixed4 _FrontColor;
+            half _FrontShininess;
 
-		//反面
+            sampler2D _BackMainTex;
+            sampler2D _BackBumpMap;
+            fixed4 _BackColor;
+            half _BackShininess;
 
-		_BackColor("Back Main Color", Color) = (1,1,1,1)
+            fixed _Flip;
 
-		_BackSpecColor("Back Specular Color", Color) = (0.5, 0.5, 0.5, 1)
+            struct Input {
+                float2 uv_FrontMainTex;
+                float2 uv_FrontBumpMap;
+                float2 uv_BackMainTex;
+                float2 uv_BackBumpMap;
+            };
 
-		_BackShininess("Back Shininess", Range(0.03, 1)) = 0.078125
+            void surf(Input IN, inout SurfaceOutput o) {
+                if (_Flip < 0.5) {
+                    // 正面
+                    fixed4 tex = tex2D(_FrontMainTex, IN.uv_FrontMainTex);
+                    o.Albedo = tex.rgb * _FrontColor.rgb;
+                    o.Gloss = tex.a;
+                    o.Alpha = tex.a * _FrontColor.a;
+                    o.Specular = _FrontShininess;
+                    o.Normal = UnpackNormal(tex2D(_FrontBumpMap, IN.uv_FrontBumpMap));
+                }
+     else {
+                    // 反面
+                    fixed4 tex = tex2D(_BackMainTex, IN.uv_BackMainTex);
+                    o.Albedo = tex.rgb * _BackColor.rgb;
+                    o.Gloss = tex.a;
+                    o.Alpha = tex.a * _BackColor.a;
+                    o.Specular = _BackShininess;
+                    o.Normal = UnpackNormal(tex2D(_BackBumpMap, IN.uv_BackBumpMap));
+                }
+            }
+            ENDCG
 
-		_BackMainTex("Back Base (RGB) Gloss (A)", 2D) = "white" {}
+            Cull Front
 
-		_BackBumpMap("Back Normalmap", 2D) = "bump" {}
+            CGPROGRAM
+            #pragma surface surf BlinnPhong
 
-	}
+            sampler2D _FrontMainTex;
+            sampler2D _FrontBumpMap;
+            fixed4 _FrontColor;
+            half _FrontShininess;
 
-		SubShader{
+            sampler2D _BackMainTex;
+            sampler2D _BackBumpMap;
+            fixed4 _BackColor;
+            half _BackShininess;
 
-		Tags { "RenderType" = "Opaque" }
+            fixed _Flip;
 
-		LOD 400
+            struct Input {
+                float2 uv_FrontMainTex;
+                float2 uv_FrontBumpMap;
+                float2 uv_BackMainTex;
+                float2 uv_BackBumpMap;
+            };
 
-		Cull back
+            void surf(Input IN, inout SurfaceOutput o) {
+                if (_Flip < 0.5) {
+                    // 正面
+                    fixed4 tex = tex2D(_BackMainTex, IN.uv_BackMainTex);
+                    o.Albedo = tex.rgb * _BackColor.rgb;
+                    o.Gloss = tex.a;
+                    o.Alpha = tex.a * _BackColor.a;
+                    o.Specular = _BackShininess;
+                    o.Normal = UnpackNormal(tex2D(_BackBumpMap, IN.uv_BackBumpMap));
+                }
+     else {
+                    // 反面
+                    fixed4 tex = tex2D(_FrontMainTex, IN.uv_FrontMainTex);
+                    o.Albedo = tex.rgb * _FrontColor.rgb;
+                    o.Gloss = tex.a;
+                    o.Alpha = tex.a * _FrontColor.a;
+                    o.Specular = _FrontShininess;
+                    o.Normal = UnpackNormal(tex2D(_FrontBumpMap, IN.uv_FrontBumpMap));
+                }
+            }
+            ENDCG
+        }
 
-
-		CGPROGRAM
-
-		//表明是surface渲染方式 主渲染程序是surf 光照模型是BLinnPhong
-
-		#pragma surface surf BlinnPhong
-
-		sampler2D _MainTex;
-
-		sampler2D _BumpMap;
-
-		fixed4 _Color;
-
-		half _Shininess;
-
-		struct Input {
-
-		float2 uv_MainTex;
-
-		float2 uv_BumpMap;
-
-		};
-
-		void surf(Input IN, inout SurfaceOutput o) {
-
-		fixed4 tex = tex2D(_MainTex, IN.uv_MainTex);
-
-		o.Albedo = tex.rgb * _Color.rgb;
-
-		o.Gloss = tex.a;
-
-		o.Alpha = tex.a * _Color.a;
-
-		o.Specular = _Shininess;
-
-		o.Normal = UnpackNormal(tex2D(_BumpMap, IN.uv_BumpMap));
-		}
-
-		ENDCG
-
-		Cull front
-
-
-		CGPROGRAM
-
-		#pragma surface surf BlinnPhong
-
-		sampler2D _BackMainTex;
-
-		sampler2D _BackBumpMap;
-
-		fixed4 _BackColor;
-
-		half _BackShininess;
-
-		struct Input {
-
-			float2 uv_BackMainTex;
-
-			float2 uv_BackBumpMap;
-
-		};
-
-		void surf(Input IN, inout SurfaceOutput o) {
-
-			fixed4 tex = tex2D(_BackMainTex, IN.uv_BackMainTex);
-
-			o.Albedo = tex.rgb * _BackColor.rgb;
-
-			o.Gloss = tex.a;
-
-			o.Alpha = tex.a * _BackColor.a;
-
-			o.Specular = _BackShininess;
-
-			o.Normal = UnpackNormal(tex2D(_BackBumpMap, IN.uv_BackBumpMap));
-		}
-
-		ENDCG
-
-		}
-
-		FallBack "Specular"
+            Fallback "Specular"
 }
+

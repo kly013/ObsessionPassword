@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BooksSpaceBack : MonoBehaviour
 {
-    static public bool goBack=false;
+    static public bool goBack = false;
 
 
 

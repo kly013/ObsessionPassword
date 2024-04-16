@@ -84,7 +84,7 @@ public class BagController : MonoBehaviour
     public void addTools(GameObject obj)
     {
         // 暫放
-        print(obj.name);
+        //print(obj.name);
         // 取得物品名稱
         string name = obj.name;
 

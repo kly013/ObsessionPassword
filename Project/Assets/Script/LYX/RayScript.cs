@@ -31,6 +31,7 @@ public class RayScript : MonoBehaviour
     public GameObject contactBook;
     public GameObject diary;
     public GameObject crossHair;
+    public GameObject camera;
 
     static public Vector3 startPos;
     static public Vector3 startRotation;
@@ -44,6 +45,7 @@ public class RayScript : MonoBehaviour
     public AudioClip Refrigerator;
     public AudioClip CabinetDoor;
     public AudioClip Clock;
+    public AudioClip Door;
 
     void Start()
     {
@@ -184,6 +186,7 @@ public class RayScript : MonoBehaviour
                     contactBook.SetActive(true);
                     gameObject.transform.position = new Vector3(1.398f, 5.729f, 20.329f);
                     gameObject.transform.eulerAngles = new Vector3(0, 0, 0);
+                    camera.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
                     crossHair.SetActive(false);
                 }
                 if (hit.collider.name == "Diary")
@@ -192,6 +195,7 @@ public class RayScript : MonoBehaviour
                     diary.SetActive(true);
                     gameObject.transform.position = new Vector3(5.9f, 5.85f, 19.64f);
                     gameObject.transform.eulerAngles = new Vector3(0, 0, 0);
+                    camera.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
                     crossHair.SetActive(false);
                 }
 
@@ -248,6 +252,9 @@ public class RayScript : MonoBehaviour
                 break;
             case "Clock":
                 audioSource.clip = Clock;
+                break;
+            case "Door001":
+                audioSource.clip = Door;
                 break;
             default:
                 // 默認的音效
