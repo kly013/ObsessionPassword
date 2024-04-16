@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 8026806888455566280}
   - component: {fileID: 3018697081880070685}
   - component: {fileID: 4721330348009328055}
-  - component: {fileID: 6153543990067251912}
   - component: {fileID: -2285710010035314975}
   - component: {fileID: 1167110030523869879}
+  - component: {fileID: 1470145168853865275}
   m_Layer: 0
   m_Name: Flour002
   m_TagString: Untagged
@@ -29,8 +29,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6153543990067251913}
   m_LocalRotation: {x: 0.5, y: -0.5, z: -0.5, w: 0.5}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.2, y: 0, z: 0}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -84,20 +84,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6153543990067251912
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6153543990067251913}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 7058681984779691595, guid: 70dec6cc2be635148b5e6248c8d07f15, type: 3}
 --- !u!114 &-2285710010035314975
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,3 +114,16 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!65 &1470145168853865275
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6153543990067251913}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.28830853, y: 0.13389611, z: 0.30602023}
+  m_Center: {x: 0.05694573, y: 0.0000000037252903, z: 0.14890988}
