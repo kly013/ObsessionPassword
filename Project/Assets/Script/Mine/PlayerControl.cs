@@ -5,68 +5,47 @@ using UnityEngine;
 public class PlayerControl : MonoBehaviour
 {
     // 移動速度
-    public float movespeed = 1;
-    float moveSpeed;
-    // 轉頭速度
-    public float rotatspeed = 100;
-    float rotatSpeed;
+    float speed = 1.5f;
+    // 判斷是否與牆壁碰撞
+    private bool isColliding = false;
 
-    // 計算 xy 軸旋轉
-    float xRotation = 0;
-    float yRotation = 0;
-
-    Vector3 moveDirection;
 
     void Update()
     {
-        // 方向量值
-        float h = Input.GetAxis("Horizontal");
-        float v = Input.GetAxis("Vertical");
-
-        // 將自身座標轉成世界座標，保持以自身前後左右走
-        Vector3 moveDirection = new Vector3(h, 0, v).normalized;
-        moveDirection = transform.TransformDirection(moveDirection);
-        moveDirection = new Vector3(moveDirection.x, 0, moveDirection.z);
-
-        // 滑鼠 xy 軸量值
-        float mouseX = -Input.GetAxis("Mouse X") * rotatSpeed * Time.deltaTime;
-        float mouseY = Input.GetAxis("Mouse Y") * rotatSpeed * Time.deltaTime;
-
-        // 判斷有沒有在走路
-        if (h == 0 && v == 0)
+        // 未與牆壁碰撞，且不是在對話，則可以移動
+        if (!isColliding && !LevelText01.isTalking)
         {
-            // 選擇左右轉或上下看
-            if (Mathf.Abs(mouseX) >= Mathf.Abs(mouseY))
-            {
-                yRotation -= mouseX;
-            }
-            else
-            {
-                xRotation -= mouseY;
-                xRotation = Mathf.Clamp(xRotation, -90f, 90f);
-            }
+            // 移動輸入
+            float horizontalInput = Input.GetAxis("Horizontal");
+            float verticalInput = Input.GetAxis("Vertical");
 
-            if (mouseX != 0 || mouseY != 0)
-            {
-                // 轉動
-                transform.rotation = Quaternion.Euler(xRotation, yRotation, 0f);
-            }
-        }
-        else
-        {
-            transform.Translate(moveDirection * moveSpeed * Time.deltaTime, Space.World);
-        }
+            // 計算移動方向
+            Vector3 moveDirection = new Vector3(horizontalInput, 0f, verticalInput).normalized;
 
-        // 點擊東西後不動不轉
-        if (LevelText01.isTalking)
-        {
-            moveSpeed = 0;
-            rotatSpeed = 0;
-        }
-        else
-        {
-            moveSpeed = movespeed;
-            rotatSpeed = rotatspeed;
+            // 將移動方向轉換為角色的本地座標方向
+            Vector3 localMoveDirection = transform.TransformDirection(moveDirection);
+
+            // 使用本地座標方向進行移動
+            transform.position += localMoveDirection * speed * Time.deltaTime;
         }
     }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        // 如果撞到牆壁，停止移動
+        if (collision.gameObject.tag == "Wall")
+        {
+            isColliding = true;
+        }
+    }
+
+    void OnCollisionExit(Collision collision)
+    {
+        // 離開牆壁則恢復移動
+        if (collision.gameObject.tag == "Wall")
+        {
+            isColliding = false;
+        }
+    }
+    
 }

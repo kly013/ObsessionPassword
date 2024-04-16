@@ -100,8 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f2b664ada8aa354eac21d5a45ec91f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 1
-  rotatSpeed: 100
+  speed: 5
 --- !u!114 &5795956893497134556
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -119,6 +118,17 @@ MonoBehaviour:
   openDoor: {fileID: 0}
   takeLook: {fileID: 0}
   logic: {fileID: 0}
+  contactBook: {fileID: 0}
+  diary: {fileID: 0}
+  crossHair: {fileID: 0}
+  touch: {fileID: 0}
+  SlidingDoor: {fileID: 0}
+  DogBowl: {fileID: 0}
+  Drawer: {fileID: 0}
+  DogFoods: {fileID: 0}
+  Refrigerator: {fileID: 0}
+  CabinetDoor: {fileID: 0}
+  Clock: {fileID: 0}
 --- !u!114 &5795956893497134557
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -201,6 +211,7 @@ GameObject:
   - component: {fileID: 5795956894050708089}
   - component: {fileID: 5795956894050708088}
   - component: {fileID: 5795956894050708091}
+  - component: {fileID: 1524481042703368867}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -273,3 +284,17 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5795956894050708090}
   m_Enabled: 1
+--- !u!114 &1524481042703368867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5795956894050708090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbbed234ff1c55a4cade89752e04f3c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensitivity: 3
+  playerTra: {fileID: 5795956893497134559}

@@ -4,14 +4,20 @@ using UnityEngine;
 
 public class Rotate : MonoBehaviour
 {
-    float speed = 3f;
+    // 轉動速度
+    float speed = 10f;
 
+    // 鼠標移動數值
     float axisX;
     float axisY;
 
+    // 轉動物件
     GameObject rotateObj;
+    // 復原物件
     GameObject gameObj;
+    // 對話框
     public GameObject DialogueBG;
+    // 提示文字
     public GameObject choseText;
 
     public BagController bagController;
@@ -20,19 +26,6 @@ public class Rotate : MonoBehaviour
 
     void Update()
     {
-        //if (gameObj.name == "ContactBook")
-        //{
-        //    OpenBook.isContactBook = true;
-        //}
-        //else if (gameObj.name == "Diary")
-        //{
-        //    OpenBook.isDiary = true;
-        //}
-        //else
-        //{
-
-        //}
-
         if (!isEnter)
         {
             if (Input.GetMouseButton(0))
