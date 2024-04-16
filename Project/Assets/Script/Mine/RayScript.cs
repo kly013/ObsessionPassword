@@ -123,7 +123,8 @@ public class RayScript : MonoBehaviour
                 // 點擊需要開門的物件的開門
                 openDoor.HitByRaycast(hit.collider.name);
 
-                print("s = " + LevelController.selectName + " , c = " + LevelController.clickName);
+                // 暫放
+                //print("s = " + LevelController.selectName + " , c = " + LevelController.clickName);
 
                 logic.GameLogic(hit.collider.name);
 
@@ -159,8 +160,8 @@ public class RayScript : MonoBehaviour
                         startRotation = gameObject.transform.rotation.eulerAngles;
                         LevelText01.isTalking = true;
                         contactBook.SetActive(true);
-                        Debug.Log(gameObject.transform.position);
-                        Debug.Log(gameObject.transform.rotation.eulerAngles);
+                        //Debug.Log(gameObject.transform.position);
+                        //Debug.Log(gameObject.transform.rotation.eulerAngles);
                     }
 
                     if (hit.collider.name == "Diary")
