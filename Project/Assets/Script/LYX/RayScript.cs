@@ -22,8 +22,6 @@ public class RayScript : MonoBehaviour
     public LevelText01 levelText01;
     // 點電腦後的行為
     public ClickComputer clickComputer;
-    // 點擊手機事件
-    public ClickCellphone clickCellphone;
     // 點門後的開關動畫
     public OpenDoor openDoor;
     // 點擊可以拿起的物品後的動作
