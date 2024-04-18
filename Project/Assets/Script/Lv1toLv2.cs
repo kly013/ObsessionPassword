@@ -20,6 +20,11 @@ public class Lv1toLv2 : MonoBehaviour
     {
 
         vp.loopPointReached += EndReached;
+
+        // 解鎖控制鼠標在視窗內
+        Cursor.lockState = CursorLockMode.None;
+        // 鼠標出現
+        Cursor.visible = true;
     }
 
     // 改變播放速度
