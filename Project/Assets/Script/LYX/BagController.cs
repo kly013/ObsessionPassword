@@ -83,17 +83,12 @@ public class BagController : MonoBehaviour
     // 取得物品新增至道具欄
     public void addTools(GameObject obj)
     {
-        // 暫放
-        //print(obj.name);
         // 取得物品名稱
         string name = obj.name;
 
         // 如果為Tools中所列道具，則出現相對應圖片
         try
         {
-            // 暫放
-            //print(name);
-
             // 測試是否為Tools所列道具
             Tools result = (Tools)Enum.Parse(typeof(Tools), name);
             // 有則取得道具編號
@@ -106,12 +101,11 @@ public class BagController : MonoBehaviour
             img.sprite = toolsImg[toolsNum];
             // 新增進 toolsList
             LevelController.toolsList.Add(obj);
-            // 將欄位指向下一個位置(?!)
+            // 將欄位指向下一個位置
             posNum++;
         }
         catch
         {
-            // 暫放
             //print("not found");
         }
     }
@@ -127,8 +121,6 @@ public class BagController : MonoBehaviour
         // 丟出物品為第一欄位物品
         if (name == "Tool01")
         {
-            // 暫放
-            //print("tool01");
 
             // 取得道具欄位的image
             img1 = imgPos[0].GetComponent<Image>();
@@ -182,9 +174,6 @@ public class BagController : MonoBehaviour
         // 丟出物品為第二欄位物品
         if (name == "Tool02")
         {
-            // 暫放
-            //print("tool02");
-
             // 取得道具欄位的image
             img2 = imgPos[1].GetComponent<Image>();
             img3 = imgPos[2].GetComponent<Image>();
@@ -220,9 +209,6 @@ public class BagController : MonoBehaviour
         // 丟出物品為第三欄位物品
         if (name == "Tool03")
         {
-            // 暫放
-            //print("tool03");
-
             // 將第三欄位隱藏
             imgPos[2].SetActive(false);
             // 將 位置 2 物件移除

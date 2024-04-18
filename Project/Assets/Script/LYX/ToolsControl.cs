@@ -10,7 +10,6 @@ public class ToolsControl : MonoBehaviour
     public void onClickArrow()
     {
         isOpen = !isOpen;
-        //print(isOpen);
         animator.SetBool("isOpen", isOpen);
     }
 }

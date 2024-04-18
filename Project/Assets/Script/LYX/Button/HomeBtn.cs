@@ -16,13 +16,16 @@ public class HomeBtn : MonoBehaviour
     // 播放速度文字
     public Text speedText;
 
-    private void Update()
+    public GameObject loader;
+
+    private void Start()
     {
-        // 播完換場景
-        if (!videoPlayer.isPlaying && videoPlayer.time >= videoPlayer.length)
-        {
-            SceneManager.LoadScene("Level01");
-        }
+        videoPlayer.loopPointReached += EndReached;
+    }
+
+    void EndReached(UnityEngine.Video.VideoPlayer videoPlayer)
+    {
+        SceneManager.LoadScene("Level01");
     }
 
     // 按start
@@ -48,6 +51,8 @@ public class HomeBtn : MonoBehaviour
     {
         // 播按鍵音效
         MusicController.instance.PlaySoundEffect("clickBtn");
+
+        loader.SetActive(true);
 
         // 直接換場景
         SceneManager.LoadScene("Level01");

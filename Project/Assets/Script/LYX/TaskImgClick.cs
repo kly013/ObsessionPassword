@@ -12,10 +12,8 @@ public class TaskImgClick : MonoBehaviour
 
     public void onClick()
     {
-        //print("change");
         Image img = tool.GetComponent<Image>();
         img.sprite = toolsImg[taskNum];
-        //LevelController.toolsList[0] = null;
         LevelText01.isTalking = false;
         photodog.SetActive(false);
         this.gameObject.SetActive(false);

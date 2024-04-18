@@ -3,50 +3,49 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Video;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Lv1toLv2 : MonoBehaviour
 {
     public VideoPlayer vp;
-    // Start is called before the first frame update
+
+    // 影片播放速度
+    int playSpeed = 1;
+    // 播放速度文字
+    public Text speedText;
+
+    public GameObject restartBtn;
+
     void Start()
     {
 
         vp.loopPointReached += EndReached;
     }
 
-    // Update is called once per frame
-    void Update()
+    // 改變播放速度
+    public void onClickSpeed()
     {
-        
-    }
-    public void PlayBackSpeed()
-    {
-        if (vp)
+        MusicController.instance.PlaySoundEffect("clickBtn");
+        if (playSpeed < 3)
         {
-            if (vp.playbackSpeed == 1.0f)
-            {
-                vp.playbackSpeed = 2.0f;
-            }
-            else
-            {
-                vp.playbackSpeed = 1.0f;
-            }
+            playSpeed++;
         }
+        else if (playSpeed == 3)
+        {
+            playSpeed = 1;
+        }
+
+        vp.playbackSpeed = playSpeed;
+        speedText.text = "X" + playSpeed;
     }
 
-    public void NextLevel()
+    public void onClickRestart()
     {
-        SceneManager.LoadScene("Level02");
+        SceneManager.LoadScene("StartMenu");
     }
 
     public void EndReached(UnityEngine.Video.VideoPlayer vp)
     {
-        SceneManager.LoadScene("Level02");
+        restartBtn.SetActive(true);
     }
-    //public void EndReached2(UnityEngine.Video.VideoPlayer vp)
-    //{
-    //    vp.playbackSpeed = vp.playbackSpeed * 10.0F;
-    //}
-
-
 }

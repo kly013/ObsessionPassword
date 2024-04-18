@@ -23,7 +23,7 @@ public class ComputerTime : MonoBehaviour
     {
         if (year == 2021 && moon == 5 && day == 27)
         {
-            print("TimeFinish");
+            // print("TimeFinish");
             LevelController.isFinishTime = true;
         }
 

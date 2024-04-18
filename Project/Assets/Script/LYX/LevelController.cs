@@ -26,6 +26,8 @@ public class LevelController : MonoBehaviour
     void Start()
     {
         gameTimer = 0;
+        isFinishTime = false;
+        isFinishPhoto = false;
     }
 
     void Update()

@@ -11,8 +11,6 @@ public class OpenDoor : MonoBehaviour
 
     public void HitByRaycast(string name) //被射線打到時會進入此方法
     {
-        //print("EEEEEE");
-
         OpenDoorAnim = RayScript.hit.collider.GetComponent<Animator>();
         int thisNum = -1;
 
@@ -68,8 +66,6 @@ public class OpenDoor : MonoBehaviour
                 break;
         }
 
-        //print("ThisNum = " + thisNum);
-
         if (thisNum >= 0)
         {
             if (isthisOpen[thisNum])
@@ -82,7 +78,6 @@ public class OpenDoor : MonoBehaviour
             }
 
             isthisOpen[thisNum] = isOpen;
-            //print("isOpen = " + isOpen);
 
             switch (name)
             {

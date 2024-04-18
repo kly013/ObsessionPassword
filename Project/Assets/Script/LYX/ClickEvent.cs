@@ -40,32 +40,29 @@ public class ClickEvent : MonoBehaviour
     public void OnClick()
     {
         clickNum++;
-        //print("clickNum = " + clickNum);
 
+        // 開始計時
         if (clickNum == 1)
         {
             clickTimer = LevelController.gameTimer;
-            //print("開始計時");
         }
     }
 
     void onceClickEvent()
     {
-        //print("觸發單擊事件");
-        //print(gameObject.name);
+        // 觸發單擊事件
 
         Image buttonImage = GetComponent<Image>();
         Sprite sourceSprite = buttonImage.sprite;
         LevelController.selectName = sourceSprite.name;
-        //Debug.Log("按鈕的 Source Image 是：" + sourceSprite.name);
     }
     void doubleClickEvent()
     {
-        //print("觸發雙擊事件");
+        // 觸發雙擊事件
         Image buttonImage = GetComponent<Image>();
         Sprite sourceSprite = buttonImage.sprite;
 
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < LevelController.toolsList.Count; i++)
         {
             if (LevelController.toolsList[i].name == sourceSprite.name)
             {
@@ -76,10 +73,6 @@ public class ClickEvent : MonoBehaviour
 
         if (obj != null)
         {
-            // 暫放
-            //print("not null , "+ this.gameObject.name);
-            //print(obj.name);
-
             obj.gameObject.SetActive(true);
             bagController.onChangePos(this.gameObject.name);
         }
