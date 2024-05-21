@@ -28,6 +28,8 @@ public class RayScript : MonoBehaviour
     public TakeLook takeLook;
     public Logic logic;
 
+    public static bool isReading = false;
+
     public GameObject contactBook;
     public GameObject diary;
     public GameObject crossHair;
@@ -67,17 +69,21 @@ public class RayScript : MonoBehaviour
 
 
         // 按alt或對話時
-        if (Input.GetKey(KeyCode.LeftAlt))
+        if (!isReading)
         {
-            //// 鼠標出現
-            //Cursor.visible = true;
-            //Cursor.lockState = CursorLockMode.None;
-            LevelText01.isTalking = true;
+            if (Input.GetKey(KeyCode.LeftAlt))
+            {
+                //// 鼠標出現
+                //Cursor.visible = true;
+                //Cursor.lockState = CursorLockMode.None;
+                LevelText01.isTalking = true;
+            }
+            if (Input.GetKeyUp(KeyCode.LeftAlt))
+            {
+                LevelText01.isTalking = false;
+            }
         }
-        if (Input.GetKeyUp(KeyCode.LeftAlt))
-        {
-            LevelText01.isTalking = false;
-        }
+
 
         if (LevelText01.isTalking)
         {
@@ -126,7 +132,7 @@ public class RayScript : MonoBehaviour
                 openDoor.HitByRaycast(hit.collider.name);
 
                 // 暫放
-                //print("s = " + LevelController.selectName + " , c = " + LevelController.clickName);
+                print("s = " + LevelController.selectName + " , c = " + LevelController.clickName);
 
                 logic.GameLogic(hit.collider.name);
 
@@ -158,6 +164,7 @@ public class RayScript : MonoBehaviour
 
                     if (hit.collider.name == "ContactBook")
                     {
+                        isReading = true;
                         startPos = gameObject.transform.position;
                         startRotation = gameObject.transform.rotation.eulerAngles;
                         LevelText01.isTalking = true;
@@ -168,6 +175,7 @@ public class RayScript : MonoBehaviour
 
                     if (hit.collider.name == "Diary")
                     {
+                        isReading = true;
                         startPos = gameObject.transform.position;
                         startRotation = gameObject.transform.rotation.eulerAngles;
                         LevelText01.isTalking = true;
@@ -208,6 +216,7 @@ public class RayScript : MonoBehaviour
 
         if (BooksSpaceBack.goBack == true)
         {
+            isReading = false;
             crossHair.SetActive(true);
             gameObject.transform.position = startPos;
             gameObject.transform.rotation = Quaternion.Euler(new Vector3(startRotation.x, startRotation.y, startRotation.z));
