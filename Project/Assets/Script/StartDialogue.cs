@@ -8,6 +8,7 @@ public class StartDialogue : MonoBehaviour
     public GameObject DogCard;
     public GameObject DialogueBG;
     public GameObject crossHair;
+    public GameObject DialogueButton;
     public Text ObjTalk;
     int dialogueText;
     // Start is called before the first frame update
@@ -59,6 +60,7 @@ public class StartDialogue : MonoBehaviour
         {
             DogCard.SetActive(false);
             DialogueBG.SetActive(false);
+            DialogueButton.SetActive(false);
             crossHair.SetActive(true);
             LevelText01.isTalking = false;
             GameObject.Find("StartDialogue").GetComponent<StartDialogue>().enabled = false;
