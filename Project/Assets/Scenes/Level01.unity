@@ -26279,6 +26279,7 @@ GameObject:
   - component: {fileID: 786928741747664465}
   - component: {fileID: 786928741747664466}
   - component: {fileID: 786928741747664467}
+  - component: {fileID: 786928741747664468}
   m_Layer: 0
   m_Name: WardrobeDoor002
   m_TagString: pressE
@@ -26349,6 +26350,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffb21b2c7b6c92545bc8cf143901a4fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &786928741747664468
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 786928741747664463}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.4979899, y: 0.11317538, z: 1.3079351}
+  m_Center: {x: 0.26533782, y: 0.038264133, z: 0.052271247}
 --- !u!23 &801069082700925466
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -33652,6 +33666,8 @@ GameObject:
   - component: {fileID: 2338773428179080335}
   - component: {fileID: 1963821033456460294}
   - component: {fileID: 2546572596972470828}
+  - component: {fileID: 2546572596972470829}
+  - component: {fileID: 2546572596972470830}
   m_Layer: 0
   m_Name: Wall003
   m_TagString: Untagged
@@ -33673,6 +33689,32 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 3850357252257902658, guid: 70dec6cc2be635148b5e6248c8d07f15, type: 3}
+--- !u!65 &2546572596972470829
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2546572596972470827}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.26599598, y: 3.8454235, z: 2.483065}
+  m_Center: {x: 3.7490869, y: -1.084495, z: 1.2430857}
+--- !u!65 &2546572596972470830
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2546572596972470827}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.8276362, y: 0.34135452, z: 2.483065}
+  m_Center: {x: 1.8588891, y: -2.5622177, z: 1.2430857}
 --- !u!65 &2548140083376506337
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36317,6 +36359,7 @@ GameObject:
   - component: {fileID: 3560211274209466504}
   - component: {fileID: 3560211274209466505}
   - component: {fileID: 3560211274209466506}
+  - component: {fileID: 3560211274209466507}
   m_Layer: 0
   m_Name: Drawer003
   m_TagString: pressE
@@ -36387,6 +36430,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffb21b2c7b6c92545bc8cf143901a4fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &3560211274209466507
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3560211274209466502}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.12299344, y: 0.5893139, z: 0.13879621}
+  m_Center: {x: 0.36748815, y: -0.3771024, z: 0.14998215}
 --- !u!33 &3578348002237855304
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -43091,6 +43147,7 @@ GameObject:
   - component: {fileID: 7163586952502371825}
   - component: {fileID: 8822832195116937967}
   - component: {fileID: 5107514929390727092}
+  - component: {fileID: 5107514929390727093}
   m_Layer: 0
   m_Name: Wall001
   m_TagString: Untagged
@@ -43112,6 +43169,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -3526660341256759886, guid: 70dec6cc2be635148b5e6248c8d07f15, type: 3}
+--- !u!65 &5107514929390727093
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5107514929390727091}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.9063787, y: 0.27268165, z: 2.4830647}
+  m_Center: {x: 0.31950903, y: -5.0928955, z: 1.2430856}
 --- !u!33 &5115331105047840260
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -43862,6 +43932,7 @@ GameObject:
   - component: {fileID: 5400059844807117076}
   - component: {fileID: 5400059844807117077}
   - component: {fileID: 5400059844807117078}
+  - component: {fileID: 5400059844807117079}
   m_Layer: 0
   m_Name: WardrobeDoor001
   m_TagString: pressE
@@ -43932,6 +44003,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffb21b2c7b6c92545bc8cf143901a4fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &5400059844807117079
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5400059844807117074}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.6505151, y: 0.28868386, z: 1.3079351}
+  m_Center: {x: -0.18537664, y: -0.047333598, z: 0.07822138}
 --- !u!114 &5402933914636212254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44558,12 +44642,28 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 5795956893497134544, guid: d9decf51020ca934fb1a578851684008, type: 3}
+      propertyPath: m_Size.x
+      value: 1.5809721
+      objectReference: {fileID: 0}
+    - target: {fileID: 5795956893497134544, guid: d9decf51020ca934fb1a578851684008, type: 3}
       propertyPath: m_Size.y
-      value: 2.351424
+      value: 4.6362514
+      objectReference: {fileID: 0}
+    - target: {fileID: 5795956893497134544, guid: d9decf51020ca934fb1a578851684008, type: 3}
+      propertyPath: m_Size.z
+      value: 1.2637951
+      objectReference: {fileID: 0}
+    - target: {fileID: 5795956893497134544, guid: d9decf51020ca934fb1a578851684008, type: 3}
+      propertyPath: m_Center.x
+      value: -0.027523339
       objectReference: {fileID: 0}
     - target: {fileID: 5795956893497134544, guid: d9decf51020ca934fb1a578851684008, type: 3}
       propertyPath: m_Center.y
-      value: -0.67571825
+      value: -1.8181365
+      objectReference: {fileID: 0}
+    - target: {fileID: 5795956893497134544, guid: d9decf51020ca934fb1a578851684008, type: 3}
+      propertyPath: m_Center.z
+      value: 0.13189802
       objectReference: {fileID: 0}
     - target: {fileID: 5795956893497134546, guid: d9decf51020ca934fb1a578851684008, type: 3}
       propertyPath: m_Name
@@ -45059,7 +45159,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8273746534470522516}
   m_LocalRotation: {x: -0.7071068, y: 0.000000061817246, z: 0.000000061817246, w: 0.7071068}
-  m_LocalPosition: {x: -2.3530626, y: -0.831, z: 2.2716184}
+  m_LocalPosition: {x: -2.3530626, y: -0.831, z: 2.187}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 543450652644565808}
@@ -49356,6 +49456,7 @@ GameObject:
   - component: {fileID: 7495741744767194025}
   - component: {fileID: 7495741744767194026}
   - component: {fileID: 7495741744767194027}
+  - component: {fileID: 7495741744767194028}
   m_Layer: 0
   m_Name: Refrigerator003
   m_TagString: pressE
@@ -49426,6 +49527,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffb21b2c7b6c92545bc8cf143901a4fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &7495741744767194028
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7495741744767194023}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.8533467, y: 0.1378823, z: 1.3301052}
+  m_Center: {x: -0.10388297, y: 0.01809191, z: 0.06683183}
 --- !u!114 &7500249494923983169
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50462,6 +50576,7 @@ GameObject:
   - component: {fileID: 7977649219728402456}
   - component: {fileID: 7977649219728402457}
   - component: {fileID: 7977649219728402458}
+  - component: {fileID: 7977649219728402459}
   m_Layer: 0
   m_Name: Drawer002
   m_TagString: pressE
@@ -50532,6 +50647,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffb21b2c7b6c92545bc8cf143901a4fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &7977649219728402459
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7977649219728402454}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0390625, y: 0.7483767, z: 0.13879621}
+  m_Center: {x: 0.3571764, y: 0.30496976, z: 0.14998026}
 --- !u!33 &7984542774630684825
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -51364,8 +51492,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.24128437, y: 0.3748003, z: 0.45394886}
-  m_Center: {x: 0.14421853, y: 0.002238892, z: 0.20992279}
+  m_Size: {x: 0.24128437, y: 0.26231351, z: 0.45394886}
+  m_Center: {x: 0.14421853, y: 0.0107559115, z: 0.20992279}
 --- !u!114 &8273746534470522518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51407,8 +51535,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.43285406, y: 0.4489494, z: 0.38402066}
-  m_Center: {x: -0.03110084, y: 0.002232276, z: -0.1087583}
+  m_Size: {x: 0.43285406, y: 0.19405884, z: 0.38402066}
+  m_Center: {x: -0.03110084, y: 0.009109341, z: -0.1087583}
 --- !u!33 &8285192140297915132
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -53468,6 +53596,7 @@ GameObject:
   - component: {fileID: 8992074600044325391}
   - component: {fileID: 8992074600044325392}
   - component: {fileID: 8992074600044325393}
+  - component: {fileID: 8992074600044325394}
   m_Layer: 0
   m_Name: Table004
   m_TagString: Untagged
@@ -53519,6 +53648,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffb21b2c7b6c92545bc8cf143901a4fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &8992074600044325394
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8992074600044325390}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5797851, y: 1.1619886, z: 0.6398023}
+  m_Center: {x: -0.14719969, y: 0.10986382, z: -0.08882302}
 --- !u!114 &8998944986131577306
 MonoBehaviour:
   m_ObjectHideFlags: 0

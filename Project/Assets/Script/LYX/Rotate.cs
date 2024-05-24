@@ -51,6 +51,7 @@ public class Rotate : MonoBehaviour
             LevelController.isTakeLook = false;
             LevelText01.isTalking = false;
             this.enabled = false;
+            isEnter = true;
             Destroy(rotateObj);
         }
 

@@ -6,6 +6,11 @@ using UnityEngine.UI;
 
 public class BagController : MonoBehaviour
 {
+    void Start()
+    {
+        toolsNum = 0;
+        posNum = 0;
+    }
     // 所有可以拿取的物品
     enum Tools
     {

@@ -11,11 +11,13 @@ public class ClickSpace : MonoBehaviour
 
     public void onClick()
     {
-        if (!LevelController.isClickComputer && !LevelController.isTakeLook)
+      
+        if (!LevelController.isClickComputer && !LevelController.isTakeLook && !RayScript.isReading)
         {
-            LevelText01.isTalking = false;
+           LevelText01.isTalking = false;
         }
         DialogueBG.SetActive(false);
         clickSpace.SetActive(false);
+
     }
 }

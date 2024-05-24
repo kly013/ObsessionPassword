@@ -29,6 +29,7 @@ public class RayScript : MonoBehaviour
     public Logic logic;
 
     public static bool isReading = false;
+    
 
     public GameObject contactBook;
     public GameObject diary;
@@ -66,7 +67,7 @@ public class RayScript : MonoBehaviour
     void Update()
     {
 
-
+        
 
         // 按alt或對話時
         if (!isReading)
@@ -85,12 +86,14 @@ public class RayScript : MonoBehaviour
         }
 
 
+
         if (LevelText01.isTalking)
         {
             // 解鎖控制鼠標在視窗內
             Cursor.lockState = CursorLockMode.None;
             // 鼠標出現
             Cursor.visible = true;
+                       
         }
         else
         {
@@ -98,6 +101,9 @@ public class RayScript : MonoBehaviour
             Cursor.lockState = CursorLockMode.Locked;
             // 鼠標隱藏
             Cursor.visible = false;
+            
+            
+            
         }
 
         // 攝影機射到畫面正中央的射線
@@ -190,6 +196,7 @@ public class RayScript : MonoBehaviour
 
                 if (hit.collider.name == "ContactBook")
                 {
+                    
                     LevelText01.isTalking = true;
                     contactBook.SetActive(true);
                     gameObject.transform.position = new Vector3(1.398f, 5.729f, 20.329f);
@@ -199,6 +206,7 @@ public class RayScript : MonoBehaviour
                 }
                 if (hit.collider.name == "Diary")
                 {
+                    
                     LevelText01.isTalking = true;
                     diary.SetActive(true);
                     gameObject.transform.position = new Vector3(5.9f, 5.85f, 19.64f);

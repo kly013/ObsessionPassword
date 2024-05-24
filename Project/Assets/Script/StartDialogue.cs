@@ -54,7 +54,7 @@ public class StartDialogue : MonoBehaviour
         }
         if (dialogueText == 4)
         {
-            ObjTalk.text = "*按住Alt出現鼠標可點選物品欄，使用道具，點兩下取消。";
+            ObjTalk.text = "*按住Alt出現鼠標可點選物品欄，使用道具。對道具點兩下能丟棄道具物品。";
         }
         if (dialogueText >= 5)
         {
