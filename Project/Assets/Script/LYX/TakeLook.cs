@@ -17,7 +17,10 @@ public class TakeLook : MonoBehaviour
             LevelController.isTakeLook = true;
             LevelText01.isTalking = true;
             GameObject rotateobj = Instantiate(gameObj, objPos);
-            print(gameobj.gameObject.name);
+
+            // ¼È©ñ
+            //print(gameobj.gameObject.name);
+
             gameobj.SetActive(false);
             choseText.SetActive(true);
 
