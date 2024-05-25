@@ -28,6 +28,15 @@ public class LevelController : MonoBehaviour
         gameTimer = 0;
         isFinishTime = false;
         isFinishPhoto = false;
+        isCheatPhoto = false;
+
+        levelnum = 1;
+        taskNum = 0;
+        isTask = false;
+        toolsList = new List<GameObject>();
+
+        selectName = null;
+        clickName = null;
     }
 
     void Update()
