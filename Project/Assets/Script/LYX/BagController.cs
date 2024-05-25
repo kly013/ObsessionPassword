@@ -126,7 +126,6 @@ public class BagController : MonoBehaviour
         // 丟出物品為第一欄位物品
         if (name == "Tool01")
         {
-
             // 取得道具欄位的image
             img1 = imgPos[0].GetComponent<Image>();
             img2 = imgPos[1].GetComponent<Image>();
@@ -138,8 +137,6 @@ public class BagController : MonoBehaviour
                 img1.sprite = img2.sprite;
                 // 將 toolsList 位置 1 物件換到位置 0 
                 LevelController.toolsList[0] = LevelController.toolsList[1];
-                // 將 位置 1 物件移除
-                LevelController.toolsList.Remove(LevelController.toolsList[1]);
                 // 先將第二欄位隱藏
                 imgPos[1].SetActive(false);
                 // 將指向欄位換成第二欄位
@@ -152,16 +149,24 @@ public class BagController : MonoBehaviour
                 {
                     // 將第三欄位的圖片給第二欄位
                     img2.sprite = img3.sprite;
+
                     // 將 toolsList 位置 2 物件換到位置 1
                     LevelController.toolsList[1] = LevelController.toolsList[2];
                     // 將 位置 2 物件移除
                     LevelController.toolsList.Remove(LevelController.toolsList[2]);
+
                     // 將第二欄位改為顯示
                     imgPos[1].SetActive(true);
                     // 將第三欄位隱藏
                     imgPos[2].SetActive(false);
+
                     // 指向欄位為第三欄位
                     posNum = 2;
+                }
+                else
+                {
+                    // 將 位置 1 物件移除
+                    LevelController.toolsList.Remove(LevelController.toolsList[1]);
                 }
             }
             // 非顯示狀態，則表道具欄原只有一道具，丟掉唯一道具

@@ -138,7 +138,7 @@ public class RayScript : MonoBehaviour
                 openDoor.HitByRaycast(hit.collider.name);
 
                 // 暫放
-                print("s = " + LevelController.selectName + " , c = " + LevelController.clickName);
+                //print("s = " + LevelController.selectName + " , c = " + LevelController.clickName);
 
                 logic.GameLogic(hit.collider.name);
 
