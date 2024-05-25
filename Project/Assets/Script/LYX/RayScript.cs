@@ -66,11 +66,8 @@ public class RayScript : MonoBehaviour
 
     void Update()
     {
-
-        
-
         // 按alt或對話時
-        if (!isReading)
+        if (!isReading && !LevelController.isTakeLook && !LevelController.isClickComputer)
         {
             if (Input.GetKey(KeyCode.LeftAlt))
             {
@@ -84,7 +81,6 @@ public class RayScript : MonoBehaviour
                 LevelText01.isTalking = false;
             }
         }
-
 
 
         if (LevelText01.isTalking)
