@@ -9,6 +9,7 @@ public class LevelController : MonoBehaviour
 
     public static bool isChangeCamera;
     public static bool isClickComputer;
+    public static bool isClickCellphone;
     public static bool isTakeLook;
 
     public static string selectName;
@@ -37,6 +38,9 @@ public class LevelController : MonoBehaviour
 
         selectName = null;
         clickName = null;
+
+        isClickCellphone = false;
+        isClickComputer = false;
     }
 
     void Update()

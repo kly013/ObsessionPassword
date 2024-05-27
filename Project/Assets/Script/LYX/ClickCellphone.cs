@@ -48,6 +48,7 @@ public class ClickCellphone : MonoBehaviour
             dia.SetActive(false);
             this.gameObject.SetActive(false);
             LevelText01.isTalking = false;
+            LevelController.isClickCellphone = false;
         }
     }
 

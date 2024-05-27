@@ -62,12 +62,14 @@ public class RayScript : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         // 隱藏鼠標
         Cursor.visible = false;
+
+        isReading = false;
     }
 
     void Update()
     {
         // 按alt或對話時
-        if (!isReading && !LevelController.isTakeLook && !LevelController.isClickComputer)
+        if (!isReading && !LevelController.isTakeLook && !LevelController.isClickComputer && !LevelController.isClickCellphone)
         {
             if (Input.GetKey(KeyCode.LeftAlt))
             {

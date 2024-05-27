@@ -47,7 +47,7 @@ public class Logic : MonoBehaviour
             LevelController.isFinishPhoto = true;
         }
 
-        if (LevelController.selectName == "charger" && LevelController.clickName == "Cellphone")
+        if (LevelController.selectName == "Charger" && LevelController.clickName == "Cellphone")
         {
             if (isFirst)
             {
@@ -60,6 +60,7 @@ public class Logic : MonoBehaviour
             }
             else
             {
+                LevelController.isClickCellphone = true;
                 isElectrified = true;
                 clickCellphone.SetActive(true);
             }

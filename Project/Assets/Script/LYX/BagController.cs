@@ -56,7 +56,7 @@ public class BagController : MonoBehaviour
         Pen005,
         Pen006,
         Pen007,
-        Photo2020,
+        Photo,
         PhotoDog,
         PhotoFrame,
         PopsicleBox001,

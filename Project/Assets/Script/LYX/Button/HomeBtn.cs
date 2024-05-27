@@ -21,6 +21,7 @@ public class HomeBtn : MonoBehaviour
     private void Start()
     {
         videoPlayer.loopPointReached += EndReached;
+        Cursor.visible = true;
     }
 
     void EndReached(UnityEngine.Video.VideoPlayer videoPlayer)

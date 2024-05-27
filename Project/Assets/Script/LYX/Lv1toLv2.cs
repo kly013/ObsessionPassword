@@ -49,6 +49,11 @@ public class Lv1toLv2 : MonoBehaviour
         SceneManager.LoadScene("StartMenu");
     }
 
+    public void onClickExit()
+    {
+        Application.Quit();
+    }
+
     public void EndReached(UnityEngine.Video.VideoPlayer vp)
     {
         restartBtn.SetActive(true);

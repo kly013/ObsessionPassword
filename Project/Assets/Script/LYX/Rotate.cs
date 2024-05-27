@@ -55,17 +55,20 @@ public class Rotate : MonoBehaviour
             Destroy(rotateObj);
         }
 
-        if(Input.GetKeyDown(KeyCode.F))
+        if (LevelController.isTakeLook)
         {
-            if (BagController.posNum <= 2)
+            if (Input.GetKeyDown(KeyCode.F))
             {
-                DialogueBG.SetActive(false);
-                choseText.SetActive(false);
-                bagController.addTools(gameObj);
-                LevelController.isTakeLook = false;
-                LevelText01.isTalking = false;
-                this.enabled = false;
-                Destroy(rotateObj);
+                if (BagController.posNum <= 2)
+                {
+                    DialogueBG.SetActive(false);
+                    choseText.SetActive(false);
+                    bagController.addTools(gameObj);
+                    LevelController.isTakeLook = false;
+                    LevelText01.isTalking = false;
+                    this.enabled = false;
+                    Destroy(rotateObj);
+                }
             }
         }
     }
