@@ -11,6 +11,7 @@ public class ClickCellphone : MonoBehaviour
     public Text centerTimeMin;
 
     public GameObject dia;
+    public GameObject baseDia;
 
     int h;
     int m;
@@ -55,5 +56,6 @@ public class ClickCellphone : MonoBehaviour
     public void onClick()
     {
         dia.SetActive(true);
+        baseDia.SetActive(false);
     }
 }

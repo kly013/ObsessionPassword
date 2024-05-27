@@ -19,6 +19,12 @@ public class Logic : MonoBehaviour
     public static bool notChange = false;
     public static bool isElectrified = false;
 
+    private void Start()
+    {
+        notChange = false;
+        isElectrified = false;
+    }
+
     public void GameLogic(string name)
     {
         if (LevelController.selectName == "Scissors" && LevelController.clickName == "PhotoDog"

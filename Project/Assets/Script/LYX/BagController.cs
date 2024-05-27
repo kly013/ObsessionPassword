@@ -6,11 +6,6 @@ using UnityEngine.UI;
 
 public class BagController : MonoBehaviour
 {
-    void Start()
-    {
-        toolsNum = 0;
-        posNum = 0;
-    }
     // 所有可以拿取的物品
     enum Tools
     {
@@ -84,6 +79,12 @@ public class BagController : MonoBehaviour
     int toolsNum = 0;
     // 指向道具欄位編號，表下一道具該放哪
     public static int posNum = 0;
+
+    void Start()
+    {
+        toolsNum = 0;
+        posNum = 0;
+    }
 
     // 取得物品新增至道具欄
     public void addTools(GameObject obj)

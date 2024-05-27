@@ -41,6 +41,8 @@ public class LevelController : MonoBehaviour
 
         isClickCellphone = false;
         isClickComputer = false;
+
+        LevelText01.isTalking = false;
     }
 
     void Update()

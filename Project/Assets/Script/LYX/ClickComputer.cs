@@ -18,6 +18,12 @@ public class ClickComputer : MonoBehaviour
 
     int accelerate = 2;
 
+    private void Start()
+    {
+        min = 0;
+        hr = 0;
+    }
+
     private void Update()
     {
         if(Input.GetKeyDown(KeyCode.K))

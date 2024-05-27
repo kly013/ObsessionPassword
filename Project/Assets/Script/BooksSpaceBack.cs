@@ -6,12 +6,9 @@ public class BooksSpaceBack : MonoBehaviour
 {
     static public bool goBack = false;
 
-
-
-    // Start is called before the first frame update
     void Start()
     {
-        
+        goBack = false;
     }
 
     // Update is called once per frame

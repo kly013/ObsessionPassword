@@ -489,7 +489,7 @@ public class LevelText01 : MonoBehaviour
         {
             isTalking = true;
         }
-        if (isTalking && !LevelController.isClickComputer && !Logic.isElectrified)
+        if (isTalking && !LevelController.isClickComputer && !LevelController.isClickCellphone)
         {
             DialogueBG.SetActive(true);
             ObjTalk.text = objtext;
